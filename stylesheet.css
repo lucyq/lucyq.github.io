@@ -7,15 +7,10 @@ p {
   text-align: center;
 }
 
-head {
-  font-size: 48px;
-  font-family: "Zapf Chancery";
-  text-align: center;
-}
-
 h1 {
    font-family: "Palatino Linotype";
    font-size: 28px;
+   font-color: gray;
 }
 
 h2 {
@@ -27,4 +22,3 @@ h3 {
    font-family: "Verdana";
    font-size: 14px;
 }
-
