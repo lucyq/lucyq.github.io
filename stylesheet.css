@@ -1,7 +1,25 @@
 p {
-
-  font-size: 30px;
-  font-family: Verdana;
-
-
+  font-size: 12px;
+  font-family: "Verdana";
 }
+
+#p-center {
+  text-align: center;
+}
+
+head {
+  font-size: 48px;
+  font-family: "Zapf Chancery";
+  text-align: center;
+}
+
+h1 {
+   font-family: "Palatino Linotype";
+   font-size: 20px;
+}
+
+h2 {
+   font-family: "Palatino Linotype";
+   font-size: 14px;
+}
+
