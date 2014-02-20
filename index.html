@@ -20,13 +20,8 @@ var printTime = function() {
  }
 
 var msg = function() {
-  document.getElementById("msg").createFormNode;
-
+  console.log(document.getElementById("msg").value);
 }
-
-var btn=document.creatElement("BUTTON");
-var t=document.createTextNode("Enter");
-btn.appendChild(t);
 
 </script>
 
@@ -57,7 +52,7 @@ btn.appendChild(t);
 
 
   <h3>Updates</h3>
-  <div id="status">
+  <div id="status" onchange="msg()">
     </div>
   <div id="yesterday">
     <h3>Updates from yesterday:</h3>
