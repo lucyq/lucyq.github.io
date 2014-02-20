@@ -20,7 +20,8 @@ var printTime = function() {
  }
 
 var msg = function() {
-  document.getElementById("msg").innerHTML=printTime();
+  document.getElementById("msg").createFormNode;
+
 }
 
 var btn=document.creatElement("BUTTON");
@@ -44,7 +45,17 @@ btn.appendChild(t);
       </ul>
     </div>
   <h2 id="fullname">Barney Gumble</h2>
-  <h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30"/><input type="submit" value ="Submit" /></h3>
+  <h3>What are you thinking about? 
+    <!--trying to make a form-->
+    <form name ="input">
+      <input type = "text" id ="msg" name="msg" size="30">
+      <input type="submit" value ="Submit">
+    </form>
+
+
+<!-- original code    <input type="text" id="msg" name="msg" size="30"/></h3> -->
+
+
   <h3>Updates</h3>
   <div id="status">
     </div>
