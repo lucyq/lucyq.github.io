@@ -11,7 +11,7 @@
 <title>Fecesbook</title>
 <script>
   
-function printTime() {  
+var printTime = function() {  
   var updateTime = new Date()
   var hours = updateTime.getHours()
   var minutes = updateTime.getMinutes()
@@ -19,11 +19,13 @@ function printTime() {
   document.write(hours + ":" + minutes + ":" + seconds)
  }
 
-function msg() {
+var msg = function() {
   document.getElementById("msg").innerHTML=printTime();
 }
 
-
+var btn=document.creatElement("BUTTON");
+var t=document.createTextNode("Enter");
+btn.appendChild(t);
 
 </script>
 
@@ -42,9 +44,9 @@ function msg() {
       </ul>
     </div>
   <h2 id="fullname">Barney Gumble</h2>
-  <h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30" /></h3>
+  <h3>What are you thinking about? <input type="text" id="msg" name="msg" size="30"/><input type="submit" value ="Submit" /></h3>
   <h3>Updates</h3>
-  <div id="status" onchange="printTime()">
+  <div id="status">
     </div>
   <div id="yesterday">
     <h3>Updates from yesterday:</h3>
