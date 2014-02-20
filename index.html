@@ -11,16 +11,13 @@
 <title>Fecesbook</title>
 <script>
   
-var printTime = function() {  
-  var updateTime = new Date()
-  var hours = updateTime.getHours()
-  var minutes = updateTime.getMinutes()
-  var seconds = updateTime.getSeconds()
-  document.write(hours + ":" + minutes + ":" + seconds)
- }
-
-var msg = function() {
-  console.log(document.getElementById("msg").value);
+function printMsg() {  
+  var updateTime = new Date();
+  var hours = updateTime.getHours();
+  var minutes = updateTime.getMinutes();
+  var seconds = updateTime.getSeconds();
+  console.log(hours + ":" + minutes + ":" + seconds + " " + 
+    document.getElementById("msg").value);
 }
 
 </script>
@@ -44,7 +41,7 @@ var msg = function() {
     <!--trying to make a form-->
     <form name ="input">
       <input type = "text" id ="msg" name="msg" size="30">
-      <input type="submit" value ="Submit">
+      <input type="submit" value ="Submit" onclick="printMsg()">
     </form>
 
 
@@ -52,7 +49,7 @@ var msg = function() {
 
 
   <h3>Updates</h3>
-  <div id="status" onchange="msg()">
+  <div id="status">
     </div>
   <div id="yesterday">
     <h3>Updates from yesterday:</h3>
