@@ -120,6 +120,26 @@ function creatMarkers() {
 	}
 }
 
+//
+// - - - PARSING DATA
+//
+
+function parse () {
+	data = new XMLHttpRequest;
+	data = JSON.parse(responseText);
+}
+
+
+
+
+function drawLine() {
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0,0,150,75);
+}
+
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -145,7 +165,7 @@ content
 //
 // CODE FROM CLASS
 // 
-data = JSON.parse (response.text);
+data = JSON.parse (responseText);
 
 // to print out a line:
 // console.log(data.line);
@@ -171,14 +191,6 @@ for (i = 0; i < data["schedule"].length; i++) {
 
 // 
 
-
-function parse {
-
-schedule = JSON.parse();
-schedule.line
-
-
-}
 
 
 
