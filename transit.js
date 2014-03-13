@@ -104,11 +104,10 @@ var redLineMarkers = new Array();
 function creatMarkers() {
 for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
-	var redMarker = 'meMarker.png';
+
 	redLineMarkers[i] = new google.maps.Marker({
 		position: redLine[i],
 		title: "TEST"
-		icon: redMarker
 	});
 
 	// open an info window on click of marker
