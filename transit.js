@@ -125,17 +125,7 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
-		genMarkers();
-	}
-}
-
-function genMarkers() {
-
-
-
-}
-
-	var redLineMarkers = new Array();
+			var redLineMarkers = new Array();
 
 	for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
@@ -152,6 +142,10 @@ function genMarkers() {
 			infowindow.open(map, marker);
 		});
 	}
+	}
+}
+
+
 
 
 /*
