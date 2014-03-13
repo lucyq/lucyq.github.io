@@ -107,7 +107,7 @@ for (var i = 0; i < redLine.length; i++) {
 */
 
 }
-/*
+
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
@@ -115,14 +115,13 @@ function createMarker(place) {
 		map: map,
 		position: place.geometry.location
 	});
-	google.maps.event.addListener(marker, 'click', function()) {
+	google.maps.event.addListener(marker, 'click', function() {
 		infowindow.close();
 		infowindow.setContent(place.name);
 		infowindow.open(map, this);
 	}
 }
 
-*/
 
 
 // DISPLAY INFO ON TRAINS COMING INTO STATION. 
