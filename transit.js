@@ -1,10 +1,5 @@
-// 
-// - - - CREATING THE MAP
-// 
 
-// setting up necessary variables
-
-	var myLat = 0;
+			var myLat = 0;
 			var myLng = 0;
 			var request = new XMLHttpRequest();
 			var me = new google.maps.LatLng(myLat, myLng);
@@ -38,22 +33,22 @@
 				}
 			}
 
-function renderMap() 
-{
-	me = new google.maps.LatLng(myLat, myLng);
+			function renderMap()
+			{
+				me = new google.maps.LatLng(myLat, myLng);
 
-	// update map & go there
-	map.panTo(me);
+				// Update map and go there...
+				map.panTo(me);
 
-	// create a marker
-	marker = new google.maps.Marker({
-		position: me;
-		title: "Here";
+				// Create a marker
+				marker = new google.maps.Marker({
+					position: me,
+					title: "Here I Am!"
+				});
+				marker.setMap(map);
 
-	});
-	marker.setMap(map);
-
-	google.maps.event.addListener(marker, 'click', function() {
+				// Open info window on click of marker
+				google.maps.event.addListener(marker, 'click', function() {
 					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
 				});
@@ -66,10 +61,9 @@ function renderMap()
 				};
 				service = new google.maps.places.PlacesService(map);
 				service.search(request, callback);
-}
+			}
 
-
-// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
+			// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
 			function callback(results, status)
 			{
 				if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -95,11 +89,3 @@ function renderMap()
 					infowindow.open(map, this);
 				});
       }
-
-
-
-
-
-
-
-}
