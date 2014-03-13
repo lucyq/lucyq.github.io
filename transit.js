@@ -37,7 +37,6 @@ function initialize() {
 	request.onreadystatechange = function() {
 		var data = JSON.parse(request.responseText);
 		console.log(data);
-
 	};
 
 }
@@ -148,9 +147,6 @@ function drawLine() {
 	ctx.fillRect(0,0,150,75);
 }
 
-
-
-google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
