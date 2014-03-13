@@ -51,7 +51,7 @@ var myLat = 0;
 					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
 				});
-
+/*
 				// Calling Google Places API
 				var request = {
 					location: me,
@@ -60,6 +60,7 @@ var myLat = 0;
 				};
 				service = new google.maps.places.PlacesService(map);
 				service.search(request, callback);
+				*/
 			}
 
 			// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
