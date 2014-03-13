@@ -55,6 +55,7 @@ function renderMap() {
 	marker = new google.maps.Marker({
 		position: me,
 		icon: image,
+		map: map,
 		title: "HI, YOU FOUND ME!"
 	});
 
