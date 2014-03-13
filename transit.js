@@ -1,9 +1,31 @@
 // 
 // - - - CREATING THE MAP
 // 
+
+// setting up necessary variables
+var map;
+var marker;
+var places;
+var infowindow = new google.maps.InfoWindow();
+
 function init()
 {
 	var request = new XMLHttpRequest();
+
+	// Get user's location
+	if (navigator.geolocation) { // if geolocation is supported
+	navigator.geolocation.getCurrentPosition(function(position){
+		myLat = position.coords.latitude;
+		myLng = position.coords.longitude;
+		renderMap();
+		});
+
+	}
+	else {
+		alert("Geolocation is not supported by your web browser. Sorry!");
+	}
+
+	
 	var me = new google.maps.LatLng(myLat, myLng);
 	// set up map
 	var myOptions = {
@@ -14,47 +36,10 @@ function init()
 
 	// create a map in the "map_canvas" <div>
 	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	
 }
 
 
-
-
-
-
-
-
-
-
-
-
-var map;
-var marker;
-var infowindow=new google.maps.InfoWindow();
-var places;
-
-
-
-
-function whops() // create the map
-{
-	map = new google.maps.Map(document.getElementById("map_canvas", myOptions));
-		getMyLocation();
-}
-
-function getMyLocation() // get user's location
-{
-	if (navigator.geolocation) { // if geolocation is supported
-		navigator.geolocation.getCurrentPosition(function(position){
-			myLat = position.coords.latitude;
-			myLng = position.coords.longitude;
-			renderMap();
-		});
-
-	}
-	else {
-		alert("Geolocation is not supported by your web browser. Sorry!");
-	}
-}
 
 function renderMap() 
 {
