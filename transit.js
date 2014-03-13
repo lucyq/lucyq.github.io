@@ -28,7 +28,7 @@ var Wollaston = new google.maps.LatLng(42.2665139,-71.0203369);
 var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				Davis, DCross, Fields, Harvard, JFK, Kendall, NQuincy, Park, Porter, 
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
-var redLineMarkers = new Array();
+
 
 
 
@@ -131,6 +131,8 @@ function createMarkers() {
 
 function genMarkers() {
 
+	var redLineMarkers = new Array();
+	
 	for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
 
