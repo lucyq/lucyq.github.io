@@ -10,6 +10,7 @@ var myLng = 0;
 var map;
 var marker;
 var infowindow = new google.maps.InfoWindow();
+var data;
 
 
 //
@@ -36,9 +37,10 @@ function initialize() {
 	request.send();
 	request.onreadystatechange = function() {
 		if (request.readyState==4 && request.status==200) 
-			var data = JSON.parse(request.responseText);
+			data = JSON.parse(request.responseText);
 		
 	};
+	createMarkers();
 
 }
 
@@ -78,8 +80,28 @@ function renderMap() {
 		infowindow.open(map, marker);
 	});
 
-	createMarkers();
+}
 
+
+function createMarkers() {
+	for (var i = 0; i < data.length; i++) {
+	// create a marker 
+
+	var lineInfo = data["line"];
+	console.log(lineInfo);
+
+		redLineMarkers[i] = new google.maps.Marker({
+			position: redLine[i],
+			title: "TEST",
+			map: map
+		});
+
+		// open an info window on click of marker
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.setContent(marker.title);
+			infowindow.open(map, marker);
+		});
+	}
 }
 
 /*
@@ -115,23 +137,7 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
 var redLineMarkers = new Array();
 
-function createMarkers() {
-	for (var i = 0; i < redLine.length; i++) {
-	// create a marker 
 
-		redLineMarkers[i] = new google.maps.Marker({
-			position: redLine[i],
-			title: "TEST",
-			map: map
-		});
-
-		// open an info window on click of marker
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.setContent(marker.title);
-			infowindow.open(map, marker);
-		});
-	}
-}
 
 //
 // - - - PARSING DATA
