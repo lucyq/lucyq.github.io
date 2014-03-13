@@ -31,9 +31,10 @@ var request = new XMLHttpRequest();
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	getLocation();
+
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send();
-	request.onreadystatechange = parse;
+	request.onreadystatechange = parseStations;
 
 }
 
@@ -131,10 +132,9 @@ function createMarkers() {
 // - - - PARSING DATA
 //
 
-function parse() {
+function parseStations() {
 	var data = JSON.parse(request.responseText);
 	console.log(data);
-
 }
 
 
