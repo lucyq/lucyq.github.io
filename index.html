@@ -1,53 +1,21 @@
 <!DOCTYPE HTML>
-
-
 <html>
-  <head>
-    <title>Transit</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
-    <script src="transit.js"></script>
-  
-
-
-  </head>
-
-  <body onload="init()">
-    <div id="map_canvas"></div>
-  
-  </body>
-</html>
-
-
-
-
-
-
-<!-- OLD RESUME STUFF
-<html>
-
 
 <head>
-  <meta charset="UTF-8">
-  <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
-  <title>Lucy Qin</title>
+  <title>MBTA Transit</title>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&libraries=places"></script>
+    <script type="text/javascript" src="transit.js"></script>
+    <link rel="stylesheet" href="geolocation_map_style.css" />
 </head>
 
 
-<body>
-  <h1>Lucy Qin</h1>
-  <div>
-    <p id="p-center"><a href="resume.html">Resume</a> | <a href="bio.html">
-Bio</a>
-    </p>
-  </div>
-  <p>
-    <img src ="pic.png" alt="Lucy Qin face">
-  </p>
+<body onload="init()">
+  <div id ="map_canvas"></div>
 
 
 </body>
 
 </html>
 
-//-->
