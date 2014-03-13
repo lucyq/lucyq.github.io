@@ -124,9 +124,19 @@ function creatMarkers() {
 // - - - PARSING DATA
 //
 
-function parse () {
-	data = new XMLHttpRequest;
-	data = JSON.parse(responseText);
+var request = new XMLHttpRequest();
+
+function request () {
+	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+	request.send();
+	request.onreadystatechange = parse;
+
+}
+
+function parse() {
+	var data = JSON.parse(request.responseText);
+	console.log(data);
+
 }
 
 
