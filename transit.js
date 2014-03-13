@@ -1,12 +1,11 @@
-var me;
-var map;
+var me = new google.maps.LatLng(42.3581, -71.0636);
 
+var map;
 // if you put a var in front of a variable, it means that your variable is only good within this scope
 
 
 function initialize() {
-	me = new google.maps.LatLng(42.3581, -71.0636);
-
+	
 	var mapOptions = {
 		zoom: 13,
 		center: me
