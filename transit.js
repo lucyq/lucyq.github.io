@@ -51,7 +51,8 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
 var redLineMarkers = new Array();
 
-for (int i = 0; i < redLine.length; i++) {
+var i;
+for (i = 0; i < redLine.length; i++) {
 	redLineMarkers[i] = new google.maps.Marker ({
 		position: redLine[i];
 		map: map;
