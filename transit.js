@@ -31,13 +31,13 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	getLocation();
 
-
+	console.log("init called");
 	var request = new XMLHttpRequest();
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send();
 	request.onreadystatechange = function() {
 		// var data = JSON.parse(request.responseText);
-		console.log(request.responseText);
+		console.log("response");
 	};
 
 }
