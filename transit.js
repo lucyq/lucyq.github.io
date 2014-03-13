@@ -50,9 +50,11 @@ function renderMap() {
 	// update map and go there!
 	map.panTo(me);
 
+	var image = 'meMarker.png';
 	// create a marker 
 	marker = new google.maps.Marker({
 		position: me,
+		icon: image,
 		title: "HI, YOU FOUND ME!"
 	});
 
@@ -102,9 +104,11 @@ var redLineMarkers = new Array();
 function creatMarkers() {
 for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
+	var redMarker = 'meMarker.png';
 	redLineMarkers[i] = new google.maps.Marker({
 		position: redLine[i],
 		title: "TEST"
+		icon: 
 	});
 
 	// open an info window on click of marker
