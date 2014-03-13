@@ -35,7 +35,7 @@ var places;
 
 
 
-function init() // create the map
+function whops() // create the map
 {
 	map = new google.maps.Map(document.getElementById("map_canvas", myOptions));
 		getMyLocation();
