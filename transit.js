@@ -16,7 +16,6 @@ var infowindow = new google.maps.InfoWindow();
 // - - - INITIALIZING MAP
 //
 
-var request = new XMLHttpRequest();
 
 var mapOptions = {
 		zoom: 13,
@@ -28,6 +27,7 @@ var mapOptions = {
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	getLocation();
+	request();
 }
 
 // use geolocation to get your GPS coordinates
@@ -65,7 +65,7 @@ function renderMap() {
 		infowindow.open(map, marker);
 	});
 
-	creatMarkers();
+	createMarkers();
 
 }
 
