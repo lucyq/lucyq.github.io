@@ -7,7 +7,7 @@
 function init()
 {
 	var request = new XMLHttpRequest();
-/*
+
 	// Get user's location
 	if (navigator.geolocation) { // if geolocation is supported
 	navigator.geolocation.getCurrentPosition(function(position){
@@ -30,7 +30,7 @@ function init()
 		center: me,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-*/
+
 	// create a map in the "map_canvas" <div>
 	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	
