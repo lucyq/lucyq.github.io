@@ -1,24 +1,68 @@
-var me = new google.maps.LatLng(42.3581, -71.0636);
 
-var map;
 // if you put a var in front of a variable, it means that your variable is only good within this scope
 
+//
+// - - - DECLARING VARIABLES
+//
+var me;
+var myLat = 0;
+var myLng = 0;
+var map;
+var marker;
+var infowindow = new google.maps.InfoWindow();
 
-function initialize() {
-	
-	var mapOptions = {
+
+//
+// - - - INITIALIZING MAP
+//
+
+var request = new XMLHttpRequest();
+
+var mapOptions = {
 		zoom: 13,
-		center: me
+		center: me,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 
+// purpose: create a new map within "map_canvas"
+function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	getLocation();
 }
 
-var marker = new google.maps.Marker({
-	position: me,
-	map: map,
-	title: "HI, YOU FOUND ME!"
-});
+// use geolocation to get your GPS coordinates
+function getLocation() {
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			myLat = position.coords.latitude;
+			myLng = position.coords.longitude;
+			renderMap();
+		});
+	} else {
+		alert("Geolocation is not supported by your browser. So sad!");
+	}
+
+}
+
+function renderMap() {
+	// create map
+	me = new google.maps.LatLng(myLat, myLng);
+	// update map and go there!
+	map.panTo(me);
+
+	// create a marker 
+	marker = new google.maps.Marker({
+		position: me,
+		title: "HI, YOU FOUND ME!"
+	});
+
+	// open an info window on click of marker
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(marker.title);
+		infowindow.open(map, marker);
+	});
+
+}
 
 
 //
@@ -81,7 +125,9 @@ function createMarker(place) {
 //WHen you click on a marker, you only want the trains coming 
 // and going into the station
 
+// view-source:mbtamap.herokuapp.com
 
+// NOTE: make sure you fix the error from JSON parsing.
 
 /*
 
@@ -131,16 +177,7 @@ schedule.line
 }
 
 
-function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-			myLat = position.coords.latitude;
-			myLng = position.coords.longitude;
-			renderMap();
-		})
-	}
 
-}
 
 
  NOTES
