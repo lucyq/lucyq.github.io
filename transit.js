@@ -1,4 +1,4 @@
-var me = new google.maps.LatLng(42.3581, 71.0636)
+var me = new google.maps.LatLng(42.3581, -71.0636)
 var map;
 
 function initialize() {
