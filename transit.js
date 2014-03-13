@@ -103,21 +103,21 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 var redLineMarkers = new Array();
 
 function creatMarkers() {
-for (var i = 0; i < redLine.length; i++) {
+	for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
 
-	redLineMarkers[i] = new google.maps.Marker({
-		position: redLine[i],
-		title: "TEST"
-	});
+		redLineMarkers[i] = new google.maps.Marker({
+			position: redLine[i],
+			title: "TEST",
+			map: map
+		});
 
-	// open an info window on click of marker
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent(marker.title);
-		infowindow.open(map, marker);
-	});
-
-}
+		// open an info window on click of marker
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.setContent(marker.title);
+			infowindow.open(map, marker);
+		});
+	}
 }
 
 
