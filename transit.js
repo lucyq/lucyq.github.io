@@ -62,6 +62,8 @@ function renderMap() {
 		infowindow.open(map, marker);
 	});
 
+	creatMarkers();
+
 }
 
 
@@ -97,29 +99,21 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
 var redLineMarkers = new Array();
 
-
+function creatMarkers() {
 for (var i = 0; i < redLine.length; i++) {
-	createMarker(redLine[i]);
-/*	redLineMarkers[i] = new google.maps.Marker ({
-		position: redLine[i];
-		map: map;
+	// create a marker 
+	redLineMarkers[i] = new google.maps.Marker({
+		position: redLine[i],
+		title: "TEST"
 	});
-*/
+
+	// open an info window on click of marker
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.setContent(marker.title);
+		infowindow.open(map, marker);
+	});
 
 }
-
-
-function createMarker(place) {
-	var placeLoc = place.geometry.location;
-	var marker = new google.maps.Marker({
-		map: map,
-		position: place.geometry.location
-	});
-	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.close();
-		infowindow.setContent(place.name);
-		infowindow.open(map, this);
-	});
 }
 
 
