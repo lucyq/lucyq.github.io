@@ -97,16 +97,17 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
 var redLineMarkers = new Array();
 
-var i;
-for (i = 0; i < redLine.length; i++) {
+
+for (var i = 0; i < redLine.length; i++) {
 	createMarker(redLine[i]);
 /*	redLineMarkers[i] = new google.maps.Marker ({
 		position: redLine[i];
 		map: map;
 	});
 */
-}
 
+}
+/*
 
 function createMarker(place) {
 	var placeLoc = place.geometry.location;
@@ -120,6 +121,9 @@ function createMarker(place) {
 		infowindow.open(map, this);
 	}
 }
+
+*/
+
 
 // DISPLAY INFO ON TRAINS COMING INTO STATION. 
 //WHen you click on a marker, you only want the trains coming 
