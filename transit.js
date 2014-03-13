@@ -124,7 +124,7 @@ function renderMap() {
 
 function createMarkers() {
 	var line = data["line"];
-	if (line = "red") {
+	if (line == "red") {
 		genMarkers();
 	}
 }
