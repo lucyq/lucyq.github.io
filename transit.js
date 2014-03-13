@@ -89,16 +89,14 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	if (line = "red") {
-		// generate red markers
+		genMarkers();
 	}
+}
 
-
+function genMarkers() {
 
 	for (var i = 0; i < data.length; i++) {
 	// create a marker 
-
-	var lineInfo = data["line"];
-	console.log(lineInfo);
 
 		redLineMarkers[i] = new google.maps.Marker({
 			position: redLine[i],
@@ -114,7 +112,7 @@ function createMarkers() {
 	}
 }
 
-/*
+
 //
 // RED LINE MARKERS
 //
@@ -149,13 +147,8 @@ var redLineMarkers = new Array();
 
 
 
-//
-// - - - PARSING DATA
-//
 
-
-
-
+/*
 
 function drawLine() {
 	var c = document.getElementById("myCanvas");
@@ -163,6 +156,7 @@ function drawLine() {
 	ctx.fillStyle = "#FF0000";
 	ctx.fillRect(0,0,150,75);
 }
+
 
 
 
@@ -175,15 +169,14 @@ function drawLine() {
 
 // NOTE: make sure you fix the error from JSON parsing.
 
-/*
 
 content 
 
-*/
 
 
 
-/*
+
+
 //
 // CODE FROM CLASS
 // 
@@ -211,7 +204,6 @@ for (i = 0; i < data["schedule"].length; i++) {
 	}
 }
 
-// 
 
 
 
@@ -228,6 +220,5 @@ google.maps.event - An event listener for Google Maps
 
 
 */
-
 
 
