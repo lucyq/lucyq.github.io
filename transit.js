@@ -23,11 +23,18 @@ var mapOptions = {
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 
+
+
+var request = new XMLHttpRequest();
+
 // purpose: create a new map within "map_canvas"
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	getLocation();
-	request();
+	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+	request.send();
+	request.onreadystatechange = parse;
+
 }
 
 // use geolocation to get your GPS coordinates
@@ -102,7 +109,7 @@ var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
 				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
 var redLineMarkers = new Array();
 
-function creatMarkers() {
+function createMarkers() {
 	for (var i = 0; i < redLine.length; i++) {
 	// create a marker 
 
@@ -123,15 +130,6 @@ function creatMarkers() {
 //
 // - - - PARSING DATA
 //
-
-var request = new XMLHttpRequest();
-
-function request () {
-	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-	request.send();
-	request.onreadystatechange = parse;
-
-}
 
 function parse() {
 	var data = JSON.parse(request.responseText);
