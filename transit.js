@@ -35,8 +35,8 @@ function initialize() {
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send();
 	request.onreadystatechange = function() {
-		var data = JSON.parse(request.responseText);
-		console.log(data);
+		// var data = JSON.parse(request.responseText);
+		console.log(request.responseText);
 	};
 
 }
@@ -81,7 +81,7 @@ function renderMap() {
 
 }
 
-
+/*
 //
 // RED LINE MARKERS
 //
@@ -212,4 +212,6 @@ google.maps.event - An event listener for Google Maps
 
 */
 
+
+*/
 
