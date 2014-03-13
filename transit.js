@@ -108,7 +108,7 @@ for (var i = 0; i < redLine.length; i++) {
 	redLineMarkers[i] = new google.maps.Marker({
 		position: redLine[i],
 		title: "TEST"
-		icon: 
+		icon: redMarker
 	});
 
 	// open an info window on click of marker
