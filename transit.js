@@ -119,8 +119,11 @@ function createMarker(place) {
 		infowindow.close();
 		infowindow.setContent(place.name);
 		infowindow.open(map, this);
-	}
+	});
 }
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
@@ -194,5 +197,4 @@ google.maps.event - An event listener for Google Maps
 
 */
 
-google.maps.event.addDomListener(window, 'load', initialize);
 
