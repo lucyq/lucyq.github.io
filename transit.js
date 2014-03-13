@@ -1,17 +1,31 @@
 // 
 // - - - CREATING THE MAP
 // 
+function init()
+{
+	var request = new XMLHttpRequest();
+	var me = new google.maps.LatLng(myLat, myLng);
+	// set up map
+	var myOptions = {
+		zoom: 13,
+		center: me,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+
+	// create a map in the "map_canvas" <div>
+	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+}
 
 
 
-var request = new XMLHttpRequest();
-var me = new google.maps.LatLng(myLat, myLng);
-var myOptions = {
-	zoom: 13,
-	center: me,
-	mapTypeId: google.maps.MapTypeId.ROADMAP
 
-};
+
+
+
+
+
+
+
 
 var map;
 var marker;
