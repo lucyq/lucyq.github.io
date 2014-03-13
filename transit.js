@@ -77,6 +77,11 @@ function createMarker(place) {
 	}
 }
 
+// DISPLAY INFO ON TRAINS COMING INTO STATION. 
+//WHen you click on a marker, you only want the trains coming 
+// and going into the station
+
+
 
 /*
 
