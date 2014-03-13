@@ -34,14 +34,12 @@ function initialize() {
 
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send();
-	request.onreadystatechange = parseStations;
+	request.onreadystatechange = function() {
+		var data = JSON.parse(request.responseText);
+		console.log(data);
 
-}
+	};
 
-function parseStations() {
-	// add status 
-	var data = JSON.parse(request.responseText);
-	console.log(data);
 }
 
 
