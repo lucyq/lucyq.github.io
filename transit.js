@@ -1,6 +1,9 @@
 var me;
 var map;
 
+// if you put a var in front of a variable, it means that your variable is only good within this scope
+
+
 function initialize() {
 	me = new google.maps.LatLng(42.3581, -71.0636);
 
@@ -53,11 +56,26 @@ var redLineMarkers = new Array();
 
 var i;
 for (i = 0; i < redLine.length; i++) {
-	redLineMarkers[i] = new google.maps.Marker ({
+	createMarker(redLine[i]);
+/*	redLineMarkers[i] = new google.maps.Marker ({
 		position: redLine[i];
 		map: map;
 	});
+*/
+}
 
+
+function createMarker(place) {
+	var placeLoc = place.geometry.location;
+	var marker = new google.maps.Marker({
+		map: map;
+		position: place.geometry.location
+	});
+	google.maps.event.addListener(marker, 'click', function()) {
+		infowindow.close();
+		infowindow.setContent(place.name);
+		infowindow.open(map, this);
+	}
 }
 
 
