@@ -38,6 +38,13 @@ function initialize() {
 
 }
 
+function parseStations() {
+	// add status 
+	var data = JSON.parse(request.responseText);
+	console.log(data);
+}
+
+
 // use geolocation to get your GPS coordinates
 function getLocation() {
 	if (navigator.geolocation) {
@@ -132,10 +139,6 @@ function createMarkers() {
 // - - - PARSING DATA
 //
 
-function parseStations() {
-	var data = JSON.parse(request.responseText);
-	console.log(data);
-}
 
 
 
