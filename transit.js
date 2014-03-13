@@ -87,8 +87,9 @@ function renderMap() {
 
 
 function createMarkers() {
-	if data["line"] = "red" {
-		console.log("YAY!")
+	var line = data["line"];
+	if (line = "red") {
+		// generate red markers
 	}
 
 
