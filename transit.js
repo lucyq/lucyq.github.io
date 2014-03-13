@@ -125,19 +125,19 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
-			var redLineMarkers = new Array();
+	
 
-	for (var i = 0; i < 22; i++) {
-		redLineMarkers[i] = new google.maps.Marker({
+	for (var i = 0; i < redLine.length; i++) {
+		var lineMarker = new google.maps.Marker({
 			position: redLine[i],
 			title: "TEST",
 			map: map
 		});
 
 		// open an info window on click of marker
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.setContent(marker.title);
-			infowindow.open(map, marker);
+		google.maps.event.addListener(lineMarker, 'click', function() {
+			infowindow.setContent(lineMarker.title);
+			infowindow.open(map, lineMarker);
 		});
 	}
 	}
