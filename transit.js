@@ -106,7 +106,8 @@ schedule.line
 
 
 }
-/*
+
+
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
@@ -117,16 +118,16 @@ function getLocation() {
 	}
 
 }
-*/
 
-/* NOTES
+
+ NOTES
 google.maps.Map - The map object (duh!)
 google.maps.LatLng - An object that contains the latitude and longitude pair
 google.maps.Marker - A marker
 google.maps.InfoWindow - An info window
 google.maps.Polyline - A linear overlay
 google.maps.event - An event listener for Google Maps
-*/
+
 
 */
 
