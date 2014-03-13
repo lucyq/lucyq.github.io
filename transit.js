@@ -127,9 +127,7 @@ function createMarkers() {
 	if (line == "red") {
 			var redLineMarkers = new Array();
 
-	for (var i = 0; i < redLine.length; i++) {
-	// create a marker 
-
+	for (var i = 0; i < 22; i++) {
 		redLineMarkers[i] = new google.maps.Marker({
 			position: redLine[i],
 			title: "TEST",
