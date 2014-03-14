@@ -166,7 +166,7 @@ function createMarkers() {
 	if (line == "red") {
 		for (var i = 0; i < redLine.length; i++) {
 			var redStation = new google.maps.LatLng(redLine[i]["Lat"], redLine[i]["Lng"]);
-			var redMarker = new.google.maps.Marker ({
+			var redMarker = new google.maps.Marker ({
 				position: redStation,
 				title: redLine[i]["name"],
 				map: map
