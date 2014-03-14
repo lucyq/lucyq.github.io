@@ -72,7 +72,7 @@ var redLine = [{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.142483}
 			{"id": 21, "Name": "South Station", "Lat": 42.352271, "Lng": -71.055242},
 			{"id": 22, "Name": "Wollaston", "Lat": 42.2665139, "Lng":-71.0203369}];
 
-console.log(redLine[1]["Lat"]);
+
 
 
 //
