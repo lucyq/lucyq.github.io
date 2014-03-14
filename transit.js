@@ -178,7 +178,7 @@ function createMarkers() {
 
 function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
-		var station[i] = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
+		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		
 		var stationMark[i] = new google.maps.Marker({
 			position: station,
