@@ -154,12 +154,12 @@ function renderMap() {
 	});
 
 }
-
+/*
 
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
-	/*
+	
 		for (var i = 0; i < redLine.length; i++) {
 			var redStation = new google.maps.LatLng(redLine[i]["Lat"], redLine[i]["Lng"]);
 			var redMarker = new google.maps.Marker ({
@@ -174,10 +174,10 @@ function createMarkers() {
 			infowindow.open(map, redMarker);
 			});
 		}
-		*/
+		
 }
 
-
+*/
 
 
 /*
