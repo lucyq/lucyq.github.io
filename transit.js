@@ -159,8 +159,6 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
-		console.log("THIS WORKED!");
-		/*
 		for (var i = 0; i < redLine.length; i++) {
 			var redStation = new google.maps.LatLng(redLine[i]["Lat"], redLine[i]["Lng"]);
 			var redMarker = new google.maps.Marker ({
@@ -174,7 +172,6 @@ function createMarkers() {
 			infowindow.setContent(redMarker.title);
 			infowindow.open(map, redMarker);
 			});
-*/
 		}
 }
 
