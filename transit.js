@@ -15,8 +15,6 @@ var blueLine = [{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395
 			{"id": 11, "Name": "Wonderland" , "Lat": 42.41342, "Lng": -70.991648},
 			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}];
 
-console.log(blueLine[1]["Lat"]);
-
 
 //
 // - - - ORANGE LINE LOCATIONS
@@ -154,31 +152,35 @@ function renderMap() {
 	});
 
 }
-/*
+
 
 function createMarkers() {
 	var line = data["line"];
-	if (line == "red") {
-	
-		for (var i = 0; i < redLine.length; i++) {
-			var redStation = new google.maps.LatLng(redLine[i]["Lat"], redLine[i]["Lng"]);
-			var redMarker = new google.maps.Marker ({
-				position: redStation,
-				title: "YOU FOUND ME!",
-				map: map
-			});
+	var length;
+	if (line == "blue") {
+		length = blueLine.length;
+		genMarkers(length, blueLine);
+	}
+}
+
+
+function genMarkers(length, colorLine){
+	for (var i = 0; i < length; i++) {
+		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
+		var stationMark = new google.maps.Marker({
+			position: station,
+			map: map
+		});
+	}
+
+}
 			
-			// open an info window on click of marker
+		/*	// open an info window on click of marker
 			google.maps.event.addListener(redMarker, 'click', function() {
 			infowindow.setContent(redMarker.title);
 			infowindow.open(map, redMarker);
 			});
-		}
-		
-}
-
-*/
-
+		*/
 
 /*
 
