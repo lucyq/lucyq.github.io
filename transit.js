@@ -160,17 +160,17 @@ function createMarkers() {
 
 	if (line == "blue") {
 		length = blueLine.length;
-		icon.src= 'blue.png';
+		icon = 'blue.png';
 		genMarkers(length, blueLine, icon);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
-		icon.src = "orange.png";
+		icon = "orange.png";
 		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
 		length = redLine.length;
-		icon.src = "red.png";
+		icon = "red.png";
 		genMarkers(length, redLine, icon);
 	}
 }
