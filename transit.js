@@ -1,66 +1,105 @@
 //
-// RED LINE LOCATIONS
+// - - - BLUE LINE LOCATIONS
 //
 
-var Alewife	= new google.maps.LatLng(42.395428,-71.142483);
-var Andrew	= new google.maps.LatLng(42.330154, -71.057655);
-var Ashmont	= new google.maps.LatLng(42.284652, -71.064489);
-var Braintree = new google.maps.LatLng(42.2078543,-71.0011385);
-var Broadway = new google.maps.LatLng(42.342622,-71.056967);
-var Central = new google.maps.LatLng(42.365486,-71.103802);
-var Charles	= new google.maps.LatLng(42.361166,-71.070628); //charles mgh
-var Davis = new google.maps.LatLng(42.39674,-71.121815); 
-var DCross = new google.maps.LatLng(42.355518,-71.060225); // downtown crossing
-var Fields = new google.maps.LatLng(42.300093,-71.061667);
-var Harvard = new google.maps.LatLng(42.373362,-71.118956);
-var JFK = new google.maps.LatLng(42.320685,-71.052391); // jfk-umass
-var Kendall	= new google.maps.LatLng(42.36249079,-71.08617653);
-var NQuincy = new google.maps.LatLng(42.275275,-71.029583);
-var Park = new google.maps.LatLng(42.35639457,-71.0624242);
-var Porter = new google.maps.LatLng(42.3884,-71.119149);
-var QuincyA = new google.maps.LatLng(42.233391,-71.007153);
-var QuincyC = new google.maps.LatLng(42.251809,-71.005409);
-var Savin = new google.maps.LatLng(42.31129,-71.053331); // Savin Hill
-var Shawmut	= new google.maps.LatLng(42.29312583,-71.06573796);
-var South = new google.maps.LatLng(42.352271,-71.055242);
-var Wollaston = new google.maps.LatLng(42.2665139,-71.0203369);
+blueString = '[{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
+			{"id": 2, "Name": "Aquarium", "Lat": 42.359784, "Lng": -71.051652},
+			{"id": 3, "Name": "Beachmont", "Lat": 42.39754234, "Lng": -70.99231944},
+			{"id": 4, "Name": "Bowdoin", "Lat": 42.361365 , "Lng": -71.062037},
+			{"id": 5, "Name": "Government Center", "Lat": 42.359705, "Lng": -71.059215},
+			{"id": 6, "Name": "Maverick", "Lat": 42.3691186, "Lng": -71.03952958},
+			{"id": 7, "Name": "Orient Heights", "Lat": 42.386867, "Lng": -71.004736},
+			{"id": 8, "Name": "Revere Beach", "Lat": 42.40784254,"Lng": -70.99253321},
+			{"id": 9, "Name": "State Street", "Lat": 42.358978, "Lng": -71.057598},
+			{"id": 10, "Name": "Suffolk Downs", "Lat": 42.39050067, "Lng": -70.99712259},
+			{"id": 11, "Name": "Wonderland" , "Lat": 42.41342, "Lng": -70.991648},
+			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}]'
 
-var redLine = [Alewife, Andrew, Ashmont, Braintree, Broadway, Central, Charles,
-				Davis, DCross, Fields, Harvard, JFK, Kendall, NQuincy, Park, Porter, 
-				QuincyA, QuincyC, Savin, Shawmut, South, Wollaston];
+var blueLine = JSON.parse(blueString);
 
 
-
-
-
-
-
-// if you put a var in front of a variable, it means that your variable is only good within this scope
 
 //
-// - - - DECLARING VARIABLES
+// - - - ORANGE LINE LOCATIONS
 //
-var me;
-var myLat = 0;
-var myLng = 0;
-var map;
-var marker;
+
+orangeString = '[{"id": 1, "Name": "Back Bay", "Lat": 42.34735, "Lng": -71.075727},
+			{"id": 2, "Name": "Chinatown", "Lat": 42.352547, "Lng": -71.062752},
+			{"id": 3, "Name": "Community College", "Lat": 42.373622, "Lng": -71.069533},
+			{"id": 4, "Name": "Downtown Crossing", "Lat": 42.355518, "Lng": -71.060225},
+			{"id": 5, "Name": "Forest Hills", "Lat": 42.300523, "Lng": -71.113686},
+			{"id": 6, "Name": "Green Street", "Lat": 42.310525, "Lng": -71.107414},
+			{"id": 7, "Name": "Haymarket", "Lat": 42.363021, "Lng": -71.05829},
+			{"id": 8, "Name": "Jackson Square", "Lat": 42.323132,"Lng": -71.099592},
+			{"id": 9, "Name": "Malden Center", "Lat": 42.426632, "Lng": -71.07411},
+			{"id": 10, "Name": "Mass Ave", "Lat": 42.341512, "Lng":  -71.083423},
+			{"id": 11, "Name": "North Station" , "Lat": 42.365577, "Lng": -71.06129},
+			{"id": 12, "Name": "Oak Grove", "Lat":42.43668 , "Lng": -71.071097 },
+			{"id": 13, "Name": "Roxbury Crossing", "Lat": 42.331397, "Lng": -71.095451},
+			{"id": 14, "Name": "Ruggles", "Lat": 42.336377, "Lng": -71.088961},
+			{"id": 15, "Name": "State Street", "Lat": 42.358978, "Lng": -71.057598},
+			{"id": 16, "Name": "Stony Brook", "Lat":42.317062, "Lng": -71.104248},
+			{"id": 17, "Name": "Sullivan", "Lat": 42.383975, "Lng": -71.076994},
+			{"id": 18, "Name": "Tufts Medical", "Lat": 42.349662, "Lng": -71.063917},
+			{"id": 19, "Name": "Wellington", "Lat": 42.40237 , "Lng": -71.077082}]'
+
+var orangeLine = JSON.parse(orangeString);
+
+
+//
+// - - - RED LINE LOCATIONS
+//
+
+redString = '[{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.142483},
+			{"id": 2, "Name": "Andrew", "Lat": 42.330154, "Lng":-71.057655},
+			{"id": 3, "Name": "Ashmont", "Lat": 42.284652, "Lng":-71.064489},
+			{"id": 4, "Name": "Braintree", "Lat": 42.2078543, "Lng": -71.0011385},
+			{"id": 5, "Name": "Broadway", "Lat": 42.342622, "Lng": -71.056967},
+			{"id": 6, "Name": "Central Square", "Lat": 42.365486, "Lng": -71.103802},
+			{"id": 7, "Name": "Charles/MGH", "Lat": 42.361166, "Lng": -71.070628},
+			{"id": 8, "Name": "Davis", "Lat": 42.39674, "Lng": -71.121815},
+			{"id": 9, "Name": "Downtown Crossing", "Lat": 42.355518, "Lng":	-71.060225},
+			{"id": 10, "Name": "Fields Corner", "Lat": 42.300093, "Lng": -71.061667},
+			{"id": 11, "Name": "Harvard Square", "Lat": 42.373362, "Lng": -71.118956},
+			{"id": 12, "Name": "JFK/UMass", "Lat": 42.320685, "Lng": -71.052391},
+			{"id": 13, "Name": "Kendall/MIT", "Lat": 42.36249079, "Lng": -71.08617653},
+			{"id": 14, "Name": "North Quincy", "Lat": 42.275275, "Lng": -71.029583},
+			{"id": 15, "Name": "Park Street", "Lat": 42.35639457, "Lng": -71.0624242},
+			{"id": 16, "Name": "Porter Square", "Lat": 42.3884, "Lng": -71.119149}, 
+			{"id": 17, "Name": "Quincy Adams", "Lat": 42.233391, "Lng":	-71.007153},
+			{"id": 18, "Name": "Quincy Center", "Lat": 42.251809, "Lng": -71.005409},
+			{"id": 19, "Name": "Savin Hill", "Lat": 42.31129, "Lng": -71.053331},
+			{"id": 20, "Name": "Shawmut", "Lat": 42.29312583, "Lng": -71.06573796},
+			{"id": 21, "Name": "South Station", "Lat": 42.352271, "Lng": -71.055242},
+			{"id": 22, "Name": "Wollaston", "Lat": 42.2665139, "Lng":-71.0203369}]'
+
+var redLine = JSON.parse(redString);
+console.log(redLine);
+
+
+//
+// - - - DECLARING VARIABLES USED FOR MAP
+//
+
+var me; // user
+var myLat = 0; // user's latitude
+var myLng = 0; // user's longitude
+var map; // the map
+var marker; // user's marker
 var infowindow = new google.maps.InfoWindow();
-var data;
+var data; // data from parsing the schedule
 
 
 //
 // - - - INITIALIZING MAP
 //
 
-
+// settings for the map
 var mapOptions = {
 		zoom: 13,
 		center: me,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-
-
 
 
 // purpose: create a new map within "map_canvas"
@@ -77,10 +116,7 @@ function initialize() {
 			console.log(data);
 			createMarkers();
 		}
-		
 	};
-	
-
 }
 
 
@@ -98,6 +134,7 @@ function getLocation() {
 
 }
 
+// loading the actual map
 function renderMap() {
 	// create map
 	me = new google.maps.LatLng(myLat, myLng);
@@ -125,22 +162,19 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
-	
-
-	for (var i = 0; i < redLine.length; i++) {
-		var lineMarker = new google.maps.Marker({
-			position: redLine[i],
-			title: "TEST",
-			map: map
-		});
-
-		// open an info window on click of marker
-		google.maps.event.addListener(lineMarker, 'click', function() {
-			infowindow.setContent(lineMarker.title);
-			infowindow.open(map, lineMarker);
-		});
-	}
-	}
+		for (var i = 0; i < redLine.length; i++) {
+			var redStation = new google.maps.LatLng(redLine[i]["Lat"], redLine[i]["Lng"]);
+			var redMarker = new.google.maps.Marker ({
+				position: redStation,
+				title: redLine[i]["name"],
+				map: map
+			});
+			// open an info window on click of marker
+			google.maps.event.addListener(redMarker, 'click', function() {
+			infowindow.setContent(redMarker.title);
+			infowindow.open(map, redMarker);
+			});
+		}
 }
 
 
