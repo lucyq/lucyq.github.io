@@ -2,7 +2,7 @@
 // - - - BLUE LINE LOCATIONS
 //
 
-var blueString = '[{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
+blueString = '[{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
 			{"id": 2, "Name": "Aquarium", "Lat": 42.359784, "Lng": -71.051652},
 			{"id": 3, "Name": "Beachmont", "Lat": 42.39754234, "Lng": -70.99231944},
 			{"id": 4, "Name": "Bowdoin", "Lat": 42.361365 , "Lng": -71.062037},
