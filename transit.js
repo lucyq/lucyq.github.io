@@ -2,7 +2,7 @@
 // - - - BLUE LINE LOCATIONS
 //
 
-var blueString = [{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
+var blueLine = [{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
 			{"id": 2, "Name": "Aquarium", "Lat": 42.359784, "Lng": -71.051652},
 			{"id": 3, "Name": "Beachmont", "Lat": 42.39754234, "Lng": -70.99231944},
 			{"id": 4, "Name": "Bowdoin", "Lat": 42.361365 , "Lng": -71.062037},
@@ -15,17 +15,14 @@ var blueString = [{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.0303
 			{"id": 11, "Name": "Wonderland" , "Lat": 42.41342, "Lng": -70.991648},
 			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}];
 
-console.log(blueString[1]["Name"]);
-
-var blueLine = JSON.parse(blueString);
 
 
-/*
+
 //
 // - - - ORANGE LINE LOCATIONS
 //
 
-var orangeString = '[{"id": 1, "Name": "Back Bay", "Lat": 42.34735, "Lng": -71.075727},
+var orangeLine = [{"id": 1, "Name": "Back Bay", "Lat": 42.34735, "Lng": -71.075727},
 			{"id": 2, "Name": "Chinatown", "Lat": 42.352547, "Lng": -71.062752},
 			{"id": 3, "Name": "Community College", "Lat": 42.373622, "Lng": -71.069533},
 			{"id": 4, "Name": "Downtown Crossing", "Lat": 42.355518, "Lng": -71.060225},
@@ -43,16 +40,16 @@ var orangeString = '[{"id": 1, "Name": "Back Bay", "Lat": 42.34735, "Lng": -71.0
 			{"id": 16, "Name": "Stony Brook", "Lat":42.317062, "Lng": -71.104248},
 			{"id": 17, "Name": "Sullivan", "Lat": 42.383975, "Lng": -71.076994},
 			{"id": 18, "Name": "Tufts Medical", "Lat": 42.349662, "Lng": -71.063917},
-			{"id": 19, "Name": "Wellington", "Lat": 42.40237 , "Lng": -71.077082}]';
+			{"id": 19, "Name": "Wellington", "Lat": 42.40237 , "Lng": -71.077082}];
 
-var orangeLine = JSON.parse(orangeString);
+
 
 
 //
 // - - - RED LINE LOCATIONS
 //
 
-var redString = '[{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.142483},
+var redLine = [{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.142483},
 			{"id": 2, "Name": "Andrew", "Lat": 42.330154, "Lng":-71.057655},
 			{"id": 3, "Name": "Ashmont", "Lat": 42.284652, "Lng":-71.064489},
 			{"id": 4, "Name": "Braintree", "Lat": 42.2078543, "Lng": -71.0011385},
@@ -73,11 +70,10 @@ var redString = '[{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.1424
 			{"id": 19, "Name": "Savin Hill", "Lat": 42.31129, "Lng": -71.053331},
 			{"id": 20, "Name": "Shawmut", "Lat": 42.29312583, "Lng": -71.06573796},
 			{"id": 21, "Name": "South Station", "Lat": 42.352271, "Lng": -71.055242},
-			{"id": 22, "Name": "Wollaston", "Lat": 42.2665139, "Lng":-71.0203369}]';
+			{"id": 22, "Name": "Wollaston", "Lat": 42.2665139, "Lng":-71.0203369}];
 
-var redLine = JSON.parse(redString);
-console.log(redLine);
-*/
+
+
 
 //
 // - - - DECLARING VARIABLES USED FOR MAP
@@ -159,7 +155,7 @@ function renderMap() {
 
 }
 
-/*
+
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
@@ -178,7 +174,7 @@ function createMarkers() {
 		}
 }
 
-*/
+
 
 
 /*
