@@ -178,9 +178,9 @@ function createMarkers() {
 
 function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
-		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
+		var station[i] = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		
-		var stationMark = new google.maps.Marker({
+		var stationMark[i] = new google.maps.Marker({
 			position: station,
 			icon: icon,
 			map: map
@@ -188,6 +188,12 @@ function genMarkers(length, colorLine, icon){
 	}
 
 }
+
+
+
+
+
+
 			
 		/*	// open an info window on click of marker
 			google.maps.event.addListener(redMarker, 'click', function() {
