@@ -116,7 +116,7 @@ function initialize() {
 	};
 }
 
-/*
+
 // use geolocation to get your GPS coordinates
 function getLocation() {
 	if (navigator.geolocation) {
@@ -155,7 +155,7 @@ function renderMap() {
 
 }
 
-
+/*
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
