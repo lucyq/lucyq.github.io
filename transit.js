@@ -180,7 +180,7 @@ function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
 		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		
-		var stationMark[i] = new google.maps.Marker({
+		var stationMark = new google.maps.Marker({
 			position: station,
 			icon: icon,
 			map: map
