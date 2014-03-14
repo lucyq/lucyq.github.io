@@ -15,6 +15,8 @@ var blueString = [{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.0303
 			{"id": 11, "Name": "Wonderland" , "Lat": 42.41342, "Lng": -70.991648},
 			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}];
 
+console.log(blueString[i]["Name"]);
+
 var blueLine = JSON.parse(blueString);
 
 
