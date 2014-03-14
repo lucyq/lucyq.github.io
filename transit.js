@@ -251,6 +251,3 @@ google.maps.event - An event listener for Google Maps
 */
 
 
-
-
-*/
