@@ -13,7 +13,7 @@ blueString = {{"id": 1, "Name": "Airport", "Lat": 42.374262, "Lng": -71.030395},
 			{"id": 9, "Name": "State Street", "Lat": 42.358978, "Lng": -71.057598},
 			{"id": 10, "Name": "Suffolk Downs", "Lat": 42.39050067, "Lng": -70.99712259},
 			{"id": 11, "Name": "Wonderland" , "Lat": 42.41342, "Lng": -70.991648},
-			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}}
+			{"id": 12, "Name": "Wood Island", "Lat": 42.3796403, "Lng": -71.02286539}};
 
 var blueLine = JSON.parse(blueString);
 
