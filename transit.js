@@ -160,7 +160,7 @@ function renderMap() {
 
 }
 
-
+/*
 function createMarkers() {
 	var line = data["line"];
 	if (line == "red") {
@@ -179,7 +179,7 @@ function createMarkers() {
 		}
 }
 
-
+*/
 
 
 /*
