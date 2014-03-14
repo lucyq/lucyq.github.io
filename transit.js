@@ -161,6 +161,14 @@ function createMarkers() {
 		length = blueLine.length;
 		genMarkers(length, blueLine);
 	}
+	if (line == "orange") {
+		length = orangeLine.length;
+		genMarkers(length, orangeLine);
+	} 
+	if (line == "red") {
+		length = redLine.length;
+		genMarkers(length, redLine);
+	}
 }
 
 
