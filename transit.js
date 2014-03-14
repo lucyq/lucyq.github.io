@@ -44,7 +44,7 @@ var orangeLine = [{"id": 1, "Name": "Back Bay", "Lat": 42.34735, "Lng": -71.0757
 
 
 
-/*
+
 //
 // - - - RED LINE LOCATIONS
 //
@@ -111,12 +111,12 @@ function initialize() {
 	request.onreadystatechange = function() {
 		if (request.readyState==4 && request.status==200) {
 			data = JSON.parse(request.responseText);
-			createMarkers();
+//			createMarkers();
 		}
 	};
 }
 
-
+/*
 // use geolocation to get your GPS coordinates
 function getLocation() {
 	if (navigator.geolocation) {
