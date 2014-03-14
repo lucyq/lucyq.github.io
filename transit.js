@@ -157,7 +157,7 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	var length;
-	var icon = new Image();
+
 	if (line == "blue") {
 		length = blueLine.length;
 		icon.src= 'blueMarker.png';
@@ -166,6 +166,8 @@ function createMarkers() {
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon.src = "orangeMarker.png";
+		icon.width = icon.width / 100;
+		icon.height = icon.height / 100;
 		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
@@ -179,8 +181,7 @@ function createMarkers() {
 function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
 		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
-		icon.width = icon.width / 100;
-		icon.height = icon.height / 100;
+		
 		var stationMark = new google.maps.Marker({
 			position: station,
 			icon: icon,
