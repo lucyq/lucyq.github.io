@@ -136,7 +136,7 @@ function renderMap() {
 	// update map and go there!
 	map.panTo(me);
 
-	var image = 'meMarker.jpg';
+	var image = 'meMarker.png';
 	// create a marker 
 	marker = new google.maps.Marker({
 		position: me,
@@ -160,17 +160,17 @@ function createMarkers() {
 	var icon;
 	if (line == "blue") {
 		length = blueLine.length;
-		icon = 'blueMarker.jpg';
+		icon = 'blueMarker.png';
 		genMarkers(length, blueLine, icon);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
-		icon = "orangeMarker.jpg";
+		icon = "orangeMarker.png";
 		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
 		length = redLine.length;
-		icon = "redMarker.jpg";
+		icon = "redMarker.png";
 		genMarkers(length, redLine, icon);
 	}
 }
