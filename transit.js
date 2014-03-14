@@ -20,7 +20,7 @@ console.log(blueString[i]["Name"]);
 var blueLine = JSON.parse(blueString);
 
 
-
+/*
 //
 // - - - ORANGE LINE LOCATIONS
 //
@@ -77,7 +77,7 @@ var redString = '[{"id": 1, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.1424
 
 var redLine = JSON.parse(redString);
 console.log(redLine);
-
+*/
 
 //
 // - - - DECLARING VARIABLES USED FOR MAP
