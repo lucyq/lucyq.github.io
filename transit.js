@@ -166,8 +166,6 @@ function createMarkers() {
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon.src = "orangeMarker.png";
-		icon.width = icon.width / 100;
-		icon.height = icon.height / 100;
 		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
