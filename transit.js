@@ -136,7 +136,7 @@ function renderMap() {
 	// update map and go there!
 	map.panTo(me);
 
-	var image = 'meMarker.png';
+	var image = 'meMarker.jpg';
 	// create a marker 
 	marker = new google.maps.Marker({
 		position: me,
@@ -157,26 +157,31 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	var length;
+	var icon;
 	if (line == "blue") {
 		length = blueLine.length;
-		genMarkers(length, blueLine);
+		icon = 'blueMarker.jpg';
+		genMarkers(length, blueLine, icon);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
-		genMarkers(length, orangeLine);
+		icon = "orangeMarker.jpg";
+		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
 		length = redLine.length;
-		genMarkers(length, redLine);
+		icon = "redMarker.jpg";
+		genMarkers(length, redLine, icon);
 	}
 }
 
 
-function genMarkers(length, colorLine){
+function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
 		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		var stationMark = new google.maps.Marker({
 			position: station,
+			icon: icon,
 			map: map
 		});
 	}
