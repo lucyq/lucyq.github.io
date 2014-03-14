@@ -157,20 +157,20 @@ function renderMap() {
 function createMarkers() {
 	var line = data["line"];
 	var length;
-	var icon;
+	var icon = new Image();
 	if (line == "blue") {
 		length = blueLine.length;
-		icon = 'blueMarker.png';
+		icon.src= 'blueMarker.png';
 		genMarkers(length, blueLine, icon);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
-		icon = "orangeMarker.png";
+		icon.src = "orangeMarker.png";
 		genMarkers(length, orangeLine, icon);
 	} 
 	if (line == "red") {
 		length = redLine.length;
-		icon = "redMarker.png";
+		icon.src = "redMarker.png";
 		genMarkers(length, redLine, icon);
 	}
 }
