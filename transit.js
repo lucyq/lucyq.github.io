@@ -205,41 +205,17 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
-		markers[i] = stationMark;
-	}
-
-	console.log(markers);
-	
-	stationWindow = new google.maps.InfoWindow();
+		stationWindow = new google.maps.InfoWindow();
 
 
-	for (var j = 0; j < markers.length; j++) {
-		google.maps.events.addListener(markers[i], 'click', function() {
-			stationWindow.setContent(markers[i].title);
+		google.maps.events.addListener(stationMark, 'click', function() {
+			stationWindow.setContent(stationMark.title);
 			stationWindow.open(map, this);
+
 		});
 
+
 	}
-
-
-
-
-/*
-		// create windows
-		markerInfo = new google.maps.InfoWindow(
-			{
-				content: stationMark.title
-			});
-
-		console.log(colorLine[i]["Name"]);
-
-
-		google.maps.event.addListener(stationMark, 'click', function() {
-    		markerInfo.open(map, this);
-		});
-	}
-	*/
-
 	
 	
 	// create polylines
