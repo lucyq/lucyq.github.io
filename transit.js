@@ -202,16 +202,19 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
+			title: color[i]["Name"];
 		});
 
 		// create windows
-		markerInfo = new google.maps.InfoWindow();
+		markerInfo = new google.maps.InfoWindow(
+			{
+				content: stationMark.title
+			});
 
 		console.log(colorLine[i]["Name"]);
 
 
 		google.maps.event.addListener(stationMark, 'click', function() {
-			markerInfo.setContent(colorLine[i]["Name"]);
     		markerInfo.open(map, this);
 		});
 	}
