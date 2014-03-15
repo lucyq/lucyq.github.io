@@ -243,7 +243,8 @@ function createTable(findStop) {
 	//	stops = endPoint["Predictions"][j];
 //	}
 	// TEST
-	console.log(findStop);
+
+console.log(endPoint)
 
 
 	for (var j = 0; j < endPoint.length; j++) {
@@ -257,6 +258,39 @@ function createTable(findStop) {
 	return seconds;
 
 }
+
+/*
+
+
+	var table = document.createElement("table");
+	var tBody = document.createElement("tbody");
+
+
+
+	for (var j = 0; j < SIZEEEEEE; j++) {
+		var row = document.createElement("tr");
+		for (var i = 0; j < ______; i++) {
+			var cell = document.createELement("td");
+			var cellText = document.createTextNode("cell is row "+j+", column "+i);
+
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+		}
+
+		// row added to end of table body
+		tblBody.appendChild(row);
+	}
+
+	// append the <tbody> inside <table> 
+	tbl.appendChild(tBody);
+
+	// put <table> in the <body>
+	body.appendChild(tbl);
+	tbl.setAttribute("border", "2");
+
+
+*/
+
 
 //
 // - - - FINDING DISTANCES
