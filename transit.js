@@ -187,7 +187,6 @@ function genMarkers(length, colorLine, icon){
 			icon: icon,
 			map: map
 		});
-
 	}
 	var flightPath = new google.maps.Polyline({
 		path: station,
@@ -196,7 +195,6 @@ function genMarkers(length, colorLine, icon){
 		strokeOpacity: 1.0,
 		strokeWeight:2
 	});
-
 
 }
 
