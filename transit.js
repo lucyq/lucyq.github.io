@@ -300,7 +300,7 @@ function manageDistances(length, colorLine) {
 	alert(index);
 
 
-	foundStation = "Closest T Station: " + colorLine[index]["Name"];
+	foundStation = "Closest T Station: ";
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
