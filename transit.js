@@ -280,7 +280,7 @@ function findInfo(findStop) {
 	}
 
 	var information;
-	information = [data["Destination"], foundSeconds];\
+	information = [data["Destination"], foundSeconds];
 	console.log(data["Destination"]);
 }
 //
