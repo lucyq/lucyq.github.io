@@ -212,9 +212,14 @@ function genMarkers(length, colorLine, icon, color){
 
 		var stationWindow = new google.maps.InfoWindow();
 
+		var infoDiv = document.createElement("div");
+		infoDiv.id = "infoDiv";
+		infoDiv.innerHTML = colorLine[i]["Name"];
+
+
 		google.maps.event.addListener(stationMark, 'click', (function(stationMark, i) {
 			return function() {
-				stationWindow.setContent(stationMark.title);
+				stationWindow.setContent(infoDiv);
 				stationWindow.open(map, this);
 			}
 		})(stationMark, i));
