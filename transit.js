@@ -224,17 +224,17 @@ function genMarkers(length, colorLine, icon, color){
 function manageDistances(length, colorLine) {
 	var distances = new Array();
 
+	var minD = 10000000.10;
+	var index = 0;
+
 	for (var i = 0; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
-									myLng, colorLine[i]["Lng"]);
-	}
-	console.log(distances);
-	var index = 0;
-	for (var j = 1; j < (distances.length-1); j++) {
-		if (distances[j] > distances[j+1]) {
-			index = j+1;
-			console.log(index); 		
+									myLng, colorLine[i]["Lng"]);]
+		if (distances[i] < minD) {
+			index = i;
 		}
+	}
+	console.log(index);
 
 //	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
 	console.log(colorLine[index]["Name"]);
