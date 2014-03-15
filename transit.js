@@ -234,6 +234,7 @@ function manageDistances(length, colorLine) {
 		if (distances[j+1] < foundDistance) {
 			foundDistance = (distances[j+1]);
 			index = j+1;
+			console.log(index);
 		}
 	}
 	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
