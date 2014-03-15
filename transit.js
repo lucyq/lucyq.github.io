@@ -332,7 +332,7 @@ function toRad(x) {
 }
 
 // convert km to miles
-function convertMiles(var distance) {
+function convertMiles(distance) {
 	distance = distance * 0.621371;
 	return distance;
 }
