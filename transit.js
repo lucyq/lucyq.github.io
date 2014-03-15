@@ -200,7 +200,7 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
-			title: color[i]["Name"];
+			title: color[i]["Name"]
 		});
 	}
 	// create polyline
