@@ -228,6 +228,25 @@ function genMarkers(length, colorLine, icon, color){
 
 }
 
+function createTable() {
+/*  Demo
+stop_of_interest = "Davis";
+*/
+// Go through each train destination
+	for (var i = 0; i < data["schedule"].length; i++) {
+		destination = data["schedule"][i];
+		stops = destination["Predictions"];
+	}
+	var s;
+	for (var j = 0; j < stops.length; j++) {
+		s = stops[j];
+		if (s == foundStation) {
+			console.log(s["Seconds"]);
+			console.log(destination["Destination"]);
+		}
+	}
+}
+
 //
 // - - - FINDING DISTANCES
 //
