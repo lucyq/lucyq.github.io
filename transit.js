@@ -204,7 +204,7 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
-		markerArray[i] = stationMark;
+	//	markerArray[i] = stationMark;
 	}
 
 	/*
@@ -238,14 +238,14 @@ function genMarkers(length, colorLine, icon, color){
 // Figures out the shortest distance and returns the closest station
 function manageDistances(length, colorLine) {
 	var distances = new Array();
-/*
+
 	var index = 0;
 	var i = 0;
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 								myLng, colorLine[i]["Lng"]);
 
 
-	for (var i = 1; i < length; i++) {
+	for (i = 1; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
 		if (distances[i] < distances[i-1]) {
@@ -256,7 +256,6 @@ function manageDistances(length, colorLine) {
 
 //	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
 	console.log(colorLine[index]["Name"]);
-	*/
 
 }
 
