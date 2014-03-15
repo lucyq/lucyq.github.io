@@ -221,10 +221,10 @@ function genMarkers(length, colorLine, icon, color){
 			var cellText = document.createTextNode(foundSeconds[j]);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
-			console.log(cell + " THIS WAS REACHED");
+	
 			console.log(foundSeconds[j]);
 		}
-//		chartbody.appendChild(row);
+		chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
@@ -242,7 +242,7 @@ function genMarkers(length, colorLine, icon, color){
 	}
 	
 	
-	// create polylines
+	// Create polylines
 	var flightPath = new google.maps.Polyline({
 		path: stationArray,
 		geodesic: true,
@@ -254,6 +254,7 @@ function genMarkers(length, colorLine, icon, color){
 
 }
 
+// CREATE A TABLE
 function createTable(findStop) {
 	var endPoint;
 	var stops;
@@ -299,9 +300,7 @@ function manageDistances(length, colorLine) {
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
-	Number.prototype.toRad = function() {
-		return this * Math.PI/180;
-	}
+	
 var R = 6371; // km
 var dLat = (lat2-lat1).toRad();
 var dLon = (lon2-lon1).toRad();
@@ -316,7 +315,9 @@ var d = R * c;
 return d;
 }
 
-
+function toRad(x) {
+   return x * Math.PI / 180;
+}
 
 
 
