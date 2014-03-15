@@ -235,7 +235,7 @@ function manageDistances(length, colorLine) {
 			index = j+1;
 		}
 	}
-	console.log(colorLines[i]["Name"]); 
+	console.log(colorLine[i]["Name"]); 
 
 }
 
