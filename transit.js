@@ -243,11 +243,12 @@ function createTable(findStop) {
 //	}
 	// TEST
 	console.log(findStop);
-	console.log(endPoint);
+
 
 	for (var j = 0; j < endPoint.length; j++) {
 		s = endPoint[j]["Stop"];
 		if (s == findStop) {
+			console.log(s);
 			console.log(endPoint[j]["Seconds"]);
 		}
 
