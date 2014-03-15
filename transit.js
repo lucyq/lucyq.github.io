@@ -227,13 +227,12 @@ function manageDistances(length, colorLine) {
 	for (var i = 0; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
-		console.log(distances[i]);
 	}
 	var foundDistance = distances[0];
 	var index = 0;
 	for (var j = 0; j < (distances.length-1); j++) {
-		if (distances[j+1] < foundStation) {
-			foundStation = (distances[j+1]);
+		if (distances[j+1] < foundDistance) {
+			foundDistance = (distances[j+1]);
 			index = j+1;
 		}
 	}
