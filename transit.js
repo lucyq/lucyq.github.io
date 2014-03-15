@@ -228,6 +228,7 @@ function manageDistances(length, colorLine) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
 	}
+	console.log(distances);
 	var minD = distances[0];
 	var index = 0;
 	for (var j = 1; j < (distances.length-1); j++) {
