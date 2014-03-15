@@ -237,6 +237,7 @@ function manageDistances(length, colorLine) {
 		}
 	}
 	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
+	console.log(colorLine[index]["Name"]);
 
 }
 
