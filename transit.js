@@ -211,12 +211,12 @@ function genMarkers(length, colorLine, icon, color){
 
 		var stationWindow = new google.maps.InfoWindow();
 
-		google.maps.event.addListener(stationMark, 'click', (function(contentString, i) {
+		google.maps.event.addListener(stationMark, 'click', (function(stationMark, i) {
 			return function() {
 				stationWindow.setContent(contentString);
 				stationWindow.open(map, this);
 			}
-		})(contentString, i));
+		})(stationMark, i));
 	}
 	
 	
