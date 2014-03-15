@@ -227,7 +227,7 @@ function genMarkers(length, colorLine, icon, color){
 			cell.appendChild(cellText);
 			row.appendChild(cell);
 		}
-		console.log(row);
+		console.log(cellText);
 
 		console.log("FOUND: " + foundSeconds);
 	//	chartbody.appendChild(row);
