@@ -119,7 +119,7 @@ function locationSetup() {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
 			});
-		
+
 			renderMap();
 			var request = new XMLHttpRequest();
 			request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
@@ -129,7 +129,7 @@ function locationSetup() {
 					data = JSON.parse(request.responseText);
 					manageLines();
 				}
-			});
+			}
 	} else {
 		alert("Geolocation is not supported by your browser. So sad!");
 	}
