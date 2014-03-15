@@ -289,7 +289,7 @@ function manageDistances(colorLine) {
 	}
 
 	for (var j = 0; j < (colorLine.length-1); j++) {
-		if (distances[i+1]) <= distances[i]){
+		if (distances[i+1] < distances[i]){
 			index = i+1;
 		}
 	}
