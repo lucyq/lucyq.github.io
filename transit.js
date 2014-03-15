@@ -113,8 +113,7 @@ function initialize() {
 	request.send();
 	request.onreadystatechange = function() {
 		if (request.readyState==4 && request.status==200) {
-			data = JSON.parse(request.responseText);
-			manageLines();
+			data = JSON.parse(request.responseText);	
 		}
 	};
 
@@ -129,6 +128,7 @@ function getLocation() {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
 			renderMap();
+			manageLines();
 		});
 	} else {
 		alert("Geolocation is not supported by your browser. So sad!");
