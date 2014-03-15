@@ -204,6 +204,7 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
+			title: colorLine[i]["Name"];
 		});
 
 		var contentString = colorLine[i]["Name"];
@@ -213,7 +214,7 @@ function genMarkers(length, colorLine, icon, color){
 
 		google.maps.event.addListener(stationMark, 'click', (function(stationMark, i) {
 			return function() {
-				stationWindow.setContent(contentString);
+				stationWindow.setContent(stationMark.title);
 				stationWindow.open(map, this);
 			}
 		})(stationMark, i));
@@ -239,26 +240,14 @@ function createTable(findStop) {
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i]["Predictions"];
 	}
-//	for (var j = 0; j < endPoint["Predictions"].length; j++) {
-	//	stops = endPoint["Predictions"][j];
-//	}
-	// TEST
-
-console.log(endPoint)
-
 
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
 			var seconds = endPoint[j]["Seconds"];
 		}
-
-
 	}
-		console.log(seconds);
 	return seconds;
-
-
 }
 
 /*
