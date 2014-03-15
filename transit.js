@@ -283,6 +283,7 @@ function manageDistances(length, colorLine) {
 
 	var i = 0;
 	var j = 0;
+	var a = new Array();
 
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
