@@ -223,9 +223,9 @@ function genMarkers(length, colorLine, icon, color){
 			console.log(cell);
 			console.log(foundSeconds[j]);
 		}
-	//	chartbody.appendChild(row);
-//		chart.appendChild(chartbody);
-//		chart.setAttribute("border", "2");
+		chartbody.appendChild(row);
+		chart.appendChild(chartbody);
+		chart.setAttribute("border", "2");
 		// add table to InfoWindow
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
