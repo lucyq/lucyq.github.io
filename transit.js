@@ -224,9 +224,9 @@ function genMarkers(length, colorLine, icon, color){
 			var cellText = document.createTextNode(foundSeconds[j]);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
-	
-			console.log(foundSeconds[j]);
 		}
+
+		console.log(foundSeconds);
 	//	chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
@@ -272,7 +272,6 @@ function findSeconds(findStop) {
 			var foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
-	alert(foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
