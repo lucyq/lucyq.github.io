@@ -294,10 +294,11 @@ function manageDistances(length, colorLine) {
 		if (distances[i] <= distances[i-1]) {
 			a[j] = i;
 			j++;
-			console.log(i);
 		}
 	}
 	var index = a[j-1];
+	alert(index);
+
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 }
