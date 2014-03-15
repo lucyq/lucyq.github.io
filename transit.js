@@ -309,7 +309,7 @@ function manageDistances(length, colorLine) {
 	convertedD = convertMiles(distances[index]);
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"] + 
-					". It is approximately " + convertedD + "miles away from you";
+					". It is approximately " + convertedD + " miles away from you";
 }
 // find the shortest distance between you and station
 function findDistance (lat1, lat2, lon1, lon2) {
