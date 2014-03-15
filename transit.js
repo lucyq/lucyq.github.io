@@ -119,6 +119,7 @@ function locationSetup() {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
 			});
+		
 			renderMap();
 			var request = new XMLHttpRequest();
 			request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
