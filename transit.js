@@ -259,7 +259,7 @@ function createTable(findStop) {
 		if (s == findStop) {
 			var seconds = endPoint[j]["Seconds"];
 			var row = document.createElement("tr");
-			var cell = document.createELement"td");
+			var cell = document.createELement("td");
 			var cellText = document.createTextNode (seconds);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
