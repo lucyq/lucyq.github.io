@@ -14,12 +14,7 @@ body {
 	height: 100%;
 }
 
-#stationWindow {
-    width: 150px;
-    height: 150px;
-}
-
-.gmap-popup {
-  max-width:204px;
-  max-height:110px;
+#infoDiv {
+	width: 100%;
+	height: 100%;
 }
