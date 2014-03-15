@@ -217,12 +217,12 @@ function genMarkers(length, colorLine, icon, color){
 		infoDiv.innerHTML = colorLine[i]["Name"];
 
 
-		google.maps.event.addListener(stationMark, 'click', (function(stationMark, i) {
+		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
 			return function() {
 				stationWindow.setContent(infoDiv);
 				stationWindow.open(map, this);
 			}
-		})(stationMark, i));
+		})(infoDiv, i));
 	}
 	
 	
