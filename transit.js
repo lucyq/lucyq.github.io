@@ -242,10 +242,10 @@ function manageDistances(length, colorLine) {
 function findDistance (lat1, lat2, lon1, lon2) {
 
 	var R = 6371; // km
-	var dLat = (lat2-lat1).toRad();
-	var dLon = (lon2-lon1).toRad();
-	var lat1 = lat1.toRad();
-	var lat2 = lat2.toRad();
+	var x1 = lat2-lat1;
+	var dLat = x1.toRad();
+	var x2 = lon2-lon1;
+	var dLon = x2.toRad();
 
 	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
     	    Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
