@@ -145,7 +145,7 @@ function renderMap() {
 		position: me,
 		icon: image,
 		map: map,
-		title: "HI, YOU FOUND ME!"
+		title: foundStation
 	});
 
 	// open an info window on click of marker
@@ -227,7 +227,7 @@ function manageDistances(length, colorLine) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
 	}
-	foundStation = distances[0];
+	var foundDistance = distances[0];
 	var index = 0;
 	for (var j = 0; j < (distances.length-1); j++) {
 		if (distances[j+1] < foundStation) {
@@ -235,7 +235,7 @@ function manageDistances(length, colorLine) {
 			index = j+1;
 		}
 	}
-	console.log(colorLine[index]["Name"]); 
+	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
 
 }
 
