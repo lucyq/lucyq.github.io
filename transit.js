@@ -199,7 +199,8 @@ function genMarkers(length, colorLine, icon, color){
 		var stationMark = new google.maps.Marker({
 			position: station,
 			icon: icon,
-			map: map
+			map: map,
+			title: color[i]["Name"];
 		});
 	}
 	// create polyline
