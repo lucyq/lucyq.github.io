@@ -240,11 +240,11 @@ function createTable(findStop) {
 		endPoint = data["schedule"][i];
 	}
 	for (var j = 0; j < endPoint.length; j++) {
-		stops = endPoint["Predictions"];
+		stops = endPoint["Predictions"][j];
 	}
 	
 console.log(endPoint);
-	var s;
+	/*var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
 		if (s == findStop) {
@@ -256,7 +256,7 @@ console.log(endPoint);
 
 	var table = document.createElement("table");
 	var tBody = document.createElement("tbody");
-
+*/
 
 	return colorLine[i]["Name"];
 /*
