@@ -281,7 +281,6 @@ function createTable(findStop) {
 function manageDistances(length, colorLine) {
 	var distances = new Array();
 
-	index = 0;
 	var i = 0;
 	var j = 0;
 
@@ -297,7 +296,7 @@ function manageDistances(length, colorLine) {
 			console.log(i);
 		}
 	}
-	alert(index);
+	var index = a[j-1];
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 }
