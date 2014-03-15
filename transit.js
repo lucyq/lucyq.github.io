@@ -233,18 +233,17 @@ function genMarkers(length, colorLine, icon, color){
 }
 
 function createTable(findStop) {
-	console.log(data["schedule"]);
 	var endPoint;
 	var stops;
 // Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i];
 		for (var k = 0; k < endPoint.length; k++) {
-			stops = endPoint["Predictions"][k];
+			stops = endPoint[k]["Predictions"];
 		}
 	}
 	
-
+console.log(stops);
 	var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
