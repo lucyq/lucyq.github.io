@@ -111,9 +111,10 @@ function initialize() {
 	request.onreadystatechange = function() {
 		if (request.readyState==4 && request.status==200) {
 			data = JSON.parse(request.responseText);
-			createMarkers();
+			manageLines();
 		}
 	};
+	manageDistances();
 }
 
 
@@ -155,8 +156,11 @@ function renderMap() {
 
 }
 
+//
+// - - - SETTING UP MARKERS
+//
 
-function createMarkers() {
+function manageLines() {
 	var line = data["line"];
 	var length;
 
@@ -206,7 +210,26 @@ function genMarkers(length, colorLine, icon, color){
 
 }
 
-function findDistance () {
+//
+// - - - FINDING DISTANCES
+//
+
+function manageDistances() {
+	var distances = new Array();
+
+	for (var i = 0; i < length; i++) {
+		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
+									myLng, colorLine[i]["Lng"]);
+	}
+	var foundStation = distances[0];
+	for (var j = 0; j < (distances.length-1); j++) {
+		if distances[j+1] < foundStation {
+			foundStation = distances[j+1];
+		}
+	}
+}
+
+function findDistance (lat1, lat2, lon1, lon2) {
 	Number.prototype.toRad = function() {
 		return this * Math.PI/180;
 	}
