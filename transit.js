@@ -297,6 +297,7 @@ function manageDistances(length, colorLine) {
 		}
 	}
 	var index = a[j-1];
+	console.log(a);
 	alert(index);
 
 
