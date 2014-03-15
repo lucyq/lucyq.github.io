@@ -220,6 +220,8 @@ function genMarkers(length, colorLine, icon, color){
 			var cellText = document.createTextNode(foundSeconds[j]);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
+			console.log(cell);
+			console.log(foundSeconds[j]);
 		}
 		chartbody.appendChild(row);
 		chart.appendChild(chartbody);
