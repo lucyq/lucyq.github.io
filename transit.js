@@ -198,7 +198,7 @@ function genMarkers(length, colorLine, icon, color){
 		geodesic: true,
 		strokeColor: color,
 		strokeOpacity: 1.0,
-		strokeWeight: 3,
+		strokeWeight: 10,
 		map: map
 	});
 
