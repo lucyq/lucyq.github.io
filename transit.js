@@ -281,7 +281,6 @@ function createTable(findStop) {
 function manageDistances(length, colorLine) {
 	var distances = new Array();
 
-alert("Length: " + length);
 	index = 0;
 	var i = 0;
 
@@ -293,6 +292,7 @@ alert("Length: " + length);
 									myLng, colorLine[i]["Lng"]);
 		if (distances[i] < distances[i-1]) {
 			index = i;
+			console.log(i);
 		}
 	}
 	alert(index);
