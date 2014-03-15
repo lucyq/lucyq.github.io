@@ -252,11 +252,13 @@ function createTable(findStop) {
 			console.log("Made ith ere!");
 		}
 	}
-
+/*
 	var table = document.createElement("table");
 	var tBody = document.createElement("tbody");
 
 	return colorLine[i]["Name"];
+
+	*/
 /*
 	for (var j = 0; j < SIZEEEEEE; j++) {
 		var row = document.createElement("tr");
