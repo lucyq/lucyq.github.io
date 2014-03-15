@@ -209,7 +209,7 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		}); 
 		// CREATE TABLE
-		var foundSeconds = createTable(findStop);
+		var foundSeconds = createTable(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
