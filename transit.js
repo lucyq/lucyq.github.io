@@ -282,21 +282,18 @@ function manageDistances(colorLine) {
 	var distances = new Array();
 
 	var index = 0;
-	var i = 0;
 
-	// TEST
-	console.log(myLat);
-	distances[i] = findDistance(myLat, colorLine[i]["Lat"],
-								myLng, colorLine[i]["Lng"]);
-
-	alert(distances);
-	for (i = 1; i < colorLine.length; i++) {
-		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
+	for (var i = 0; i < colorLine.length; i++) {
+		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
-		if (distances[i] < distances[i-1]) {
-			index = i;
+	}
+
+	for (var j = 0; j < (colorLine.length-1); j++) {
+		if (distances[i+1]) < distances[i]){
+			index = i+1;
 		}
 	}
+
 	console.log(distances);
 	alert(index);
 
