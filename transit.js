@@ -87,7 +87,7 @@ var marker; // user's marker
 var infowindow = new google.maps.InfoWindow();
 var data; // data from parsing the schedule
 var foundStation;
-var foundSeconds;
+var foundSeconds = new Array();
 
 
 //
