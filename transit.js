@@ -281,21 +281,23 @@ function createTable(findStop) {
 function manageDistances(colorLine) {
 	var distances = new Array();
 
-	var index = 0;
-
 	for (var i = 0; i < colorLine.length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
 	}
+
+	var minD = Math.min(distances);
+
+	alert(minD);
+
+
 
 	for (var j = 0; j < (colorLine.length-1); j++) {
 		if (distances[i+1] < distances[i]){
 			foundStation = colorLine[i]["Name"];
 		}
 	}
-
 	console.log(distances);
-	alert(foundStation);
 
 	foundStation = "Closest T Station: " + foundStation; 
 }
