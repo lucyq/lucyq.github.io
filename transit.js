@@ -206,11 +206,11 @@ function genMarkers(length, colorLine, icon, color){
 		});
 
 		// create windows
-		markerInfo = new google.maps.InfoWindow({
-			content: stationMark.title
-		});
+		markerInfo = new google.maps.InfoWindow();
+
 		google.maps.event.addListener(marker, 'click', function() {
-    	markerInfo.open(map, this);
+			markerInfo.setContent(stationMark.title);
+    		markerInfo.open(map, this);
 		});
 
 	}
