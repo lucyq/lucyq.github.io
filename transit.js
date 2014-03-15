@@ -272,6 +272,7 @@ function findSeconds(findStop) {
 			var foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
+	console.log(foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
