@@ -146,7 +146,7 @@ function renderMap() {
 		position: me,
 		icon: image,
 		map: map,
-		title: foundStation
+		title: "YOU FOUND ME!" + foundStation
 	});
 
 	// open an info window on click of marker
@@ -280,29 +280,6 @@ function findDistance (lat2, lat1, lon2, lon1) {
 
 
 
-
-
-			
-		/*	// open an info window on click of marker
-			google.maps.event.addListener(redMarker, 'click', function() {
-			infowindow.setContent(redMarker.title);
-			infowindow.open(map, redMarker);
-			});
-		*/
-
-/*
-
-function drawLine() {
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-	ctx.fillStyle = "#FF0000";
-	ctx.fillRect(0,0,150,75);
-}
-
-
-
-
-
 // DISPLAY INFO ON TRAINS COMING INTO STATION. 
 //WHen you click on a marker, you only want the trains coming 
 // and going into the station
@@ -311,8 +288,7 @@ function drawLine() {
 
 // NOTE: make sure you fix the error from JSON parsing.
 
-
-content 
+/*
 
 
 
@@ -342,16 +318,6 @@ for (i = 0; i < data["schedule"].length; i++) {
 
 
 
-
-
-
- NOTES
-google.maps.Map - The map object (duh!)
-google.maps.LatLng - An object that contains the latitude and longitude pair
-google.maps.Marker - A marker
-google.maps.InfoWindow - An info window
-google.maps.Polyline - A linear overlay
-google.maps.event - An event listener for Google Maps
 
 
 */
