@@ -211,15 +211,33 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		});
 
-		var contentString = colorLine[i]["Name"];
-		var table = createTable(contentString);
-		console.log(table);
 
+// CREATE TABLE
+		var foundSeconds = createTable(findStop);
 		var stationWindow = new google.maps.InfoWindow();
+
+		var chart = document.createElement("table");
+		var chartbody = document.createElement("tbody");
+
+
+		for (var j = 0; j < table.length; j++) {
+			var row = document.createElement("tr");
+			var cell = document.createElement("td");
+			var cellText = document.createTextNode(foundSeconds[j]);
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+		}
+		}
+		chartbody.appendChild(row);
+		chart.appendChild(chartbody);
+		chart.setAttribute("border", "2");
+
+
 
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
+		infoDiv.appendChild(table);
 
 
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
@@ -251,24 +269,14 @@ function createTable(findStop) {
 		endPoint = data["schedule"][i]["Predictions"];
 	}
 
-	var chart = document.createElement("table");
-	var chartbody = document.createElement("tbody");
-
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
 			var seconds = endPoint[j]["Seconds"];
-			var row = document.createElement("tr");
-			var cell = document.createELement("td");
-			var cellText = document.createTextNode (seconds);
-			cell.appendChild(cellText);
-			row.appendChild(cell);
 		}
 	}
-	chartbody.appendChild(row);
-	chart.appendChild(chartbody);
-	chart.setAttribute("border", "2");
-
+	return seconds;
+}
 //
 // - - - FINDING DISTANCES
 //
