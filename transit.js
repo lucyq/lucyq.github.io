@@ -213,7 +213,7 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		}); 
 		// CREATE TABLE
-		createTable(colorLine[i]["Name"]);
+		findSeconds(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
@@ -258,7 +258,7 @@ function genMarkers(length, colorLine, icon, color){
 }
 
 // CREATE A TABLE
-function createTable(findStop) {
+function findSeconds(findStop) {
 	var endPoint;
 	var stops;
 // Go through each train destination (endPoint)
@@ -272,6 +272,7 @@ function createTable(findStop) {
 			var foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
+	alert(foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
@@ -301,72 +302,27 @@ function manageDistances(length, colorLine) {
 	var index = a[j-2];
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
-	console.log(colorLine[index]["Name"]);
+
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
+	var R = 6371; // km
+	var dLat = toRad(lat2-lat1);
+	var dLon = toRad(lon2-lon1);
+	var lat1 = toRad(lat1);
+	var lat2 = toRad(lat2);
 
-var R = 6371; // km
-var dLat = toRad(lat2-lat1);
-var dLon = toRad(lon2-lon1);
-var lat1 = toRad(lat1);
-var lat2 = toRad(lat2);
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+    	    Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	var d = R * c;
 
-var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
-var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c;
-
-return d;
+	return d;
 }
 
 function toRad(x) {
    return x * Math.PI / 180;
 }
 
-
-
-
-// DISPLAY INFO ON TRAINS COMING INTO STATION. 
-//WHen you click on a marker, you only want the trains coming 
-// and going into the station
-
-// view-source:mbtamap.herokuapp.com
-
-// NOTE: make sure you fix the error from JSON parsing.
-
-/*
-
-
-
-
-// to print out a line:
-// console.log(data.line);
-
-//  Demo
-stop_of_interest = "Davis";
-
-
-// Step 1: go through each train destination
-for (i = 0; i < data["schedule"].length; i++) {
-	destination = data["schedule"][i];
-
-	// step 2: get list of stops 
-	stops = destination["Predictions"];
-	for (j = 0; j < stops.length; j++) {
-		s = stops[j];
-		if (s == stop_of_interest) {
-			console.log(s["Seconds"]);
-			console.log(destination["Destination"]);
-		}
-	}
-}
-
-
-
-
-
-
-*/
 
 
