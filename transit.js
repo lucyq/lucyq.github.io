@@ -106,30 +106,30 @@ var mapOptions = {
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	
-	locationSetup();
+	getLocation();
+
+	var request = new XMLHttpRequest();
+	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+	request.send();
+	request.onreadystatechange = function() {
+		if (request.readyState==4 && request.status==200) {
+			data = JSON.parse(request.responseText);
+			manageLines();
+		}
+	};
 
 
 }
 
 
 // use geolocation to get your GPS coordinates
-function locationSetup() {
+function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
-			});
-
 			renderMap();
-			var request = new XMLHttpRequest();
-			request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-			request.send();
-			request.onreadystatechange = function() {
-				if (request.readyState==4 && request.status==200) {
-					data = JSON.parse(request.responseText);
-					manageLines();
-				}
-			}
+		});
 	} else {
 		alert("Geolocation is not supported by your browser. So sad!");
 	}
