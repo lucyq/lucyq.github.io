@@ -244,7 +244,7 @@ function manageDistances(length, colorLine) {
 
 }
 
-function findDistance (lat1, lat2, lon1, lon2) {
+function findDistance (lat2, lat1, lon2, lon1) {
 	Number.prototype.toRad = function() {
 		return this * Math.PI/180;
 	}
