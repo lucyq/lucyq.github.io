@@ -243,7 +243,7 @@ function createTable(findStop) {
 	}
 	// TEST
 	console.log(findStop);
-	console.log(stops);
+	console.log(endPoint);
 
 	
 	for (var j = 0; j < stops.length; j++) {
