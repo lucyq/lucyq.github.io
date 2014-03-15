@@ -206,16 +206,14 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		});
 
-		/*
 		stationWindow = new google.maps.InfoWindow();
-
 
 		google.maps.events.addListener(stationMark, 'click', function() {
 			stationWindow.setContent(stationMark.title);
 			stationWindow.open(map, this);
 
 		});
-*/
+
 
 
 	}
