@@ -188,7 +188,8 @@ function genMarkers(length, colorLine, icon){
 			map: map
 		});
 
-		var flightPath = new google.maps.Polyline({
+	}
+	var flightPath = new google.maps.Polyline({
 		path: station,
 		geodesic: true,
 		strokeColor: '#FF0000',
@@ -196,7 +197,6 @@ function genMarkers(length, colorLine, icon){
 		strokeWeight:2
 	});
 
-	}
 
 }
 
