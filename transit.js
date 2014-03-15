@@ -238,7 +238,7 @@ function genMarkers(length, colorLine, icon, color){
 // Figures out the shortest distance and returns the closest station
 function manageDistances(length, colorLine) {
 	var distances = new Array();
-
+/*
 	var index = 0;
 	var i = 0;
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"],
@@ -256,6 +256,7 @@ function manageDistances(length, colorLine) {
 
 //	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
 	console.log(colorLine[index]["Name"]);
+	*/
 
 }
 
