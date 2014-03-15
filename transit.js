@@ -248,7 +248,7 @@ function createTable(findStop) {
 	for (var j = 0; j < endPoint.length; j++) {
 		s = endPoint[j]["Stop"];
 		if (s == findStop) {
-			console.log("REACHED");
+			console.log(endPoint[j]["Seconds"]);
 		}
 
 
