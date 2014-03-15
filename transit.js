@@ -205,8 +205,8 @@ function genMarkers(length, colorLine, icon, color){
 		var stationWindow = new google.maps.InfoWindow();
 		// open an info window on click of marker
 		google.maps.event.addListener(stationMark, 'click', function() {
-			infowindow.setContent(stationMark.title);
-			infowindow.open(map, stationMark);
+			stationWindow.setContent(stationMark.title);
+			stationWindow.open(map, stationMark);
 	});
 
 	
