@@ -191,6 +191,7 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array();
+	var markerArray = new Array();
 	for (var i = 0; i < length; i++) {
 		station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		stationArray[i] = station;
@@ -202,7 +203,18 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
+		markerArray[i] = stationMark;
 	}
+	for (var j = 0; j < markerArray.length; i++) {
+		var stationWindow = new google.maps.InfoWindow({
+			content: stationMark.title
+		});
+		google.maps.event.addListener(stationMark, 'click', function() {
+			infowindow.open(map,stationMark);
+		});
+	}
+
+
 	// create polyline
 	var flightPath = new google.maps.Polyline({
 		path: stationArray,
