@@ -76,7 +76,7 @@ var redLine = [{"id": 0, "Name": "Alewife", "Lat": 42.395428, "Lng": -71.142483}
 
 
 //
-// - - - DECLARING VARIABLES USED FOR MAP
+// - - - GLOBAL VARIABLES
 //
 
 var me; // user
@@ -86,6 +86,7 @@ var map; // the map
 var marker; // user's marker
 var infowindow = new google.maps.InfoWindow();
 var data; // data from parsing the schedule
+var foundStation;
 
 
 //
@@ -169,18 +170,21 @@ function manageLines() {
 		icon = 'blue.png';
 		color = '#0000FF';
 		genMarkers(length, blueLine, icon, color);
+		manageLines(length, blueLine);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon = "orange.png";
 		color = "#FFA500";
 		genMarkers(length, orangeLine, icon, color);
+		manageLines(length, orangeLine);
 	} 
 	if (line == "red") {
 		length = redLine.length;
 		icon = "red.png";
 		color = '#FF0000';
 		genMarkers(length, redLine, icon, color);
+		manageLines(length, redLine);
 	}
 }
 
@@ -214,19 +218,24 @@ function genMarkers(length, colorLine, icon, color){
 // - - - FINDING DISTANCES
 //
 
-function manageDistances() {
+// Called from manageLines
+// Figures out the shortest distance and returns the closest station
+function manageDistances(length, colorLine) {
 	var distances = new Array();
 
 	for (var i = 0; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
 	}
-	var foundStation = distances[0];
+	foundStation = distances[0];
+	var index = 0;
 	for (var j = 0; j < (distances.length-1); j++) {
 		if (distances[j+1] < foundStation) {
 			foundStation = distances[j+1];
+			index = j+1;
 		}
 	}
+	console.log(colorLine[index]["Name"]);
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
