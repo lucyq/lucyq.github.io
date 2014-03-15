@@ -214,7 +214,7 @@ function genMarkers(length, colorLine, icon, color){
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
 
-		for (var j = 0; j < table.length; j++) {
+		for (var j = 0; j < chart.length; j++) {
 			var row = document.createElement("tr");
 			var cell = document.createElement("td");
 			var cellText = document.createTextNode(foundSeconds[j]);
