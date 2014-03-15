@@ -202,10 +202,14 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
-			// open an info window on click of marker
+		var stationWindow = new google.maps.InfoWindow();
+		// open an info window on click of marker
 		google.maps.event.addListener(stationMark, 'click', function() {
 			infowindow.setContent(stationMark.title);
-		});
+			infowindow.open(map, stationMark);
+	});
+
+	
 	}
 	// create polyline
 	var flightPath = new google.maps.Polyline({
