@@ -240,7 +240,9 @@ function manageDistances(length, colorLine) {
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
-
+	Number.prototype.toRad = function() {
+		return this * Math.PI/180;
+	}
 	var R = 6371; // km
 	var x1 = lat2-lat1;
 	var dLat = x1.toRad();
@@ -254,9 +256,7 @@ function findDistance (lat1, lat2, lon1, lon2) {
 
 	alert(d);
 
-	Number.prototype.toRad = function() {
-		return this * Math.PI/180;
-	}
+	
 }
 
 
