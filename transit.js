@@ -290,16 +290,14 @@ function manageDistances(colorLine) {
 
 	for (var j = 0; j < (colorLine.length-1); j++) {
 		if (distances[i+1] < distances[i]){
-			index = i+1;
+			foundStation = colorLine[i]["Name"];
 		}
 	}
 
 	console.log(distances);
-	alert(index);
+	alert(foundStation);
 
-	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
-	console.log(colorLine[index]["Name"]);
-
+	foundStation = "Closest T Station: " + foundStation; 
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
