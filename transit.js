@@ -230,7 +230,7 @@ function genMarkers(length, colorLine, icon, color){
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
-		infoDiv.appendChild(table);
+		infoDiv.appendChild(chart);
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
 			return function() {
