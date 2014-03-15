@@ -210,7 +210,7 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		}); 
 		// CREATE TABLE
-		foundSeconds = createTable(colorLine[i]["Name"]);
+		createTable(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
@@ -224,7 +224,7 @@ function genMarkers(length, colorLine, icon, color){
 			console.log(cell);
 			console.log(foundSeconds[j]);
 		}
-		chartbody.appendChild(row);
+//		chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
