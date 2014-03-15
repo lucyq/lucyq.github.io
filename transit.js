@@ -177,21 +177,21 @@ function manageLines() {
 		icon = 'blue.png';
 		color = '#0000FF';
 		genMarkers(length, blueLine, icon, color);
-		manageDistances(length, blueLine);
+		manageDistances(blueLine);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon = "orange.png";
 		color = "#FFA500";
 		genMarkers(length, orangeLine, icon, color);
-		manageDistances(length, orangeLine);
+		manageDistances(orangeLine);
 	} 
 	if (line == "red") {
 		length = redLine.length;
 		icon = "red.png";
 		color = '#FF0000';
 		genMarkers(length, redLine, icon, color);
-		manageDistances(length, redLine);
+		manageDistances(redLine);
 	}
 }
 
@@ -278,7 +278,7 @@ function createTable(findStop) {
 
 // Called from manageLines
 // Figures out the shortest distance and returns the closest station
-function manageDistances(length, colorLine) {
+function manageDistances(colorLine) {
 	var distances = new Array();
 
 	var index = 0;
@@ -289,8 +289,8 @@ function manageDistances(length, colorLine) {
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 								myLng, colorLine[i]["Lng"]);
 
-
-	for (i = 1; i < length; i++) {
+	alert(distances);
+	for (i = 1; i < colorLine.length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);
 		if (distances[i] < distances[i-1]) {
