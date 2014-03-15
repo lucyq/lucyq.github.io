@@ -180,7 +180,7 @@ function createMarkers() {
 
 function genMarkers(length, colorLine, icon){
 	for (var i = 0; i < length; i++) {
-		var station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
+		stationArray[i] = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
 		
 		var stationMark = new google.maps.Marker({
 			position: station,
@@ -189,7 +189,7 @@ function genMarkers(length, colorLine, icon){
 		});
 	}
 	var flightPath = new google.maps.Polyline({
-		path: station,
+		path: stationArray,
 		geodesic: true,
 		strokeColor: '#FF0000',
 		strokeOpacity: 1.0,
