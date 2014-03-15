@@ -204,7 +204,7 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
-			title: colorLine[i]["Name"];
+			title: colorLine[i]["Name"]
 		});
 
 		var contentString = colorLine[i]["Name"];
