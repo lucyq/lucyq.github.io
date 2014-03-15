@@ -255,7 +255,7 @@ console.log(endPoint)
 
 
 	}
-		console.log(s);
+		console.log(seconds);
 	return seconds;
 
 
