@@ -231,11 +231,11 @@ function manageDistances(length, colorLine) {
 	var index = 0;
 	for (var j = 0; j < (distances.length-1); j++) {
 		if (distances[j+1] < foundStation) {
-			foundStation = distances[j+1];
+			foundStation = (distances[j+1]);
 			index = j+1;
 		}
 	}
-	console.log(colorLine[index]["Name"]);
+
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
