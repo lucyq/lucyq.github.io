@@ -205,14 +205,15 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
-			title: colorLine[i]["Name"]
 		});
 
-		stationWindow = new google.maps.InfoWindow();
+		var contentString = createTable();
+
+		var stationWindow = new google.maps.InfoWindow();
 
 		google.maps.event.addListener(stationMark, 'click', (function(stationMark, i) {
 			return function() {
-				stationWindow.setContent(stationMark.title);
+				stationWindow.setContent(contentString);
 				stationWindow.open(map, this);
 			}
 		})(stationMark, i));
@@ -238,7 +239,9 @@ function createTable(findStop) {
 // Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i];
-		stops = endPoint["Predictions"];
+		for (var k = 0; k < endPoint.length; k++) {
+			stops = endPoint["Predictions"][k];
+		}
 	}
 	
 
@@ -251,6 +254,36 @@ function createTable(findStop) {
 			console.log("Made ith ere!");
 		}
 	}
+
+	var table = document.createElement("table");
+	var tBody = document.createElement("tbody");
+
+
+	return colorLine[i]["Name"];
+/*
+	for (var j = 0; j < SIZEEEEEE; j++) {
+		var row = document.createElement("tr");
+		for (var i = 0; j < ______; i++) {
+			var cell = document.createELement("td");
+			var cellText = document.createTextNode("cell is row "+j+", column "+i);
+
+			cell.appendChild(cellText);
+			row.appendChild(cell);
+		}
+
+		// row added to end of table body
+		tblBody.appendChild(row);
+	}
+
+	// append the <tbody> inside <table> 
+	tbl.appendChild(tBody);
+
+	// put <table> in the <body>
+	body.appendChild(tbl);
+	tbl.setAttribute("border", "2");
+*/
+
+
 }
 
 //
