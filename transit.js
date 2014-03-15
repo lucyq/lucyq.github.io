@@ -250,7 +250,7 @@ console.log(endPoint)
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
-			var seconds = endpoint[j]["Seconds"];
+			var seconds = endPoint[j]["Seconds"];
 		}
 
 
