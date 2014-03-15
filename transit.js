@@ -206,7 +206,8 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 		});
 
-		var contentString = createTable(colorLine[i]["Name"]);
+		var contentString = colorLine[i]["Name"] + "\n" + 
+							createTable(colorLine[i]["Name"]);
 
 		var stationWindow = new google.maps.InfoWindow();
 
@@ -246,10 +247,9 @@ function createTable(findStop) {
 
 
 	for (var j = 0; j < endPoint.length; j++) {
-		s = endPoint[j]["Stop"];
+	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
-			console.log(s);
-
+			var seconds = endpoint[j]["Seconds"];
 		}
 
 
