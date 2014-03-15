@@ -191,7 +191,6 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
-	var markers = new Array();
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
@@ -208,14 +207,10 @@ function genMarkers(length, colorLine, icon, color){
 
 		stationWindow = new google.maps.InfoWindow();
 
-		google.maps.events.addListener(stationMark, 'click', function() {
+		google.maps.event.addListener(stationMark, 'click', function() {
 			stationWindow.setContent(stationMark.title);
 			stationWindow.open(map, this);
-
 		});
-
-
-
 	}
 	
 	
