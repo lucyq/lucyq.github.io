@@ -193,7 +193,6 @@ function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
 
 	// Create Tables for the Markers
-	createTable("Davis");
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
@@ -207,7 +206,7 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 		});
 
-		var contentString = createTable();
+		var contentString = createTable(colorLine[i]["Name"]);
 
 		var stationWindow = new google.maps.InfoWindow();
 
@@ -242,7 +241,10 @@ function createTable(findStop) {
 	for (var j = 0; j < endPoint["Predictions"].length; j++) {
 		stops = endPoint["Predictions"][j];
 	}
-	
+	// TEST
+	console.log(findStop);
+	console.log(stops);
+
 	
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
