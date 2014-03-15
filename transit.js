@@ -170,21 +170,21 @@ function manageLines() {
 		icon = 'blue.png';
 		color = '#0000FF';
 		genMarkers(length, blueLine, icon, color);
-		manageLines(length, blueLine);
+		manageDistances(length, blueLine);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon = "orange.png";
 		color = "#FFA500";
 		genMarkers(length, orangeLine, icon, color);
-		manageLines(length, orangeLine);
+		manageDistances(length, orangeLine);
 	} 
 	if (line == "red") {
 		length = redLine.length;
 		icon = "red.png";
 		color = '#FF0000';
 		genMarkers(length, redLine, icon, color);
-		manageLines(length, redLine);
+		manageDistances(length, redLine);
 	}
 }
 
@@ -235,6 +235,7 @@ function manageDistances(length, colorLine) {
 			index = j+1;
 		}
 	}
+	console.log(colorLines[i]["Name"]); 
 
 }
 
