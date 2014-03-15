@@ -254,42 +254,7 @@ function createTable(findStop) {
 
 
 	}
-/*
-		if (s == findStop) {
-			console.log(s["Seconds"]);
-			console.log(destination["Destination"]);
-			console.log("Made ith ere!");
-		}
-
-	var table = document.createElement("table");
-	var tBody = document.createElement("tbody");
-
-	return colorLine[i]["Name"];
-
-	*/
-/*
-	for (var j = 0; j < SIZEEEEEE; j++) {
-		var row = document.createElement("tr");
-		for (var i = 0; j < ______; i++) {
-			var cell = document.createELement("td");
-			var cellText = document.createTextNode("cell is row "+j+", column "+i);
-
-			cell.appendChild(cellText);
-			row.appendChild(cell);
-		}
-
-		// row added to end of table body
-		tblBody.appendChild(row);
-	}
-
-	// append the <tbody> inside <table> 
-	tbl.appendChild(tBody);
-
-	// put <table> in the <body>
-	body.appendChild(tbl);
-	tbl.setAttribute("border", "2");
-*/
-
+	return seconds;
 
 }
 
