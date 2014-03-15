@@ -227,9 +227,10 @@ function genMarkers(length, colorLine, icon, color){
 			cell.appendChild(cellText);
 			row.appendChild(cell);
 		}
+		console.log(row);
 
 		console.log("FOUND: " + foundSeconds);
-		chartbody.appendChild(row);
+	//	chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
