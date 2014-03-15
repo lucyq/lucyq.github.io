@@ -207,6 +207,9 @@ function genMarkers(length, colorLine, icon, color){
 		// create windows
 		markerInfo = new google.maps.InfoWindow();
 
+		console.log(colorLine[i]["Name"]);
+
+
 		google.maps.event.addListener(stationMark, 'click', function() {
 			markerInfo.setContent(colorLine[i]["Name"]);
     		markerInfo.open(map, this);
