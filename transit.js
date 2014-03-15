@@ -213,6 +213,7 @@ function genMarkers(length, colorLine, icon, color){
 
 		var contentString = colorLine[i]["Name"];
 		var table = createTable(contentString);
+		console.log(table);
 
 		var stationWindow = new google.maps.InfoWindow();
 
@@ -250,47 +251,26 @@ function createTable(findStop) {
 		endPoint = data["schedule"][i]["Predictions"];
 	}
 
+	var chart = document.createElement("table");
+	var chartbody = document.createElement("tbody");
+
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
 			var seconds = endPoint[j]["Seconds"];
-		}
-	}
-	return seconds;
-}
-
-/*
-
-
-	var table = document.createElement("table");
-	var tBody = document.createElement("tbody");
-
-
-
-	for (var j = 0; j < SIZEEEEEE; j++) {
-		var row = document.createElement("tr");
-		for (var i = 0; j < ______; i++) {
-			var cell = document.createELement("td");
-			var cellText = document.createTextNode("cell is row "+j+", column "+i);
-
+			var row = document.createElement("tr");
+			var cell = document.createELement"td");
+			var cellText = document.createTextNode (seconds);
 			cell.appendChild(cellText);
 			row.appendChild(cell);
 		}
-
-		// row added to end of table body
-		tblBody.appendChild(row);
 	}
-
-	// append the <tbody> inside <table> 
-	tbl.appendChild(tBody);
-
-	// put <table> in the <body>
-	body.appendChild(tbl);
-	tbl.setAttribute("border", "2");
+	chartbody.appendChild(row);
+	chart.appendChild(chartbody);
+	chart.setAttribute("border", "2");
 
 
 */
-
 
 //
 // - - - FINDING DISTANCES
