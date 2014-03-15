@@ -234,8 +234,7 @@ function manageDistances(length, colorLine) {
 	for (var j = 1; j < (distances.length-1); j++) {
 		if (minD > distances[j]) {
 			minD = distances[j];
-			index = j;
-			console.log(index);
+			console.log("Min D: " + minD + " distances j: " + distances[j]); 		
 		}
 	}
 	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
