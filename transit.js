@@ -290,6 +290,7 @@ function manageDistances(length, colorLine) {
 	var i = 0;
 	var j = 0;
 	var a = new Array();
+	var convertedD;
 
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
@@ -305,10 +306,12 @@ function manageDistances(length, colorLine) {
 	var index = a[j-2];
 	alert(distances[index]);
 
-	foundStation = "Closest T Station: " + colorLine[index]["Name"];
+	convertedD = convertMiles(distances[index]);
 
+	foundStation = "Closest T Station: " + colorLine[index]["Name"] + 
+					". It is approximately " + convertedD + "miles away from you";
 }
-
+// find the shortest distance between you and station
 function findDistance (lat1, lat2, lon1, lon2) {
 	var R = 6371; // km
 	var dLat = toRad(lat2-lat1);
@@ -323,10 +326,13 @@ function findDistance (lat1, lat2, lon1, lon2) {
 
 	return d;
 }
-
+// convert to radians
 function toRad(x) {
    return x * Math.PI / 180;
 }
 
-
-
+// convert km to miles
+function convertMiles(var distance) {
+	distance = distance * 0.621371;
+	return distance;
+}
