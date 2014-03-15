@@ -216,10 +216,10 @@ function genMarkers(length, colorLine, icon, color){
 		findInfo(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 
-/*
+
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
-
+/*
 		for (var j = 0; j < chart.length; j++) {
 			var row = document.createElement("tr");
 			var cell = document.createElement("td");
