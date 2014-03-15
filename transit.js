@@ -224,7 +224,7 @@ function genMarkers(length, colorLine, icon, color){
 	
 			console.log(foundSeconds[j]);
 		}
-		chartbody.appendChild(row);
+	//	chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
@@ -300,7 +300,7 @@ function manageDistances(length, colorLine) {
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
-	
+
 var R = 6371; // km
 var dLat = (lat2-lat1).toRad();
 var dLon = (lon2-lon1).toRad();
