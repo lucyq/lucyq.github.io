@@ -208,11 +208,10 @@ function genMarkers(length, colorLine, icon, color){
 		// create windows
 		markerInfo = new google.maps.InfoWindow();
 
-		google.maps.event.addListener(marker, 'click', function() {
+		google.maps.event.addListener(stationMark, 'click', function() {
 			markerInfo.setContent(stationMark.title);
     		markerInfo.open(map, this);
 		});
-
 	}
 
 	
