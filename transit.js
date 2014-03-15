@@ -299,11 +299,9 @@ function manageDistances(length, colorLine) {
 		}
 	}
 	var index = a[j-2];
-	console.log(a);
-	alert(index);
 
-
-	foundStation = "Closest T Station: ";
+	foundStation = "Closest T Station: " + colorLine[index]["Name"];
+	console.log(colorLine[index]["Name"]);
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
