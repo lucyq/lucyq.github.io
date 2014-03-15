@@ -249,7 +249,7 @@ function createTable(findStop) {
 		s = endPoint[j]["Stop"];
 		if (s == findStop) {
 			console.log(s);
-			console.log(endPoint[j]["Seconds"]);
+
 		}
 
 
