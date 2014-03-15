@@ -191,6 +191,7 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
+	var markers = new Array();
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
@@ -204,7 +205,25 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
+		markers[i] = stationMark;
+	}
 
+	stationWindow = new google.maps.InfoWindow();
+
+
+	for (var j = 0; j < markers.length; j++) {
+		var stationInfo = markers[i];
+		google.maps.events.addListener(stationInfo, 'click', function() {
+			stationWindow.setContent(markers[i].title);
+			stationWindow.open(map, this);
+		});
+
+	}
+
+
+
+
+/*
 		// create windows
 		markerInfo = new google.maps.InfoWindow(
 			{
@@ -218,6 +237,7 @@ function genMarkers(length, colorLine, icon, color){
     		markerInfo.open(map, this);
 		});
 	}
+	*/
 
 	
 	
