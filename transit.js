@@ -269,7 +269,7 @@ function findSeconds(findStop) {
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
-			var foundSeconds = endPoint[j]["Seconds"];
+			foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
 	console.log(foundSeconds);
