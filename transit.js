@@ -229,14 +229,13 @@ function manageDistances(length, colorLine) {
 									myLng, colorLine[i]["Lng"]);
 	}
 	console.log(distances);
-	var minD = distances[0];
 	var index = 0;
 	for (var j = 1; j < distances.length; j++) {
-		if (minD > distances[j]) {
-			minD = distances[j];
-			console.log("Min D: " + minD + " distances j: " + distances[j]); 		
+		if (distances[j] > distances[j+1]) {
+			index = j+1;
+			console.log(" distances j: " + distances[j] + "index: " + index); 		
 		}
-	}
+
 	foundStation = "Closest T Station: " + colorLine[index]["Name"]; 
 	console.log(colorLine[index]["Name"]);
 
