@@ -292,13 +292,12 @@ function manageDistances(length, colorLine) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
 		if (distances[i] <= distances[i-1]) {
-			index[j] = i;
+			a[j] = i;
 			j++;
 			console.log(i);
 		}
 	}
 	alert(index);
-	console.log(distances);
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 }
