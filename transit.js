@@ -218,6 +218,8 @@ function genMarkers(length, colorLine, icon, color){
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
 
+
+
 		for (var j = 0; j < chart.length; j++) {
 			var row = document.createElement("tr");
 			var cell = document.createElement("td");
@@ -268,7 +270,7 @@ function findSeconds(findStop) {
 
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
-		if (s == findStop) {
+		if (s == findStop && (endPoint[j]["Seconds"] != undefined)) {
 			foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
