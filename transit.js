@@ -278,7 +278,7 @@ function createTable(findStop) {
 
 // Called from manageLines
 // Figures out the shortest distance and returns the closest station
-function manageDistances(colorLine) {
+function manageDistances(length, colorLine) {
 	var distances = new Array();
 
 	index = 0;
