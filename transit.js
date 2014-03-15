@@ -87,6 +87,7 @@ var marker; // user's marker
 var infowindow = new google.maps.InfoWindow();
 var data; // data from parsing the schedule
 var foundStation;
+var foundSeconds;
 
 
 //
@@ -209,7 +210,7 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		}); 
 		// CREATE TABLE
-		var foundSeconds = createTable(colorLine[i]["Name"]);
+		foundSeconds = createTable(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
@@ -264,10 +265,9 @@ function createTable(findStop) {
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop) {
-			var seconds = endPoint[j]["Seconds"];
+			var foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
-	return seconds;
 }
 //
 // - - - FINDING DISTANCES
