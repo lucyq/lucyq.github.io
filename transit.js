@@ -239,8 +239,11 @@ function createTable(findStop) {
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i];
 	}
+	for (var j = 0; j < endPoint.length, j++) {
+		stops = endPoint["Predictions"];
+	}
 	
-console.log(endPoint);
+console.log(stops);
 	var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
