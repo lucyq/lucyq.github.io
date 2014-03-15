@@ -223,7 +223,7 @@ function manageDistances() {
 	}
 	var foundStation = distances[0];
 	for (var j = 0; j < (distances.length-1); j++) {
-		if distances[j+1] < foundStation {
+		if (distances[j+1] < foundStation) {
 			foundStation = distances[j+1];
 		}
 	}
