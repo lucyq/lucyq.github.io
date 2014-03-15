@@ -281,6 +281,9 @@ function manageDistances(length, colorLine) {
 
 	var index = 0;
 	var i = 0;
+
+	// TEST
+	console.log(myLat);
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 								myLng, colorLine[i]["Lng"]);
 
