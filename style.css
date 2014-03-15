@@ -18,3 +18,8 @@ body {
     width: 150px;
     height: 150px;
 }
+
+.gmap-popup {
+  max-width:204px;
+  max-height:110px;
+}
