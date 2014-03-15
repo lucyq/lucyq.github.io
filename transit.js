@@ -302,6 +302,7 @@ function manageDistances(length, colorLine) {
 		}
 	}
 	var index = a[j-2];
+	alert(distances[index]);
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 
