@@ -127,8 +127,9 @@ function getLocation() {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
-			renderMap();
 			manageLines();
+			renderMap();
+		
 		});
 	} else {
 		alert("Geolocation is not supported by your browser. So sad!");
@@ -278,6 +279,7 @@ function createTable(findStop) {
 
 // Called from manageLines
 // Figures out the shortest distance and returns the closest station
+// adds meMarker
 function manageDistances(length, colorLine) {
 	var distances = new Array();
 
