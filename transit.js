@@ -243,7 +243,7 @@ function createTable(findStop) {
 		stops = endPoint["Predictions"][j];
 	}
 	
-console.log(endPoint);
+console.log(stops);
 	/*var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
