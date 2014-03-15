@@ -202,13 +202,6 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
-		var stationWindow = new google.maps.InfoWindow();
-		// open an info window on click of marker
-		google.maps.event.addListener(stationMark, 'click', function() {
-			stationWindow.setContent(stationMark.title);
-	});
-
-	
 	}
 	// create polyline
 	var flightPath = new google.maps.Polyline({
