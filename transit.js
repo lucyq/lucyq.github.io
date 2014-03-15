@@ -107,7 +107,7 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	
 	getLocation();
-
+alert(myLat);
 	var request = new XMLHttpRequest();
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 	request.send();
@@ -128,7 +128,6 @@ function getLocation() {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
-			alert("TEST " + myLat);
 			renderMap();
 		});
 	} else {
