@@ -213,7 +213,7 @@ function genMarkers(length, colorLine, icon, color){
 			title: colorLine[i]["Name"]
 		}); 
 		// CREATE TABLE
-		findSeconds(colorLine[i]["Name"]);
+		findInfo(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
 
 /*
