@@ -208,12 +208,13 @@ function genMarkers(length, colorLine, icon, color){
 		markers[i] = stationMark;
 	}
 
+	console.log(markers);
+	
 	stationWindow = new google.maps.InfoWindow();
 
 
 	for (var j = 0; j < markers.length; j++) {
-		var stationInfo = markers[i];
-		google.maps.events.addListener(stationInfo, 'click', function() {
+		google.maps.events.addListener(markers[i], 'click', function() {
 			stationWindow.setContent(markers[i].title);
 			stationWindow.open(map, this);
 		});
