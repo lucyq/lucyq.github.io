@@ -296,6 +296,7 @@ alert("Length: " + length);
 		}
 	}
 	alert(index);
+	console.log(distances);
 
 	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 }
