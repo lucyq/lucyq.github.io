@@ -281,25 +281,19 @@ function createTable(findStop) {
 function manageDistances(colorLine) {
 	var distances = new Array();
 
-	for (var i = 0; i < colorLine.length; i++) {
+	index = 0;
+	var i = 0;
+	distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
+									myLng, colorLine[i]["Lng"]);
+
+	for (i = 1; i < colorLine.length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
-	}
-
-	var minD = Math.min(distances);
-
-	alert(minD);
-
-
-
-	for (var j = 0; j < (colorLine.length-1); j++) {
-		if (distances[i+1] < distances[i]){
-			foundStation = colorLine[i]["Name"];
+		if (distances[i] < distances[i-1]) {
+			index = i;
 		}
 	}
-	console.log(distances);
-
-	foundStation = "Closest T Station: " + foundStation; 
+	foundStation = "Closest T Station: " + colorLine[i]["Name"];
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
