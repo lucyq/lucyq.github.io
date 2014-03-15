@@ -145,7 +145,7 @@ function renderMap() {
 	marker = new google.maps.Marker({
 		position: me,
 		icon: image,
-		map: map,
+		map: map
 	});
 
 	var meDiv = document.createElement("div");
@@ -196,8 +196,6 @@ function manageLines() {
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
 
-	// Create Tables for the Markers
-
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
 		station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
@@ -209,16 +207,12 @@ function genMarkers(length, colorLine, icon, color){
 			icon: icon,
 			map: map,
 			title: colorLine[i]["Name"]
-		});
-
-
-// CREATE TABLE
+		}); 
+		// CREATE TABLE
 		var foundSeconds = createTable(findStop);
 		var stationWindow = new google.maps.InfoWindow();
-
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
-
 
 		for (var j = 0; j < table.length; j++) {
 			var row = document.createElement("tr");
@@ -227,19 +221,15 @@ function genMarkers(length, colorLine, icon, color){
 			cell.appendChild(cellText);
 			row.appendChild(cell);
 		}
-		}
 		chartbody.appendChild(row);
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
-
-
-
+		// add table to InfoWindow
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
 		infoDiv.appendChild(table);
-
-
+		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
 			return function() {
 				stationWindow.setContent(infoDiv);
