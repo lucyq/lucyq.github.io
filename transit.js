@@ -200,7 +200,7 @@ function genMarkers(length, colorLine, icon, color){
 			position: station,
 			icon: icon,
 			map: map,
-			title: color[i]["Name"]
+			title: colorLine[i]["Name"]
 		});
 			// open an info window on click of marker
 		google.maps.event.addListener(stationMark, 'click', function() {
