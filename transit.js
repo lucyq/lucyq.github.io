@@ -163,22 +163,25 @@ function createMarkers() {
 	if (line == "blue") {
 		length = blueLine.length;
 		icon = 'blue.png';
-		genMarkers(length, blueLine, icon);
+		color = '#0000FF';
+		genMarkers(length, blueLine, icon, color);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon = "orange.png";
-		genMarkers(length, orangeLine, icon);
+		color = "#FFA500";
+		genMarkers(length, orangeLine, icon, color);
 	} 
 	if (line == "red") {
 		length = redLine.length;
 		icon = "red.png";
-		genMarkers(length, redLine, icon);
+		color = '#FF0000';
+		genMarkers(length, redLine, icon, color);
 	}
 }
 
 
-function genMarkers(length, colorLine, icon){
+function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array();
 	for (var i = 0; i < length; i++) {
 		station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
@@ -193,7 +196,7 @@ function genMarkers(length, colorLine, icon){
 	var flightPath = new google.maps.Polyline({
 		path: stationArray,
 		geodesic: true,
-		strokeColor: '#FF0000',
+		strokeColor: color,
 		strokeOpacity: 1.0,
 		strokeWeight:2,
 		map: map
