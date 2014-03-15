@@ -229,6 +229,7 @@ function manageDistances(length, colorLine) {
 									myLng, colorLine[i]["Lng"]);
 	}
 	var foundDistance = distances[0];
+	console.log(distances[3]);
 	var index = 0;
 	for (var j = 0; j < (distances.length-1); j++) {
 		if (distances[j+1] < foundDistance) {
