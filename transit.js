@@ -247,6 +247,7 @@ function createTable(findStop) {
 		if (s == findStop) {
 			console.log(s["Seconds"]);
 			console.log(destination["Destination"]);
+			console.log("Made ith ere!");
 		}
 	}
 }
