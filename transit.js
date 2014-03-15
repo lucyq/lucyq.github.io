@@ -177,21 +177,21 @@ function manageLines() {
 		icon = 'blue.png';
 		color = '#0000FF';
 		genMarkers(length, blueLine, icon, color);
-		manageDistances(blueLine);
+		manageDistances(length, blueLine);
 	}
 	if (line == "orange") {
 		length = orangeLine.length;
 		icon = "orange.png";
 		color = "#FFA500";
 		genMarkers(length, orangeLine, icon, color);
-		manageDistances(orangeLine);
+		manageDistances(length, orangeLine);
 	} 
 	if (line == "red") {
 		length = redLine.length;
 		icon = "red.png";
 		color = '#FF0000';
 		genMarkers(length, redLine, icon, color);
-		manageDistances(redLine);
+		manageDistances(length, redLine);
 	}
 }
 
@@ -286,14 +286,14 @@ function manageDistances(colorLine) {
 	distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
 
-	for (i = 1; i < colorLine.length; i++) {
+	for (i = 1; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
 		if (distances[i] < distances[i-1]) {
 			index = i;
 		}
 	}
-	foundStation = "Closest T Station: " + colorLine[i]["Name"];
+	foundStation = "Closest T Station: " + colorLine[index]["Name"];
 }
 
 function findDistance (lat1, lat2, lon1, lon2) {
