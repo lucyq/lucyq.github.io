@@ -290,7 +290,7 @@ function manageDistances(length, colorLine) {
 	for (i = 1; i < length; i++) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"], 
 									myLng, colorLine[i]["Lng"]);
-		if (distances[i] < distances[i-1]) {
+		if (distances[i] > distances[i-1]) {
 			index = i;
 			console.log(i);
 		}
