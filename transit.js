@@ -205,6 +205,8 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 			title: colorLine[i]["Name"]
 		});
+
+		/*
 		stationWindow = new google.maps.InfoWindow();
 
 
@@ -213,6 +215,7 @@ function genMarkers(length, colorLine, icon, color){
 			stationWindow.open(map, this);
 
 		});
+*/
 
 
 	}
