@@ -231,6 +231,7 @@ function manageDistances(length, colorLine) {
 		distances[i] = findDistance(myLat, colorLine[i]["Lat"],
 									myLng, colorLine[i]["Lng"]);]
 		if (distances[i] < minD) {
+			minD = distances[i];
 			index = i;
 		}
 	}
