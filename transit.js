@@ -215,10 +215,10 @@ function genMarkers(length, colorLine, icon, color){
 		// CREATE TABLE
 		findSeconds(colorLine[i]["Name"]);
 		var stationWindow = new google.maps.InfoWindow();
+
+/*
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
-
-
 
 		for (var j = 0; j < chart.length; j++) {
 			var row = document.createElement("tr");
@@ -234,6 +234,8 @@ function genMarkers(length, colorLine, icon, color){
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
+*/
+
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
@@ -261,13 +263,14 @@ function genMarkers(length, colorLine, icon, color){
 }
 
 // CREATE A TABLE
-function findSeconds(findStop) {
+function findInfo(findStop) {
 	var endPoint;
 	var stops;
 // Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i]["Predictions"];
 	}
+	
 
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
@@ -275,7 +278,10 @@ function findSeconds(findStop) {
 			foundSeconds = endPoint[j]["Seconds"];
 		}
 	}
-	console.log("NEW ARRAY" + foundSeconds);
+
+	var information;
+	information = [data["Destination"], foundSeconds];\
+	console.log(data["Destination"]);
 }
 //
 // - - - FINDING DISTANCES
