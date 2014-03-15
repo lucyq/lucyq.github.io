@@ -206,8 +206,8 @@ function genMarkers(length, colorLine, icon, color){
 			map: map,
 		});
 
-		var contentString = colorLine[i]["Name"] + "\n" + 
-							createTable(colorLine[i]["Name"]);
+		var contentString = colorLine[i]["Name"]);
+		var table = createTable(contentString);
 
 		var stationWindow = new google.maps.InfoWindow();
 
@@ -255,7 +255,9 @@ console.log(endPoint)
 
 
 	}
+		console.log(seconds);
 	return seconds;
+
 
 }
 
