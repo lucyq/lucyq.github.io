@@ -146,12 +146,16 @@ function renderMap() {
 		position: me,
 		icon: image,
 		map: map,
-		title: foundStation
 	});
+
+	var meDiv = document.createElement("div");
+	meDiv.id = "meDiv";
+	meDiv.innerHTML = foundStation;
+
 
 	// open an info window on click of marker
 	google.maps.event.addListener(marker, 'click', function() {
-		infowindow.setContent(marker.title);
+		infowindow.setContent(meDiv);
 		infowindow.open(map, marker);
 	});
 
