@@ -115,7 +115,6 @@ function initialize() {
 			manageLines();
 		}
 	};
-	manageDistances();
 }
 
 
