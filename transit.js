@@ -232,7 +232,7 @@ function genMarkers(length, colorLine, icon, color){
 }
 
 function createTable(findStop) {
-	console.log("MADE ITHERE !");
+	console.log(data["schedule"]);
 	var endPoint;
 	var stops;
 // Go through each train destination (endPoint)
