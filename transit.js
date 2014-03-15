@@ -193,7 +193,7 @@ function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
 
 	// Create Tables for the Markers
-	createTable();
+	createTable("Davis");
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
@@ -231,19 +231,20 @@ function genMarkers(length, colorLine, icon, color){
 
 }
 
-function createTable() {
-/*  Demo
-stop_of_interest = "Davis";
-*/
-// Go through each train destination
+function createTable(findStop) {
+	var endPoint;
+	var stops;
+// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
-		destination = data["schedule"][i];
-		stops = destination["Predictions"];
+		endPoint = data["schedule"][i];
+		stops = endPoint["Predictions"];
 	}
+	
+
 	var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
-		if (s == foundStation) {
+		if (s == findStop) {
 			console.log(s["Seconds"]);
 			console.log(destination["Destination"]);
 		}
