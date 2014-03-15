@@ -238,12 +238,9 @@ function createTable(findStop) {
 // Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i];
-		for (var k = 0; k < endPoint.length; k++) {
-			stops = endPoint[k]["Predictions"];
-		}
 	}
 	
-console.log(stops);
+console.log(endPoint);
 	var s;
 	for (var j = 0; j < stops.length; j++) {
 		s = stops[j];
