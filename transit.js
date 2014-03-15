@@ -269,9 +269,6 @@ function createTable(findStop) {
 	chart.appendChild(chartbody);
 	chart.setAttribute("border", "2");
 
-
-*/
-
 //
 // - - - FINDING DISTANCES
 //
