@@ -281,7 +281,7 @@ console.log(endPoint);
 
 		red2[0] = stationArray[12];
 		var j = 18;
-		for (var i = 18; i < 22; i++) {
+		for (var i = 1; i < 5; i++) {
 			red2[i] = stationArray[j];
 			j++;
 		}
