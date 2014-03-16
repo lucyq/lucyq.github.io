@@ -226,7 +226,7 @@ function genMarkers(length, colorLine, icon, color){
 		infoList.innerHTML = colorLine[i]["Name"];
 
 		for (var j = 0; j < tableArray.length; j++) {
-			list = document.createElement("li");
+			list = document.createElement("ul");
 			list.innerHTML = "Direction: " + tableArray[j]["Direction"];
 			listItem = document.createElement("li");
 			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
