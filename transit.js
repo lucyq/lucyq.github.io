@@ -91,9 +91,11 @@ var foundSeconds = new Array();
 var NOTFOUND = -1000;
 var endPoint = new Array(); // destinations
 var predictions = new Array(); // predictions for each destination
-
+var tripID = new Array(); // trip ID's
+var tableArray = new Array();
 var stationArray = new Array(); // stores station locations
-			var infoDiv = document.createElement("div");
+// count 
+	var count = 0;
 
 
 //
@@ -226,9 +228,23 @@ function genMarkers(length, colorLine, icon, color){
 
 
 
-
+		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
+
+console.log(endPoint);
+
+		for (var j = 0; j < data["schedule"].length; j++) {
+
+				list = document.createElement("ul");
+				list.innerHTML = "Direction " + endPoint[j];
+				listItem = document.createElement("li");
+				listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
+				list.appendChild(listItem);
+				infoDiv.appendChild(list); 
+				console.log(foundSeconds);
+		}
+		
 
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
@@ -289,32 +305,27 @@ function createPolylines(color) {
 
 // CREATE A TABLE
 function findInfo(findStop) {
-	list = document.createElement("ul");
 
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint[i] = data["schedule"][i]["Destination"];
 		predictions = data["schedule"][i]["Predictions"];
-		list.innerHTML = "Direction " + endPoint[i];
-
+		tripID[i] = data["schedule"][i]["TripID"];
 	}
-
-
-	listItem = document.createElement("li");
-	
+	var count = 0;
 
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop ) {
 			foundSeconds = predictions[k]["Seconds"];
-			listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
+			tableArray[count] = foundSeconds;
+			count++;
 
 		} else {
 			foundSeconds = 0;
 		}
 	}
-	list.appendChild(listItem);
-	infoDiv.appendChild(list); 
+	console.log("FOUND TABLE: " + tableArray);
 }
 
 
