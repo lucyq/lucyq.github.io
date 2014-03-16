@@ -236,10 +236,8 @@ console.log(endPoint);
 			listItem = document.createElement("li");
 			listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
 			list.appendChild(listItem);
-			
-			}
-			infoDiv.appendChild(list);
 		}
+		infoDiv.appendChild(list);
 
 /*
 		var chart = document.createElement("table");
