@@ -307,8 +307,8 @@ function findInfo(findStop) {
 	console.log("Predictions: " + data["schedule"][0]["Predictions"][0]["Stop"]);
 	for (var j = 0; j < data["schedule"].length; j++) {
 		for (var k = 0; k < predictions.length; k++) {
-		//	console.log("S: " + s);
-		//	console.log("findstop: " + findStop);
+			console.log("S: " + s);
+			console.log("findstop: " + findStop);
 			var s = data["schedule"][j]["Predictions"][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = data["schedule"][j]["Predictions"][k]["Seconds"];
