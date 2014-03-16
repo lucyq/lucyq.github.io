@@ -318,7 +318,6 @@ function findInfo(findStop) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
-			console.log("FOUND SECONDS: " + foundSeconds);
 			tableArray[count] = foundSeconds;
 			count++;
 
@@ -326,7 +325,7 @@ function findInfo(findStop) {
 			foundSeconds = 0;
 		}
 	}
-	console.log(tableArray);
+	console.log("FOUND TABLE: " + tableArray);
 }
 
 
