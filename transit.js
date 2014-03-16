@@ -289,7 +289,7 @@ function findInfo(findStop) {
 		}
 	}
 
-	console.log(foundSeconds);
+	console.log("seconds " + foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
