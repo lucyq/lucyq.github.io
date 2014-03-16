@@ -303,6 +303,8 @@ function findInfo(findStop) {
 		}
 	}
 }
+console.log(endPoint);
+console.log(foundSeconds);
 
 //
 // - - - FINDING DISTANCES
