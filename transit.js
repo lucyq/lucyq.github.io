@@ -294,6 +294,7 @@ function findInfo(findStop) {
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint[i] = data["schedule"][i]["Destination"];
+		console.log(endPoint[i]);
 		predictions = data["schedule"][i]["Predictions"];
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
