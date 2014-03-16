@@ -278,9 +278,9 @@ function findInfo(findStop) {
 	console.log(tripID);
 	console.log(predictions);
 
-	for (var j = 0; j < endPoint.length; j++) {
+	for (var j = 0; j < predictions.length; j++) {
 	var	s = endPoint[j]["Stop"];
-		if (s == findStop && (endPoint[j]["Seconds"] != undefined)) {
+		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
 				predictions = NOTFOUND;
 			} else {
