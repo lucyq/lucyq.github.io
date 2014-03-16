@@ -339,7 +339,7 @@ function manageDistances(length, colorLine) {
 			j++;
 		}
 	}
-	if (j+1 == length) {
+	if (distances[i] === distances[length-1]) {
 		var index = a[j-1];
 	} else {
 		var index = a[j-2];
