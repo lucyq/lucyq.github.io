@@ -175,6 +175,7 @@ function renderMap() {
 // - - - SETTING UP MARKERS
 //
 
+// checks the line and then calls functions to generate markers and calculate distances
 function manageLines() {
 	var line = data["line"];
 	var length;
@@ -202,7 +203,7 @@ function manageLines() {
 	}
 }
 
-
+// Creates the individual markers depending on the line
 function genMarkers(length, colorLine, icon, color){
 	var list;
 	var listItem;
@@ -235,35 +236,13 @@ console.log(endPoint);
 			list = document.createElement("ul");
 			list.innerHTML = "Direction " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
-			listItem = document.createElement("li");
-			listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
-			list.appendChild(listItem);
-		}
+				listItem = document.createElement("li");
+				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
+				list.appendChild(listItem);
+			}
 		}
 		infoDiv.appendChild(list);
 
-/*
-		var chart = document.createElement("table");
-		var chartbody = document.createElement("tbody");
-
-		for (var j = 0; j < chart.length; j++) {
-			var row = document.createElement("tr");
-			var cell = document.createElement("td");
-			var cellText = document.createTextNode("Turkey");
-			cell.appendChild(cellText);
-			row.appendChild(cell);
-		}
-		console.log(cellText);
-
-		console.log("FOUND: " + foundSeconds);
-	//	chartbody.appendChild(row);
-		chart.appendChild(chartbody);
-		chart.setAttribute("border", "2");
-		// add table to InfoWindow
-
-
-		var infoDiv = document.createElement("div");
-	*/
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
 			return function() {
@@ -274,7 +253,8 @@ console.log(endPoint);
 	}
 	createPolylines(color);
 }
-
+// Create polylines
+// Manages red line
 function createPolylines(color) {
 	var line = data["line"];
 	if (line == "red") {
