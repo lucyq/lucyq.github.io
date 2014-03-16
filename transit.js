@@ -316,7 +316,7 @@ function findInfo(findStop) {
 			}
 		}
 	}
-	console.log("Table:" + tableArray[0]);
+	console.log("Table:" + tableArray[0] + " direction: " + tableArray[0]["Direction"]);
 }
 
 
