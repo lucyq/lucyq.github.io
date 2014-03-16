@@ -295,14 +295,12 @@ function findInfo(findStop) {
 	}
 	for (var j = 0; j < predictions.length; j++) {
 		var s = predictions[j]["Stop"];
-		console.log("Find Stop: " + s);
 		if (s == findStop && (predictions[j]["Stop"] != undefined)) {
 			foundSeconds[j] = NOTFOUND;
 		} else {
 			foundSeconds[j] = predictions[j]["Seconds"];
 		}
 	}
-	console.log("FOUND STOP @:" + foundSeconds);
 }
 
 //
