@@ -276,10 +276,20 @@ function findInfo(findStop) {
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
 	console.log(tripID);
-	console.log(predictions);
+	for (var j = 0; j < predictions.length; j++) {
+		for (var k = 0; k < predictions[j].length; k++) {
+			if (s == findStop && (predictions[j][k]["Stop"] != undefined)) {
+				foundSeconds[i] = NOTFOUND;
+			} else {
+				foundSeconds[i] = predictions[j][k]["Seconds"];
+			}
+		}
+	}
+}
+/*
 
 	for (var j = 0; j < predictions.length; j++) {
-	var	s = predictions[j]["Stop"];
+	var	s = data["schedule"][j][];
 	console.log("S: " + s);
 		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
@@ -289,7 +299,8 @@ function findInfo(findStop) {
 			}
 		}
 	}
-}
+	*/
+
 //
 // - - - FINDING DISTANCES
 //
