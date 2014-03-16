@@ -299,11 +299,8 @@ function findInfo(findStop) {
 	for (var j = 0; j < data["schedule"].length; j++) {
 		for (var k = 0; k < predictions.length; k++) {
 			var s = predictions[k]["Stop"];
-			if (s == findStop && (predictions[k]["Stop"] != undefined)) {
+			if (s == findStop) {
 				foundSeconds[k] = predictions[k]["Seconds"];
-			} else {
-				foundSeconds[k] = NOTFOUND;
-			}
 		}
 	}
 
