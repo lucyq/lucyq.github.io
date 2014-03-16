@@ -228,6 +228,7 @@ function genMarkers(length, colorLine, icon, color){
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
 
+console.log(endPoint);
 
 		for (var j = 0; j < data["schedule"].length; j++) {
 			list = document.createElement("ul");
@@ -294,7 +295,6 @@ function findInfo(findStop) {
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint[i] = data["schedule"][i]["Destination"];
-		console.log(endPoint[i]);
 		predictions = data["schedule"][i]["Predictions"];
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
