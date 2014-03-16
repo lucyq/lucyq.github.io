@@ -91,7 +91,6 @@ var foundSeconds = new Array();
 var NOTFOUND = -1000;
 var endPoint = new Array(); // destinations
 var predictions = new Array(); // predictions for each destination
-var tripID = new Array(); // trip ID's
 
 var stationArray = new Array(); // stores station locations
 			var infoDiv = document.createElement("div");
@@ -290,18 +289,17 @@ function createPolylines(color) {
 
 // CREATE A TABLE
 function findInfo(findStop) {
+	list = document.createElement("ul");
 
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint[i] = data["schedule"][i]["Destination"];
 		predictions = data["schedule"][i]["Predictions"];
-		tripID[i] = data["schedule"][i]["TripID"];
+		list.innerHTML = "Direction " + endPoint[i];
+
 	}
 
 
-
-	list = document.createElement("ul");
-	list.innerHTML = "Direction " + endPoint[j];
 	listItem = document.createElement("li");
 	
 
