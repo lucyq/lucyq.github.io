@@ -88,6 +88,7 @@ var infowindow = new google.maps.InfoWindow();
 var data; // data from parsing the schedule
 var foundStation;
 var foundSeconds = new Array();
+var NOTFOUND = -1000;
 
 
 //
@@ -277,7 +278,11 @@ function findInfo(findStop) {
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop && (endPoint[j]["Seconds"] != undefined)) {
-			foundSeconds = endPoint[j]["Seconds"];
+			if (endPoint[j]["Seconds"] == undefined) {
+				foundSeconds = NOTFOUND;
+			} else {
+				foundSeconds = endPoint[j]["Seconds"];
+			}
 		}
 	}
 
