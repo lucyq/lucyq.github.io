@@ -309,7 +309,8 @@ function findInfo(findStop) {
 		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
 			if ((foundSeconds > 0) && (foundSeconds!= undefined)) {
-			tableArray = {"Direction":endPoint[k], "Seconds": foundSeconds};
+			tableArray[count] = {"Direction":endPoint[k], "Seconds": foundSeconds};
+			count++;
 			} else {
 				foundSeconds = 0;
 			}
