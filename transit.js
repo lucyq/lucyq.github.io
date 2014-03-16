@@ -203,8 +203,8 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
-	var list;
-	var listItem;
+	var list = new Array();
+	var listItem = new Array();
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
