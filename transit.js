@@ -312,18 +312,21 @@ function findInfo(findStop) {
 		predictions = data["schedule"][i]["Predictions"];
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
-
+	var count = 0;
 
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
-			count = k;
 			console.log("FOUND SECONDS: " + foundSeconds);
+			tableArray[count] = foundSeconds;
+			count++;
+
 		} else {
 			foundSeconds = 0;
 		}
 	}
+	console.log(tableArray);
 }
 
 
