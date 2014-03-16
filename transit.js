@@ -241,10 +241,6 @@ console.log(endPoint);
 			infoDiv.appendChild(list);
 		}
 
-		
-	
-		console.log(list);
-
 /*
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
