@@ -297,14 +297,9 @@ function createPolylines(color) {
 // CREATE A TABLE
 function findInfo(findStop) {
 
-	// Go through each train destination (endPoint)
-	for (var i = 0; i < data["schedule"].length; i++) {
-		endPoint[i] = data["schedule"][i]["Destination"];
-	}
 	var count = 0;
-
-	console.log("Predictions: " + data["schedule"][0]["Predictions"][0]["Stop"]);
 	for (var j = 0; j < data["schedule"].length; j++) {
+		endPoint[j] = data["schedule"][j]["Destination"]
 		predictions[j] = data["schedule"][j]["Predictions"];
 		for (var k = 0; k < predictions.length; k++) {
 			console.log("S: " + s);
