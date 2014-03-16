@@ -277,6 +277,7 @@ function findInfo(findStop) {
 	}
 	for (var j = 0; j < predictions.length; j++) {
 		var s = predictions[j]["Stop"];
+		console.log("Prediction: " + s);
 		for (var k = 0; k < predictions[j].length; k++) {
 			if (s == findStop && (predictions[j][k]["Stop"] != undefined)) {
 				foundSeconds[i] = NOTFOUND;
