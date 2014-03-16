@@ -231,10 +231,15 @@ function genMarkers(length, colorLine, icon, color){
 			list.innerHTML = "Destination: " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
 				listItem = document.createElement("li");
-				listItem.innerHTML = "Arriving in: " + foundSeconds[k];
+				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 				list.appendChild(listItem);
 			}
 		}
+
+		infoDiv.id = "infoDiv";
+		infoDiv.innerHTML = colorLine[i]["Name"];
+		infoDiv.appendChild(list);
+
 		console.log(list);
 
 /*
@@ -258,9 +263,6 @@ function genMarkers(length, colorLine, icon, color){
 
 
 		var infoDiv = document.createElement("div");
-		infoDiv.id = "infoDiv";
-		infoDiv.innerHTML = colorLine[i]["Name"];
-		infoDiv.appendChild(chart);
 	*/
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
