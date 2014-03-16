@@ -305,10 +305,26 @@ function findInfo(findStop) {
 	var count = 0;
 
 	console.log("Predictions: " + data["schedule"][0]["Predictions"][0]["Stop"]);
+	for (var j = 0; j < data["schedule"].length; j++) {
+		for (var k = 0; k < predictions.length; k++) {
+		//	console.log("S: " + s);
+		//	console.log("findstop: " + findStop);
+			var s = data["schedule"][j]["Predictions"][k]["Stop"];
+			if (s == findStop) {
+				foundSeconds = data["schedule"][j]["Predictions"][k]["Seconds"];
+				tableArray[count] = {"Direction":data["schedule"][j]["Destination"], 
+									 "Seconds": foundSeconds};
+				count++;
+				// NOTE: do I need to check if it's undefined & > 0?
+			}
+		}
+	}
+
+
+/*
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
-		console.log("S: " + s);
-		console.log("findstop: " + findStop);
+
 		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
 			if ((foundSeconds > 0) && (foundSeconds!= undefined)) {
@@ -319,6 +335,8 @@ function findInfo(findStop) {
 			}
 		}
 	}
+
+	*/
 }
 
 
