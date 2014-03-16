@@ -351,7 +351,7 @@ function manageDistances(length, colorLine) {
 		}
 	}
 		var index = a[j-2];
-	}
+		
 		convertedD = convertMiles(distances[index]);
 	foundStation = "Closest T Station: " + colorLine[index]["Name"] + 
 					". It is approximately " + convertedD + " miles away from you";
