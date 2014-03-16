@@ -267,10 +267,6 @@ function findInfo(findStop) {
 	var endPoint;
 	var stops;
 
-
-
-
-
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i]["Predictions"];
@@ -287,7 +283,7 @@ function findInfo(findStop) {
 	var information;
 	information = [data["Destination"], foundSeconds];
 
-	console.log(endPoint);
+	console.log(information;
 }
 //
 // - - - FINDING DISTANCES
@@ -316,10 +312,7 @@ function manageDistances(length, colorLine) {
 		}
 	}
 	var index = a[j-2];
-	alert(distances[index]);
-
 	convertedD = convertMiles(distances[index]);
-
 	foundStation = "Closest T Station: " + colorLine[index]["Name"] + 
 					". It is approximately " + convertedD + " miles away from you";
 }
