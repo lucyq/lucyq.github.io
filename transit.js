@@ -319,6 +319,7 @@ function findInfo(findStop) {
 			if (s == findStop) {
 				foundSeconds = predictions[k]["Seconds"];
 				count = k;
+				console.log("FOUND SECONDS: " + k);
 			} else {
 				foundSeconds = 0;
 			}
@@ -327,7 +328,7 @@ function findInfo(findStop) {
 
 
 
-	console.log("FOUND SECONDS: " + k);
+	
 }
 
 
