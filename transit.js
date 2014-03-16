@@ -306,12 +306,13 @@ function findInfo(findStop) {
 
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
-		if (s == findStop ) {
-
+		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
+			if (foundSeconds > 0 && != undefined) {
 			tableArray = {"Direction":endPoint[k], "Seconds": foundSeconds};
-		} else {
-			foundSeconds = 0;
+			} else {
+				foundSeconds = 0;
+			}
 		}
 	}
 	console.log("Table:" + tableArray[0]);
