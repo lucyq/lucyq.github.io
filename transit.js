@@ -203,6 +203,8 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
+	var list;
+	var listItem;
 
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
@@ -221,9 +223,24 @@ function genMarkers(length, colorLine, icon, color){
 		var stationWindow = new google.maps.InfoWindow();
 
 
+
+		var infoDiv = document.createElement("div");
+
+		for (var j = 0; j < data["schedule"].length) {
+			list = document.createElement("ul");
+			list.innerHTML = endPoint[j];
+			for (var k = 0; k < predictions.length; k++) {
+				listItem = document.createElement("li");
+				listItem.innerHTML = foundSeconds[k];
+				list.appendChild(listItem);
+			}
+		}
+		console.log(list);
+
+/*
 		var chart = document.createElement("table");
 		var chartbody = document.createElement("tbody");
-/*
+
 		for (var j = 0; j < chart.length; j++) {
 			var row = document.createElement("tr");
 			var cell = document.createElement("td");
@@ -238,12 +255,13 @@ function genMarkers(length, colorLine, icon, color){
 		chart.appendChild(chartbody);
 		chart.setAttribute("border", "2");
 		// add table to InfoWindow
-*/
+
 
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
 		infoDiv.appendChild(chart);
+	*/
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
 			return function() {
@@ -282,25 +300,10 @@ function findInfo(findStop) {
 			foundSeconds[j] = NOTFOUND;
 		} else {
 			foundSeconds[j] = predictions[j]["Seconds"];
-			}
-		
+		}
 	}
 	console.log("FOUND STOP @:" + foundSeconds);
 }
-/*
-
-	for (var j = 0; j < predictions.length; j++) {
-	var	s = data["schedule"][j][];
-	console.log("S: " + s);
-		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
-			if (endPoint[j]["Seconds"] == undefined) {
-				foundSeconds[i] = NOTFOUND;
-			} else {
-				foundSeconds[i] = predictions[j]["Seconds"];
-			}
-		}
-	}
-	*/
 
 //
 // - - - FINDING DISTANCES
