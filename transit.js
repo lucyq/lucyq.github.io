@@ -308,7 +308,7 @@ function findInfo(findStop) {
 			}
 		}
 	}
-	sortList();
+	//sortList();
 }
 
 
