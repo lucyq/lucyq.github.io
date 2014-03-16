@@ -242,8 +242,9 @@ console.log(endPoint);
 				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 				list.appendChild(listItem);
 			}
-		}
 		infoDiv.appendChild(list);
+		}
+		
 
 		// create the actual infowindows
 		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
