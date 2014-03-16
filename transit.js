@@ -227,8 +227,6 @@ function genMarkers(length, colorLine, icon, color){
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
 
-console.log(endPoint);
-
 		for (var j = 0; j < data["schedule"].length; j++) {
 
 				list = document.createElement("ul");
