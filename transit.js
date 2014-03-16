@@ -225,21 +225,23 @@ function genMarkers(length, colorLine, icon, color){
 
 
 		var infoDiv = document.createElement("div");
+		infoDiv.id = "infoDiv";
+		infoDiv.innerHTML = colorLine[i]["Name"];
+
 
 		for (var j = 0; j < data["schedule"].length; j++) {
-			list[j]= document.createElement("ul");
+			list = document.createElement("ul");
 			list.innerHTML = "Destination: " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
 				listItem[k] = document.createElement("li");
 				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 				list.appendChild(listItem);
 			}
+			infoDiv.appendChild(list);
 		}
 
-		infoDiv.id = "infoDiv";
-		infoDiv.innerHTML = colorLine[i]["Name"];
-		infoDiv.appendChild(list);
-
+		
+	
 		console.log(list);
 
 /*
