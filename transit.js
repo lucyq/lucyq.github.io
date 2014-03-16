@@ -314,25 +314,8 @@ function findInfo(findStop) {
 				// NOTE: do I need to check if it's undefined & > 0?
 			}
 		}
-		console.log("Table: " + tableArray);
+		console.log("Table: " + tableArray[0]);
 	}
-
-/*
-	for (var k = 0; k < predictions.length; k++) {
-		var s = predictions[k]["Stop"];
-
-		if (s == findStop) {
-			foundSeconds = predictions[k]["Seconds"];
-			if ((foundSeconds > 0) && (foundSeconds!= undefined)) {
-			tableArray[count] = {"Direction":endPoint[k], "Seconds": foundSeconds};
-			count++;
-			} else {
-				foundSeconds = 0;
-			}
-		}
-	}
-
-	*/
 }
 
 
