@@ -279,7 +279,7 @@ function findInfo(findStop) {
 	console.log(predictions);
 
 	for (var j = 0; j < predictions.length; j++) {
-	var	s = endPoint[j]["Stop"];
+	var	s = predictions[j]["Stop"];
 		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
 				foundSeconds[i] = NOTFOUND;
