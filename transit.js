@@ -214,8 +214,7 @@ function genMarkers(length, colorLine, icon, color){
 		var stationMark = new google.maps.Marker({
 			position: station,
 			icon: icon,
-			map: map,
-			title: colorLine[i]["Name"]
+			map: map
 		}); 
 		// CREATE TABLE
 		findInfo(colorLine[i]["Name"]);
@@ -226,14 +225,13 @@ function genMarkers(length, colorLine, icon, color){
 		infoDiv.id = "infoDiv";
 		infoDiv.innerHTML = colorLine[i]["Name"];
 
-		for (var j = 0; j < data["schedule"].length; j++) {
-
-				list = document.createElement("ul");
-				list.innerHTML = "Direction: " + endPoint[j];
-				listItem = document.createElement("li");
-				listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
-				list.appendChild(listItem);
-				infoDiv.appendChild(list); 
+		for (var j = 0; j < tableArray.length; j++) {
+			list = document.createElement("ul");
+			list.innerHTML = "Direction: " + tableArray[j]["Direction"];
+			listItem = document.createElement("li");
+			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
+			list.appendChild(listItem);
+			infoDiv.appendChild(list); 
 		}
 		
 
