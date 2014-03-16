@@ -308,7 +308,7 @@ function findInfo(findStop) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop) {
 			foundSeconds = predictions[k]["Seconds"];
-			if (foundSeconds > 0 && != undefined) {
+			if ((foundSeconds > 0) && (foundSeconds!= undefined)) {
 			tableArray = {"Direction":endPoint[k], "Seconds": foundSeconds};
 			} else {
 				foundSeconds = 0;
