@@ -303,6 +303,7 @@ function findInfo(findStop) {
 				foundSeconds[k] = predictions[k]["Seconds"];
 		}
 	}
+	}
 
 	console.log(foundSeconds);
 }
