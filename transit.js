@@ -307,7 +307,7 @@ function findInfo(findStop) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop ) {
 			foundSeconds = predictions[k]["Seconds"];
-			listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
+			listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 
 		} else {
 			foundSeconds = 0;
