@@ -299,7 +299,6 @@ function findInfo(findStop) {
 	}
 	for (var j = 0; j < predictions.length; j++) {
 		var s = predictions[j]["Stop"];
-		alert(s);
 		if (s == findStop && (predictions[j]["Stop"] != undefined)) {
 			foundSeconds = NOTFOUND;
 		} else {
