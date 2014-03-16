@@ -285,7 +285,7 @@ function findInfo(findStop) {
 			}
 		}
 	}
-	console.log(foundSeconds);
+	console.log("FOUND" + foundSeconds);
 }
 /*
 
