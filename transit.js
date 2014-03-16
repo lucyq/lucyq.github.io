@@ -314,7 +314,8 @@ function findInfo(findStop) {
 			}
 		}
 	}
-
+console.log(endPoint);
+console.log(predictions);
 
 /*
 	for (var k = 0; k < predictions.length; k++) {
