@@ -228,10 +228,10 @@ function genMarkers(length, colorLine, icon, color){
 
 		for (var j = 0; j < data["schedule"].length; j++) {
 			list = document.createElement("ul");
-			list.innerHTML = endPoint[j];
+			list.innerHTML = "Destination: " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
 				listItem = document.createElement("li");
-				listItem.innerHTML = foundSeconds[k];
+				listItem.innerHTML = "Arriving in: " + foundSeconds[k];
 				list.appendChild(listItem);
 			}
 		}
