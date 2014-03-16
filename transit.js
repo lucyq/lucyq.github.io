@@ -93,6 +93,7 @@ var endPoint = new Array(); // destinations
 var predictions = new Array(); // predictions for each destination
 var tripID = new Array(); // trip ID's
 var tableArray = new Array();
+var stationArray = new Array(); // stores station locations
 
 
 //
@@ -203,7 +204,6 @@ function manageLines() {
 
 
 function genMarkers(length, colorLine, icon, color){
-	var stationArray = new Array(); // stores station locations
 	var list;
 	var listItem;
 
