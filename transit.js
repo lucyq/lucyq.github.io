@@ -109,8 +109,6 @@ var mapOptions = {
 // purpose: create a new map within "map_canvas"
 function initialize() {
 	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-	
-	getLocation();
 
 	var request = new XMLHttpRequest();
 	request.open("GET", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
