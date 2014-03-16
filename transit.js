@@ -266,7 +266,7 @@ function genMarkers(length, colorLine, icon, color){
 // CREATE A TABLE
 function findInfo(findStop) {
 	var endPoint = new Array();
-	var stops = new Array();
+	var predictions = new Array();
 	var tripID = new Array();
 
 	// Go through each train destination (endPoint)
