@@ -224,9 +224,8 @@ function genMarkers(length, colorLine, icon, color){
 		}); 
 		// CREATE TABLE
 		findInfo(colorLine[i]["Name"]);
+
 		var stationWindow = new google.maps.InfoWindow();
-
-
 
 		var infoDiv = document.createElement("div");
 		infoDiv.id = "infoDiv";
