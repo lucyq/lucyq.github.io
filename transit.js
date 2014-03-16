@@ -233,9 +233,11 @@ console.log(endPoint);
 		for (var j = 0; j < data["schedule"].length; j++) {
 			list = document.createElement("ul");
 			list.innerHTML = "Direction " + endPoint[j];
+			for (var k = 0; k < predictions.length; k++) {
 			listItem = document.createElement("li");
 			listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
 			list.appendChild(listItem);
+		}
 		}
 		infoDiv.appendChild(list);
 
@@ -295,9 +297,9 @@ function findInfo(findStop) {
 	for (var j = 0; j < predictions.length; j++) {
 		var s = predictions[j]["Stop"];
 		if (s == findStop && (predictions[j]["Stop"] != undefined)) {
-			foundSeconds[j] = NOTFOUND;
-		} else {
 			foundSeconds[j] = predictions[j]["Seconds"];
+		} else {
+			foundSeconds[j] = NOTFOUND;
 		}
 	}
 }
