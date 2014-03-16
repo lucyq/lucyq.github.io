@@ -302,7 +302,7 @@ function findInfo(findStop) {
 		endPoint[j] = data["schedule"][j]["Destination"]
 		predictions[j] = data["schedule"][j]["Predictions"];
 
-	console.log(predictions[j]);
+//	console.log(predictions[j]);
 
 		for (var k = 0; k < predictions[j].length; k++) {
 			console.log("S: " + s);
