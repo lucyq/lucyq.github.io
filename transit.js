@@ -117,6 +117,7 @@ function initialize() {
 	request.send();
 	request.onreadystatechange = function() {
 		if (request.readyState==4 && request.status==200) {
+			getLocation();
 			data = JSON.parse(request.responseText);	
 		}
 	};
