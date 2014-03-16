@@ -224,7 +224,7 @@ function genMarkers(length, colorLine, icon, color){
 			list = document.createElement("ul");
 			list.innerHTML = "Direction: " + tableArray[j]["Direction"];
 			listItem = document.createElement("li");
-			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
+			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " minutes";
 			list.appendChild(listItem);
 			infoList.appendChild(list); 
 		}
