@@ -301,6 +301,10 @@ function findInfo(findStop) {
 	for (var j = 0; j < data["schedule"].length; j++) {
 		endPoint[j] = data["schedule"][j]["Destination"]
 		predictions[j] = data["schedule"][j]["Predictions"];
+
+	console.log(endPoint[j]);
+	console.log(predictions[j]);
+
 		for (var k = 0; k < predictions.length; k++) {
 			console.log("S: " + s);
 			console.log("findstop: " + findStop);
@@ -314,8 +318,6 @@ function findInfo(findStop) {
 			}
 		}
 	}
-console.log(endPoint);
-console.log(predictions);
 
 /*
 	for (var k = 0; k < predictions.length; k++) {
