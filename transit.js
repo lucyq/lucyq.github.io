@@ -226,7 +226,7 @@ function genMarkers(length, colorLine, icon, color){
 		infoList.innerHTML = colorLine[i]["Name"];
 
 		for (var j = 0; j < tableArray.length; j++) {
-			list = document.createElement("ul");
+			list = document.createElement("li");
 			list.innerHTML = "Direction: " + tableArray[j]["Direction"];
 			listItem = document.createElement("li");
 			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
@@ -310,7 +310,6 @@ function findInfo(findStop) {
 			}
 		}
 	}
-console.log("Table: " + tableArray[0]["Direction"] + " " + tableArray[0]["Seconds"]);
 }
 
 
