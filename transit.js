@@ -314,7 +314,7 @@ function findInfo(findStop) {
 			foundSeconds = 0;
 		}
 	}
-	console.log("Table:" + tableArray);
+	console.log("Table:" + tableArray[0]);
 }
 
 
