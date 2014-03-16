@@ -318,6 +318,8 @@ function findInfo(findStop) {
 		}
 	}
 	}
+
+	console.log("FOUND SECONDS: " + foundSeconds);
 }
 
 
