@@ -313,15 +313,14 @@ function findInfo(findStop) {
 	}
 
 
-	for (var j = 0; j < data["schedule"].length; j++) {
-		for (var k = 0; k < predictions.length; k++) {
-			var s = predictions[k]["Stop"];
-			if (s == findStop) {
-				foundSeconds = predictions[k]["Seconds"];
-				count = k;
-				console.log("FOUND SECONDS: " + k);
-			} else {
-				foundSeconds = 0;
+	for (var k = 0; k < predictions.length; k++) {
+		var s = predictions[k]["Stop"];
+		if (s == findStop) {
+			foundSeconds = predictions[k]["Seconds"];
+			count = k;
+			console.log("FOUND SECONDS: " + k);
+		} else {
+			foundSeconds = 0;
 			}
 		}
 	}
