@@ -272,13 +272,7 @@ console.log(endPoint);
 			}
 		})(infoDiv, i));
 	}
-	
-	createPolylines();
 
-
-}
-
-function createPolylines() {
 	if (line == "red") {
 		red1 = new Array();
 		red2 = new Array();
