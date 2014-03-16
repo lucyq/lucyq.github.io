@@ -303,9 +303,8 @@ function findInfo(findStop) {
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = predictions[j][k]["Seconds"];
-				(new Date).clearTime()
-          				.addSeconds(foundSeconds)
-         				 .toString('H:mm:ss');
+				minSecs = Math.floor(secVar/60);
+				foundSeconds = foundSeconds % 60;            
 				tableArray[count] = {"Direction": endPoint[j], 
 									 "Seconds": foundSeconds};
 				count++;
