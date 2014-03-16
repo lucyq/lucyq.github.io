@@ -235,7 +235,7 @@ console.log(endPoint);
 			list.innerHTML = "Direction " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
 			listItem = document.createElement("li");
-			listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
+			listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 			list.appendChild(listItem);
 		}
 		}
