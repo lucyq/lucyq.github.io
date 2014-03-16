@@ -309,19 +309,24 @@ function findInfo(findStop) {
 		predictions = data["schedule"][i]["Predictions"];
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
+	var count = 0;
 
 	for (var j = 0; j < data["schedule"].length; j++) {
 		for (var k = 0; k < predictions.length; k++) {
 			var s = predictions[k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = predictions[k]["Seconds"];
+				tableArray[count] = {endPoint[k]:foundSeconds};
+				count++;
 			} else {
 				foundSeconds = 0;
 			}
 		}
 	}
 
-	console.log("FOUND SECONDS: " + foundSeconds);
+
+
+	console.log("FOUND SECONDS: " + tableArray);
 }
 
 
