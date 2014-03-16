@@ -232,7 +232,7 @@ console.log(endPoint);
 
 		for (var j = 0; j < data["schedule"].length; j++) {
 			list = document.createElement("ul");
-			list.innerHTML = "Destination: " + endPoint[j];
+			list.innerHTML = "Direction " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
 				listItem = document.createElement("li");
 				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
