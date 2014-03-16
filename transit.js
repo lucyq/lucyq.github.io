@@ -224,7 +224,7 @@ function genMarkers(length, colorLine, icon, color){
 			list = document.createElement("ul");
 			list.innerHTML = "Direction: " + tableArray[j]["Direction"];
 			listItem = document.createElement("li");
-			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
+			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " minutes";
 			list.appendChild(listItem);
 			infoList.appendChild(list); 
 		}
@@ -299,9 +299,8 @@ function findInfo(findStop) {
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = predictions[j][k]["Seconds"];
-			/*	minSecs = Math.floor(foundSeconds/60);
-				foundSeconds = foundSeconds % 60;     
-				*/       
+				minSecs = Math.floor(foundSeconds/60);
+				foundSeconds = foundSeconds % 60;          
 				tableArray[count] = {"Direction": endPoint[j], 
 									 "Seconds": foundSeconds};
 				count++;
