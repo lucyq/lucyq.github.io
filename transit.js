@@ -267,21 +267,24 @@ function genMarkers(length, colorLine, icon, color){
 function findInfo(findStop) {
 	var endPoint;
 	var stops;
+	var tripID;
 
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
-		endPoint = data["schedule"][i]["Predictions"];
-		dest = data["schedule"][i]["Destination"];
+		endPoint = data["schedule"][i]["Destination"];
+		predictions = data["schedule"][i]["Predictions"];
+		tripID = data["schedule"][i]["TripID"];
 	}
-	
+	console.log(tripID);
+	console.log(predictions);
 
 	for (var j = 0; j < endPoint.length; j++) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop && (endPoint[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
-				foundSeconds = NOTFOUND;
+				predictions = NOTFOUND;
 			} else {
-				foundSeconds = endPoint[j]["Seconds"];
+				predictions = endPoint[j]["Seconds"];
 			}
 		}
 	}
