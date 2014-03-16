@@ -308,7 +308,6 @@ function findInfo(findStop) {
 			}
 		}
 	}
-	sortList();
 }
 
 
@@ -339,7 +338,7 @@ function manageDistances(length, colorLine) {
 			j++;
 		}
 	}
-	
+
 	var index = a[j-2];
 	convertedD = convertMiles(distances[index]);
 	foundStation = "Closest T Station: " + colorLine[index]["Name"] + 
