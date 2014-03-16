@@ -272,10 +272,7 @@ console.log(endPoint);
 			}
 		})(infoDiv, i));
 	}
-	createPolyline(color);
-}
 
-function createPolyline(color) {
 
 	var line = data["line"];
 	if (line == "red") {
