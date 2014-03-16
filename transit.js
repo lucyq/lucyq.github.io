@@ -308,6 +308,10 @@ function findInfo(findStop) {
 
 					}
 				}
+			}
+		}
+	}
+}
 /*
 				foundSeconds = predictions[j][k]["Seconds"];
 				minSecs = Math.floor(foundSeconds/60);
@@ -317,12 +321,7 @@ function findInfo(findStop) {
 									 "Seconds": foundSeconds};
 				count++;
 */
-			}
-		}
-	}
-	//sortList();
-}
-
+	
 
 
 //
