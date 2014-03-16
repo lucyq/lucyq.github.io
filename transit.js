@@ -287,7 +287,7 @@ function findInfo(findStop) {
 	var information;
 	information = [data["Destination"], foundSeconds];
 
-	console.log(endPoint);
+	console.log(data["schedule"][0]["Destination"]);
 }
 //
 // - - - FINDING DISTANCES
