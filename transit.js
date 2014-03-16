@@ -229,7 +229,7 @@ function genMarkers(length, colorLine, icon, color){
 		for (var j = 0; j < data["schedule"].length; j++) {
 
 				list = document.createElement("ul");
-				list.innerHTML = "Direction " + endPoint[j];
+				list.innerHTML = "Direction: " + endPoint[j];
 				listItem = document.createElement("li");
 				listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
 				list.appendChild(listItem);
@@ -307,11 +307,14 @@ function findInfo(findStop) {
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop ) {
+
 			foundSeconds = predictions[k]["Seconds"];
+			tableArray = {"Direction":endPoint[k], "Seconds": foundSeconds};
 		} else {
 			foundSeconds = 0;
 		}
 	}
+	console.log("Table:" + tableArray);
 }
 
 
