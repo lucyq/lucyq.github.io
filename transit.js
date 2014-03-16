@@ -339,8 +339,6 @@ function findInfo(findStop) {
 		}
 	}
 	}
-
-	console.log(colorLIne,);
 }
 
 
