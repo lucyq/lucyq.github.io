@@ -272,7 +272,12 @@ console.log(endPoint);
 			}
 		})(infoDiv, i));
 	}
+	createPolyline(color);
+}
 
+function createPolyline(color) {
+
+	var line = data["line"];
 	if (line == "red") {
 		red1 = new Array();
 		red2 = new Array();
@@ -335,7 +340,7 @@ function findInfo(findStop) {
 	}
 	}
 
-	console.log(foundSeconds);
+	console.log(colorLIne,);
 }
 
 
