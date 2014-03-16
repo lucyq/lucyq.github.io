@@ -91,12 +91,8 @@ var foundSeconds = new Array();
 var NOTFOUND = -1000;
 var endPoint = new Array(); // destinations
 var predictions = new Array(); // predictions for each destination
-var tripID = new Array(); // trip ID's
 var tableArray = new Array();
 var stationArray = new Array(); // stores station locations
-// count 
-	var count = 0;
-
 
 //
 // - - - INITIALIZING MAP
@@ -309,7 +305,6 @@ function findInfo(findStop) {
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint[i] = data["schedule"][i]["Destination"];
 		predictions = data["schedule"][i]["Predictions"];
-		tripID[i] = data["schedule"][i]["TripID"];
 	}
 	var count = 0;
 
