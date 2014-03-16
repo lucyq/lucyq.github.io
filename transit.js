@@ -226,7 +226,7 @@ function genMarkers(length, colorLine, icon, color){
 
 		var infoDiv = document.createElement("div");
 
-		for (var j = 0; j < data["schedule"].length) {
+		for (var j = 0; j < data["schedule"].length; j++) {
 			list = document.createElement("ul");
 			list.innerHTML = endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
