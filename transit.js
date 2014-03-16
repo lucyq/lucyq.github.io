@@ -314,7 +314,7 @@ function findInfo(findStop) {
 		for (var k = 0; k < predictions.length; k++) {
 			var s = predictions[k]["Stop"];
 			if (s == findStop) {
-				foundSeconds[k] = predictions[k]["Seconds"];
+				foundSeconds = predictions[k]["Seconds"];
 		}
 	}
 	}
