@@ -270,6 +270,7 @@ function findInfo(findStop) {
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i]["Predictions"];
+		dest = data["schedule"][i]["Destination"];
 	}
 	
 
@@ -281,7 +282,7 @@ function findInfo(findStop) {
 	}
 
 	var information;
-	information = [data["Destination"], foundSeconds];
+	information = [dest, foundSeconds];
 
 	console.log(information);
 }
