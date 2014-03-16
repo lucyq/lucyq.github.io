@@ -308,7 +308,7 @@ function findInfo(findStop) {
 		for (var k = 0; k < predictions.length; k++) {
 			console.log("S: " + s);
 			console.log("findstop: " + findStop);
-			var s = data["schedule"][j]["Predictions"][k]["Stop"];
+			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = data["schedule"][j]["Predictions"][k]["Seconds"];
 				tableArray[count] = {"Direction":data["schedule"][j]["Destination"], 
