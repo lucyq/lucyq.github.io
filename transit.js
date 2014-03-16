@@ -305,8 +305,6 @@ function findInfo(findStop) {
 //	console.log(predictions[j]);
 
 		for (var k = 1; k < predictions[j].length; k++) {
-			console.log("S: " + s);
-			console.log("findstop: " + findStop);
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = data["schedule"][j]["Predictions"][k]["Seconds"];
@@ -316,6 +314,7 @@ function findInfo(findStop) {
 				// NOTE: do I need to check if it's undefined & > 0?
 			}
 		}
+		console.log("Table: " + tableArray);
 	}
 
 /*
