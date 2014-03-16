@@ -304,6 +304,7 @@ function findInfo(findStop) {
 	}
 	var count = 0;
 
+	console.log("Predictions: " + predictions);
 	for (var k = 0; k < predictions.length; k++) {
 		var s = predictions[k]["Stop"];
 		console.log("S: " + s);
