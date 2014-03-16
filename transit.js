@@ -299,9 +299,9 @@ function findInfo(findStop) {
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
 				foundSeconds = predictions[j][k]["Seconds"];
-			/*	minSecs = Math.floor(foundSeconds/60);
+				minSecs = Math.floor(foundSeconds/60);
 				foundSeconds = foundSeconds % 60;     
-				*/       
+				
 				tableArray[count] = {"Direction": endPoint[j], 
 									 "Seconds": foundSeconds};
 				count++;
