@@ -321,14 +321,10 @@ function findInfo(findStop) {
 			console.log("FOUND SECONDS: " + k);
 		} else {
 			foundSeconds = 0;
-			}
 		}
 	}
-
-
-
-	
 }
+
 
 
 //
