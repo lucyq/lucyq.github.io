@@ -205,7 +205,7 @@ function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
 	var list;
 	var listItem;
-	
+
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
 		station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
@@ -233,7 +233,7 @@ function genMarkers(length, colorLine, icon, color){
 			list = document.createElement("ul");
 			list.innerHTML = "Destination: " + endPoint[j];
 			for (var k = 0; k < predictions.length; k++) {
-				listItem[k] = document.createElement("li");
+				listItem = document.createElement("li");
 				listItem.innerHTML = "Arriving in: " + foundSeconds[k] + " seconds";
 				list.appendChild(listItem);
 			}
