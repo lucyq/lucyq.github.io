@@ -277,16 +277,15 @@ function findInfo(findStop) {
 	}
 	for (var j = 0; j < predictions.length; j++) {
 		var s = predictions[j]["Stop"];
-		console.log("Prediction: " + s);
-		for (var k = 0; k < predictions[j].length; k++) {
-			if (s == findStop && (predictions[j][k]["Stop"] != undefined)) {
-				foundSeconds[i] = NOTFOUND;
-			} else {
-				foundSeconds[i] = predictions[j][k]["Seconds"];
+		console.log("Find Stop: " + s);
+		if (s == findStop && (predictions[j]["Stop"] != undefined)) {
+			foundSeconds[j] = NOTFOUND;
+		} else {
+			foundSeconds[j] = predictions[j]["Seconds"];
 			}
-		}
+		
 	}
-	console.log("FOUND" + foundSeconds);
+	console.log("FOUND STOP @:" + foundSeconds);
 }
 /*
 
