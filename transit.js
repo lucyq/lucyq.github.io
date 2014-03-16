@@ -312,7 +312,7 @@ function findInfo(findStop) {
 			}
 		}
 	}
-console.log("Table: " + tableArray[0]);
+console.log("Table: " + tableArray[0]["Direction"] + " " + tableArray[0]["Seconds"]);
 }
 
 
