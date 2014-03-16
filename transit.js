@@ -89,6 +89,9 @@ var data; // data from parsing the schedule
 var foundStation;
 var foundSeconds = new Array();
 var NOTFOUND = -1000;
+var endPoint = new Array(); // destinations
+var predictions = new Array(); // predictions for each destination
+var tripID = new Array(); // trip ID's
 
 
 //
@@ -265,9 +268,6 @@ function genMarkers(length, colorLine, icon, color){
 
 // CREATE A TABLE
 function findInfo(findStop) {
-	var endPoint = new Array();
-	var predictions = new Array();
-	var tripID = new Array();
 
 	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
@@ -282,14 +282,14 @@ function findInfo(findStop) {
 	var	s = endPoint[j]["Stop"];
 		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
-				predictions = NOTFOUND;
+				foundSeconds[i] = NOTFOUND;
 			} else {
-				predictions = predictions[j]["Seconds"];
+				foundSeconds[i] = predictions[j]["Seconds"];
 			}
 		}
 	}
 
-	console.log(information);
+	console.log(foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
