@@ -221,9 +221,9 @@ function genMarkers(length, colorLine, icon, color){
 
 		var stationWindow = new google.maps.InfoWindow();
 
-		var infoDiv = document.createElement("div");
-		infoDiv.id = "infoDiv";
-		infoDiv.innerHTML = colorLine[i]["Name"];
+		var infoList = document.createElement("ul");
+		infoList.id = "infoDiv";
+		infoList.innerHTML = colorLine[i]["Name"];
 
 		for (var j = 0; j < tableArray.length; j++) {
 			list = document.createElement("ul");
@@ -231,17 +231,17 @@ function genMarkers(length, colorLine, icon, color){
 			listItem = document.createElement("li");
 			listItem.innerHTML = "Arriving in: " + tableArray[j]["Seconds"] + " seconds";
 			list.appendChild(listItem);
-			infoDiv.appendChild(list); 
+			infoList.appendChild(list); 
 		}
 		
 
 		// create the actual infowindows
-		google.maps.event.addListener(stationMark, 'click', (function(infoDiv, i) {
+		google.maps.event.addListener(stationMark, 'click', (function(infoList, i) {
 			return function() {
-				stationWindow.setContent(infoDiv);
+				stationWindow.setContent(infoList);
 				stationWindow.open(map, this);
 			}
-		})(infoDiv, i));
+		})(infoList, i));
 	}
 	createPolylines(color);
 }
