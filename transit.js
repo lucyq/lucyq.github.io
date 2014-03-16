@@ -301,21 +301,18 @@ function findInfo(findStop) {
 	for (var j = 0; j < data["schedule"].length; j++) {
 		endPoint[j] = data["schedule"][j]["Destination"]
 		predictions[j] = data["schedule"][j]["Predictions"];
-
-//	console.log(predictions[j]);
-
 		for (var k = 1; k < predictions[j].length; k++) {
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
-				foundSeconds = data["schedule"][j]["Predictions"][k]["Seconds"];
-				tableArray[count] = {"Direction":data["schedule"][j]["Destination"], 
+				foundSeconds = predictions[j][k]["Seconds"];
+				tableArray[count] = {"Direction": endPoint[j], 
 									 "Seconds": foundSeconds};
 				count++;
 				// NOTE: do I need to check if it's undefined & > 0?
 			}
 		}
-		console.log("Table: " + tableArray[0]);
 	}
+console.log("Table: " + tableArray[0]);
 }
 
 
