@@ -284,13 +284,10 @@ function findInfo(findStop) {
 			if (endPoint[j]["Seconds"] == undefined) {
 				predictions = NOTFOUND;
 			} else {
-				predictions = endPoint[j]["Seconds"];
+				predictions = predictions[j]["Seconds"];
 			}
 		}
 	}
-
-	var information;
-	information = [dest, foundSeconds];
 
 	console.log(information);
 }
