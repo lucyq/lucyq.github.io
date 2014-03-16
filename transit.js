@@ -235,7 +235,7 @@ function genMarkers(length, colorLine, icon, color){
 console.log(endPoint);
 
 		for (var j = 0; j < data["schedule"].length; j++) {
-			if (foundSeconds[j]!=undefined && foundSeconds[j]!=0) {
+			if (foundSeconds[j] > 0) {
 				list = document.createElement("ul");
 				list.innerHTML = "Direction " + endPoint[j];
 				listItem = document.createElement("li");
