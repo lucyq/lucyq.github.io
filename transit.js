@@ -276,7 +276,7 @@ function findInfo(findStop) {
 		tripID[i] = data["schedule"][i]["TripID"];
 	}
 	for (var j = 0; j < predictions.length; j++) {
-		var s = predictions[j][k]["Stop"];
+		var s = predictions[j]["Stop"];
 		for (var k = 0; k < predictions[j].length; k++) {
 			if (s == findStop && (predictions[j][k]["Stop"] != undefined)) {
 				foundSeconds[i] = NOTFOUND;
