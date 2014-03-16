@@ -273,16 +273,52 @@ console.log(endPoint);
 		})(infoDiv, i));
 	}
 	
-	
-	// Create polylines
-	var flightPath = new google.maps.Polyline({
+	createPolylines();
+
+
+}
+
+function createPolylines() {
+	if (line == "red") {
+		red1 = new Array();
+		red2 = new Array();
+
+		red2[0] = stationArray[12];
+		var j = 18;
+		for (var i = 18; i < 22; i++) {
+			red2[i] = stationArray[j];
+			j++;
+		}
+		for (var k = 0; k < 18; k++) {
+			red1[k] = stationArray[k];
+		}
+
+		var redPath1 = new google.maps.Polyline({
+		path: red1,
+		geodesic: true,
+		strokeColor: color,
+		strokeOpacity: 1.0,
+		strokeWeight: 6,
+		map: map
+		});
+		var redPath2 = new google.maps.Polyline({
+		path: red2,
+		geodesic: true,
+		strokeColor: color,
+		strokeOpacity: 1.0,
+		strokeWeight: 6,
+		map: map
+		});
+	} else {
+		var flightPath = new google.maps.Polyline({
 		path: stationArray,
 		geodesic: true,
 		strokeColor: color,
 		strokeOpacity: 1.0,
 		strokeWeight: 6,
 		map: map
-	});
+		});
+	}
 
 }
 
