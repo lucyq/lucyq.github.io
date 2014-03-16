@@ -280,6 +280,7 @@ function findInfo(findStop) {
 
 	for (var j = 0; j < predictions.length; j++) {
 	var	s = predictions[j]["Stop"];
+	console.log("S: " + s);
 		if (s == findStop && (predictions[j]["Seconds"] != undefined)) {
 			if (endPoint[j]["Seconds"] == undefined) {
 				foundSeconds[i] = NOTFOUND;
@@ -288,8 +289,6 @@ function findInfo(findStop) {
 			}
 		}
 	}
-
-	console.log("seconds " + foundSeconds);
 }
 //
 // - - - FINDING DISTANCES
