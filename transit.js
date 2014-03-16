@@ -266,7 +266,12 @@ function genMarkers(length, colorLine, icon, color){
 function findInfo(findStop) {
 	var endPoint;
 	var stops;
-// Go through each train destination (endPoint)
+
+	 
+
+
+
+	// Go through each train destination (endPoint)
 	for (var i = 0; i < data["schedule"].length; i++) {
 		endPoint = data["schedule"][i]["Predictions"];
 	}
