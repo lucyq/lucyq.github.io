@@ -237,7 +237,6 @@ console.log(endPoint);
 				listItem.innerHTML = "Arriving in: " + foundSeconds[j] + " seconds";
 				list.appendChild(listItem);
 				infoDiv.appendChild(list); 
-				console.log(foundSeconds);
 		}
 		
 
