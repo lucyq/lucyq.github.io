@@ -317,9 +317,6 @@ function findInfo(findStop) {
 		var s = predictions[k]["Stop"];
 		if (s == findStop ) {
 			foundSeconds = predictions[k]["Seconds"];
-			tableArray[count] = foundSeconds;
-			count++;
-
 		} else {
 			foundSeconds = 0;
 		}
