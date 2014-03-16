@@ -117,8 +117,6 @@ function initialize() {
 		if (request.readyState==4 && request.status==200) {
 			getLocation();
 			data = JSON.parse(request.responseText);	
-		} else {
-			alert("Please reload the page!");
 		}
 	};
 
