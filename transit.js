@@ -298,13 +298,25 @@ function findInfo(findStop) {
 		for (var k = 1; k < predictions[j].length; k++) {
 			var s = predictions[j][k]["Stop"];
 			if (s == findStop) {
+				for (var m = 0; m < tableArray.length; m++) {
+					if (predictions[j][k]["Seconds"] < tableArray[m]["Seconds"]) {
+						for (var n = tableArray.length; n > m; n--) {
+							tableArray[n] = tableArray[n-1];
+						}
+						foundSeconds = predictions[j][k]["Seconds"];
+						tableArray[m] = {"Direction": endPoint[j], "Seconds":foundSeconds}
+
+					}
+				}
+/*
 				foundSeconds = predictions[j][k]["Seconds"];
-			/*	minSecs = Math.floor(foundSeconds/60);
+				minSecs = Math.floor(foundSeconds/60);
 				foundSeconds = foundSeconds % 60;     
-				*/       
+				      
 				tableArray[count] = {"Direction": endPoint[j], 
 									 "Seconds": foundSeconds};
 				count++;
+*/
 			}
 		}
 	}
@@ -339,9 +351,6 @@ function manageDistances(length, colorLine) {
 			j++;
 		}
 	}
-	if (distances[i] === distances[length-1]) {
-		var index = a[j-1];
-	} else {
 		var index = a[j-2];
 	}
 		convertedD = convertMiles(distances[index]);
