@@ -301,9 +301,9 @@ function findInfo(findStop) {
 		var s = predictions[j]["Stop"];
 		alert(s);
 		if (s == findStop && (predictions[j]["Stop"] != undefined)) {
-			foundSeconds[j] = NOTFOUND;
+			foundSeconds = NOTFOUND;
 		} else {
-			foundSeconds[j] = predictions[j]["Seconds"];
+			foundSeconds = predictions[j]["Seconds"];
 		}
 	}
 }
