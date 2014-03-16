@@ -203,9 +203,9 @@ function manageLines() {
 
 function genMarkers(length, colorLine, icon, color){
 	var stationArray = new Array(); // stores station locations
-	var list = new Array();
-	var listItem = new Array();
-
+	var list;
+	var listItem;
+	
 	// creating stations locations & markers
 	for (var i = 0; i < length; i++) {
 		station = new google.maps.LatLng(colorLine[i]["Lat"], colorLine[i]["Lng"]);
