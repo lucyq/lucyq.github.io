@@ -62,3 +62,12 @@ label {
     text-align: right;
 }
 br { clear: left; }
+
+.bluePin {
+    color: #82C8D9;
+}
+.pinkPin {
+    color: #FF6699;
+}
+
+
