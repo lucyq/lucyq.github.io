@@ -1,42 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-<title>Cosmic Calendar</title>
-<link rel="stylesheet" href="style.css"></link>
-<script src="game.js"></script>
-</head>
+	<title>Lucy Qin</title>
+	<style>
+		@font-face {
+    		font-family: penelope;
+    		src: url(basic.ttf);
+		}
+
+		body {
+	    	font-family: penelope;
+	    	font-size: 40px;
+	    	text-align: center;
+		}
+		div {
+			margin-top: 10%;
+		}
+		#contact {
+			font-size: 20px;
+			margin-top: 25%;
+		}
+</style>
 
 
-<body onload="init()">
-	<h1>COSMIC CALENDAR</h1>
-	<div id = "intro">
-		The universe began approximately 13.8 billion years ago. The following calendar represents the time span of the universe if it were condensed into one calendar year.
-	<br>Try to guess the month and day of each event. The <span class="bluePin">blue pin</span> represents your guess and the <span class="pinkPin">pink pin</span> represents the correct answer.
+<body>
+	<div>
+		PAGE UNDER CONSTRUCTION! Check back real soon!
 	</div>
-	<div id = "question"></div>
-	<div id ="response">
-		<p>Please enter your guess below using numbers, then hit "enter"</p>
-		 <label for ="month">Month:</label>
-		 <input type = "text" id ="month" class="input" size="30"/>
-		 <br>
-		 <label for ="day">Day:</label>
-		 <input type = "text" id ="day" class="input" size ="30"/> 
-		 <br>
-		 <input value="Enter" name="guess" type="button" value="guess" onclick="getResponse()">
+	<div id="contact">
+		Have any questions? Wanna contact me? <a href="mailto:lucyzqin@gmail.com">Click here!</a> 
+
 	</div>
-	<div id="calendar">
-		<canvas id="visual" height="625" width="1190">
-		Your browser doesn't support canvas! Please try using a different one!
-		</canvas>
-	<img style="display:none" src="cosmo_cal.png" id="calendar" alt="graphic of a calendar"></img>
-
-	<img style="display:none" src="bluepin.png" id="blue_pin" alt="blue pin graphic"></img>
-	<img style="display:none" src="pinkpin.png" id="pink_pin" alt="pink pin graphic"></img>
-	</div>
-
-
-	<img 
 
 </body>
 
 </html>
+
