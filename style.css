@@ -1,0 +1,104 @@
+
+@font-face {
+	font-family: titleFont;
+	src: url(Ventilla.ttf); 
+}
+
+@font-face{
+	font-family: subtitleFont;
+	/*src: url(../fonts/doodle.ttf);*/
+	src: url(ostrich-light.ttf);
+
+}
+
+@font-face {
+	font-family: textFont;
+	src: url(ostrich-light.ttf);
+}
+
+body {
+	background-image: url(brushed_dark.png);
+}
+
+p {
+	font-family: textFont;
+	font-size: 36px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+ul {
+	font-family: textFont;
+	font-size: 28px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.info {
+	background-color: rgba(255,255,255,0.2);
+	display: none;
+	padding: 10px;
+}
+
+.subtitle {
+	font-family: subtitleFont;
+	font-size: 52px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.title {
+	font-family: titleFont;
+	font-size: 140px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.smallTitle {
+	font-family: titleFont;
+	font-size: 80px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.nav_link:hover {
+	color: rgb(110, 110, 110);
+}
+
+.circular {
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url("lucy.jpg") no-repeat;
+	background-size: contain;
+	margin: auto;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+span:hover {
+	background-color: rgba(255,255,255, 0.2);
+
+}
+
+
+.nav {
+	background-color: rgba(245,224,175,0.3);
+}
+
+.sticky {
+	position: fixed;
+	left: 0;
+	right: 0;
+    top: 0;  
+    font-family: titleFont;
+
+    background-color: rgb(100,100,100);
+    background-color: rgb(145, 113, 123);
+}
+
+
+

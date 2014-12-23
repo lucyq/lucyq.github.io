@@ -1,4 +1,136 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lucy Qin</title>
+		<script src="site.js"></script>
+	
+		<link href="style.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	
+	</head>
+
+
+	<body>
+		<div id="header">
+			<p class="title">Lucy Qin</p>
+		</div>
+	
+		<div class="nav">
+			<p class="subtitle">
+				<span class="nav_link" id="click_about">About</span>  |  
+				<span class="nav_link" id="click_projs">Projects</span>  |  
+				<span class="nav_link" id="click_exp_skills">Experiences & Skills</span>  |  
+				<span class="nav_link" id="click_contact"> Contact</span></p>
+		</div>
+
+		<div class="info" id="about">
+			<p class="smallTitle">About</p>
+			<div class="circular"></div>
+			<p>Hi! I'm Lucy, a senior at Tufts University studying computer science and economics. During my junior fall, I began programming for the first time and since then have  been trying to absorb as much I can. <br>
+
+			My interests within computer science are still evolving as I continue to explore the field. Within economics, my interests are in development and urbanization. I hope to merge this background with my programming skills and possibly apply them to international issues such as conflict, health and disaster response.
+			<br> 
+			My other interests include writing, playing around with Adobe Illustrator/Photoshop, exploring Boston via food, and planning my next adventure.
+			</p>
+		</div>
+
+		<div class="info" id="projs">
+			<p class="smallTitle">Projects</p>
+		</div>
+
+		<div class="info" id="exp_skills">
+			<p class="smallTitle">Experiences and Skills</p>
+	
+			<p>Relevant Courses</p>
+			<ul>Computer Science 
+				<li>Machine Structure and Assembly Programming</li>
+				<li>Data Structures</li>
+				<li>Data Visualization</li>
+				<li>Web Programming</li></ul>
+
+			<ul>Economics
+				<li>Econometrics</li>
+				<li>Economics Statistics</li>
+				<li>Seminar: African Economic Development</li>
+				<li>Topics in Economic Development</li>
+				<li>Micro/Macroeconomics</li>
+				</ul>
+
+
+			<p>Programming Languages<br> C, C++, Java, JavaScript, HTML5/CSS, Processing</p>
+			<p>Foreign Languages<br> Chinese, Spanish</p>
+
+			</p>
+		</div>
+
+		<div class="info" id="contact">
+			<p class="smallTitle">Contact</p>
+			<p>
+				Email: lucyzqin@gmail.com <br>
+				Phone: (631) 255-8546
+
+<!--				<a href="mailto:lucyzqin@gmail.com?Subject=Hello%20again">Email</a> - 
+				<a href="http://www.github.com/lucyq">GitHub</a>
+
+			</p>-->
+		</p>
+		</div>
+
+
+		
+
+		<script>
+		$( "#click_about" ).click(function() {
+ 			$( "#about" ).slideToggle("slow", function() { });
+		});
+
+		$( "#click_contact" ).click(function() {
+ 			$( "#contact" ).slideToggle("slow", function() { });
+		});
+
+		$( "#click_exp_skills" ).click(function() {
+ 			$( "#exp_skills" ).slideToggle("slow", function() { });
+		});
+
+		$( "#click_projs" ).click(function() {
+ 			$( "#projs" ).slideToggle("slow", function() { });
+		});
+
+
+
+		$(document).ready(function() {  
+		var stickyNavTop = $('.nav').offset().top;  
+		  
+		var stickyNav = function(){  
+		var scrollTop = $(window).scrollTop();  
+		       
+		if (scrollTop > stickyNavTop) {   
+		    $('.nav').addClass('sticky');  
+		} else {  
+		    $('.nav').removeClass('sticky');   
+		}  
+		};  
+		  
+		stickyNav();  
+		  
+		$(window).scroll(function() {  
+		    stickyNav();  
+		});  
+		});  
+
+		</script>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+<!--DOCTYPE HTML>
 <html>
 <head>
 	<title>Lucy Qin</title>
@@ -38,4 +170,5 @@
 </body>
 
 </html>
+-->
 
