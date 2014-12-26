@@ -20,27 +20,23 @@ body {
 	background-image: url(brushed_dark.png);
 }
 
-p {
-	font-family: textFont;
-	font-size: 36px;
+.info_text {
+	font-family: 'Lato';
+	font-size: 18px;
 	color: #FFFFFF;
 	text-align: center;
 }
 
-ul {
-	font-family: textFont;
-	font-size: 28px;
-	color: #FFFFFF;
-	text-align: center;
-}
 
 .info {
 	background-color: rgba(255,255,255,0.2);
 	display: none;
 	padding: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
-.subtitle {
+.nav {
 	font-family: subtitleFont;
 	font-size: 52px;
 	color: #FFFFFF;
@@ -55,6 +51,7 @@ ul {
 }
 
 .smallTitle {
+	margin: 10px;
 	font-family: titleFont;
 	font-size: 80px;
 	color: #FFFFFF;
@@ -80,8 +77,7 @@ ul {
 }
 
 span:hover {
-	background-color: rgba(255,255,255, 0.2);
-
+	color: rgb(145, 113, 123);
 }
 
 
@@ -94,10 +90,35 @@ span:hover {
 	left: 0;
 	right: 0;
     top: 0;  
-    font-family: titleFont;
+    font-family: subtitleFont;
 
     background-color: rgb(100,100,100);
-    background-color: rgb(145, 113, 123);
+    background-color: rgb(145, 113, 123); /* lilac */
+}
+
+a:hover {
+	background-color: rgb(145, 113, 123);
+
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+h3 {
+	margin: 10px;
+	font-family: subtitleFont;
+	font-size: 36px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+img {
+	width: auto;
+	height: 250px;
+	padding: 20px;
 }
 
 
