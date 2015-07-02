@@ -1,23 +1,23 @@
 
 @font-face {
 	font-family: titleFont;
-	src: url(Ventilla.ttf); 
+	src: url(fonts/Ventilla.ttf); 
 }
 
 @font-face{
 	font-family: subtitleFont;
-	/*src: url(../fonts/doodle.ttf);*/
-	src: url(ostrich-light.ttf);
+
+	src: url(fonts/ostrich-light.ttf);
 
 }
 
 @font-face {
 	font-family: textFont;
-	src: url(ostrich-light.ttf);
+	src: url(fonts/ostrich-light.ttf);
 }
 
 body {
-	background-image: url(brushed_dark.png);
+	background-image: url(images/brushed_dark.png);
 }
 
 .info_text {
