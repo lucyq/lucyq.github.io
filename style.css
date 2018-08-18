@@ -6,14 +6,12 @@
 
 @font-face{
 	font-family: subtitleFont;
-
 	src: url(fonts/ostrich-light.ttf);
-
 }
 
 @font-face {
 	font-family: textFont;
-	src: url(fonts/ostrich-light.ttf);
+	src: url(fonts/montserrat/Montserrat-ThinItalic.otf);
 }
 
 body {
@@ -21,8 +19,8 @@ body {
 }
 
 .info_text {
-	font-family: 'Lato';
-	font-size: 18px;
+	font-family: textFont;
+	font-size: 20px;
 	color: #FFFFFF;
 	text-align: center;
 }
@@ -31,9 +29,12 @@ body {
 .info {
 	background-color: rgba(255,255,255,0.2);
 	display: none;
-	padding: 10px;
-	padding-left: 25%;
-	padding-right: 25%;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .nav {
@@ -45,116 +46,33 @@ body {
 
 .title {
 	font-family: titleFont;
-	font-size: 160px;
+	font-size: 130px;
 	color: #FFFFFF;
 	text-align: center;
-	margin: 50px;
-	padding: 50px;
-}
-
-.tinyTitle {
-	font-family: titleFont;
-	font-size: 50px;
-	color: #FFF;
-	margin: 0px;
-	text-align: left;
-}
-
-.smallTitle {
-	margin: 10px;
-	font-family: titleFont;
-	font-size: 80px;
-	color: #FFFFFF;
-	text-align: center;
-}
-
-.nav_link:hover {
-/*	color: rgb(110, 110, 110);*/
-	background-color: rgba(255,255,255,0.8);
-	color: rgb(40,40,40);
-/*	color: rgb(80,80,80);*/
-}
-
-.circular {
-	width: 200px;
-	height: 200px;
-	border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	background: url("lucy.jpg") no-repeat;
-	background-size: contain;
-	margin: auto;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-}
-
-span:hover {
-	color: rgb(145, 113, 123);
-}
-
-
-.nav {
-	background-color: rgba(245,224,175,0.3);
-}
-
-.sticky {
-	position: fixed;
-	left: 0;
-	right: 0;
-    top: 0;  
-    font-family: subtitleFont;
-
-    background-color: rgb(100,100,100);
-    background-color: rgb(145, 113, 123); /* lilac */
-}
-
-a:hover {
-	background-color: rgb(145, 113, 123);
-
+	margin-top: 200px;
+	margin-bottom: 10px;
+	/* padding: 50px; */
 }
 
 a {
-	color: #FFFFFF;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
-
-h3 {
-	margin: 10px;
-	font-family: subtitleFont;
-	font-size: 36px;
-	text-align: center;
-	color: #FFFFFF;
+.text_link {
+	color: white;
+	text-decoration: underline;
+	text-decoration-color: #ffffcc;
 }
 
-img {
-	width: auto;
-	height: 250px;
-	padding: 20px;
+nav {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
 }
 
-#resume p {
-	text-align: left;
-}
-
-ul {
-	font-family: 'Lato';
-	font-size: 18px;
-	color: #FFFFFF;
-	text-align: left;
-	left: -50px;
-	padding: 0px;
-}
-
-li {
-	margin-left: 30px;
-}
-
-p {
-	margin: 0px;
+.icon {
+	width: 45px;
+	height: 45px;
+	display: inline-block;
 	padding: 5px;
 }
-
-
-

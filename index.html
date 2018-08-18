@@ -2,16 +2,8 @@
 <html>
 	<head>
 		<title>Lucy Qin</title>
-		
-		<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
-		<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100' rel='stylesheet' type='text/css'>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="slick.css"/>
-				<link href="style.css" rel="stylesheet">
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+		<link href="style.css" rel="stylesheet">
 	
 	</head>
 
@@ -22,56 +14,24 @@
 			<p class="title">Lucy Qin</p>
 		</div>
 
+		<div class="info" style="display:block;">
+			<h3 class="info_text">
+				<a class="text_link" href="https://multiparty.org/">researcher</a> and <a class="text_link" href="https://sail.bu.edu/">software engineer</a>. I design, develop, and deploy software systems and platforms that deliver cryptographic capabilities for real-world applications. 
+		</h3>
+		<nav role='navigation'>
+			<a href="https://github.com/lucyq">
+				<img class="icon" src="images/icons/github.png" alt="github link">
+			</a>
 
+			<a href="https://www.linkedin.com/in/lucy-qin/">
+				<img class="icon" src="images/icons/linkedin.png" alt="linkedin link">
+			</a>
 
-			<script src="slick.min.js"></script>
-		<script src="slick.js"></script>
-
-
-		<script>
-		/* TOGGLING DIFF SECTIONS */
-		$(".nav_link").bind("click", function() {
-		   $(".info").hide();
-		   var divId = $(this).attr("divId");
-		//	$("#" + divId).slideToggle('slow', function() {});
-		   $("#" + divId).show();
-		});
-
-		/* STICKY NAV */
-		$(document).ready(function() {  
-			var stickyNavTop = $('.nav').offset().top;  
-			  
-			var stickyNav = function(){  
-				var scrollTop = $(window).scrollTop();  
-				       
-				if (scrollTop > stickyNavTop) {   
-				    $('.nav').addClass('sticky');  
-				} else {  
-				    $('.nav').removeClass('sticky');   
-				}  
-			};  
-			  
-			stickyNav();  
-			  
-			$(window).scroll(function() {  
-			    stickyNav();  
-			});  
-		});  
-
-
-
-		/* SLIDER */
-		$('.variable-width').slick({
-		  dots: true,
-		  infinite: true,
-		  speed: 300,
-		  slidesToShow: 3,
-		  centerMode: true,
-		  variableWidth: true
-		});
-		        
-		</script>
-
+			<a href="https://twitter.com/lcyqn">
+				<img class="icon" src="images/icons/twitter.png" alt="twitter link">
+			</a>
+		</nav>
+		</div>
 	</body>
 
 </html>
