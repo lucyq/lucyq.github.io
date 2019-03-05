@@ -1,11 +1,7 @@
 @font-face {
 	font-family: titleFont;
-	src: url(fonts/Ventilla.ttf); 
-}
-
-@font-face{
-	font-family: subtitleFont;
-	src: url(fonts/ostrich-light.ttf);
+	/* src: url(fonts/Ventilla.ttf);  */
+	src: url(fonts/Roboto/Roboto-BlackItalic.ttf);
 }
 
 @font-face {
@@ -23,8 +19,14 @@
 	src: url(fonts/Roboto/Roboto-Light.ttf)
 }
 
+@font-face {
+	font-family: robotoMedIt;
+	src: url(fonts/Roboto/Roboto-MediumItalic.ttf)
+}
+
+
 body {
-	background-image: url(images/wall4.png);
+	background-image: url(images/white-waves.png);
 }
 
 .info_text {
@@ -38,12 +40,11 @@ body {
 
 
 .info {
-	background-color: rgba(202, 207, 225, 0.65);
-
 	/* background-color: rgba(202, 207, 225, 0.65); */
-	/* display: none; */
-	/* margin-left: 20%; */
-	/* margin-right: 20%; */
+	background-color: rgba(239, 190, 171, 0.4);
+
+	margin-left: 5%;
+	margin-right: 5%;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	padding-left: 10%;
@@ -67,8 +68,7 @@ body {
 	text-align: center;
 	margin-top: 200px;
 	margin-bottom: 10px;
-	font-family: Garamond;
-	letter-spacing: 6px
+	letter-spacing: 10px
 	/* padding: 50px; */
 }
 
@@ -108,7 +108,7 @@ nav {
 }
 
 .smallTitle {
-	font-family: robotoReg;
+	font-family: robotoMedIt;
 	font-size: 30px;
 	letter-spacing: 3px
 }
