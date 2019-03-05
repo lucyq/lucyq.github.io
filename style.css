@@ -1,6 +1,5 @@
 @font-face {
 	font-family: titleFont;
-	/* src: url(fonts/Ventilla.ttf);  */
 	src: url(fonts/Roboto/Roboto-BlackItalic.ttf);
 }
 
@@ -40,9 +39,7 @@ body {
 
 
 .info {
-	/* background-color: rgba(202, 207, 225, 0.65); */
-	background-color: rgba(239, 190, 171, 0.4);
-
+	background-color: rgba(239, 190, 171, 0.3);
 	margin-left: 5%;
 	margin-right: 5%;
 	padding-top: 2%;
@@ -69,7 +66,6 @@ body {
 	margin-top: 200px;
 	margin-bottom: 10px;
 	letter-spacing: 10px
-	/* padding: 50px; */
 }
 
 a {
@@ -125,10 +121,15 @@ nav {
 a {
 	color: black;
 }
-/* 
-#about {
-} */
 
-/* #research {
-	background-color: rgba(240, 240, 240, 0.65);
-} */
+.icon {
+	width: 25px;
+	height: auto;
+}
+
+#contact {
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
