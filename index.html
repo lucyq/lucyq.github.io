@@ -4,37 +4,141 @@
 		<title>Lucy Qin</title>
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<link href="style.css" rel="stylesheet">
-	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <script src="slick.min.js"></script> -->
 	</head>
 
 
 	<body>
-	
 		<div id="header">
 			<p class="title">LUCY QIN</p>
 		</div>
 
-		<div class="info" style="display:block;">
-			<h3 class="info_text">
-				<a class="text_link" href="https://multiparty.org/">researcher</a> and <a class="text_link" href="https://sail.bu.edu/">software engineer</a>. I design, develop, and deploy software systems and platforms that deliver cryptographic capabilities for real-world applications. 
-		</h3>
-		<nav role='navigation'>
-			<a href="https://github.com/lucyq">
-				<img class="icon" src="images/icons/github1.png" alt="github link">
-			</a>
 
-			<a href="https://www.linkedin.com/in/lucy-qin/">
-				<img class="icon" src="images/icons/linkedin1.png" alt="linkedin link">
-			</a>
+	<!-- <div class="nav">
+		<span class="nav_link" divId="about">me</span>  |  
+		<span class="nav_link" divId="research">research</span>    
+	</div> -->
+	<br><br>
 
-			<a href="https://twitter.com/lcyqn">
-				<img class="icon" src="images/icons/twitter1.png" alt="twitter link">
-			</a>
-		</nav>
-		</div>
-	</body>
+	<div class="info" id="about">
+		<p class="smallTitle">About Me</p>
+
+		<p class="info_text" style="text-align: left;">
+			I'm a researcher and software engineer at the Software & Application Innovation Lab at Boston University where I design, develop, and deploy software systems and platforms that deliver cryptographic capabilities for real-world applications.
+			Previously, I worked at MIT Lincoln Laboratory in the Secure, Resilient Systems and Technologies Group as well as the Humanitarian Assistance and Disaster Relief Systems Group. I graduated from Tufts University where I studied computer science and development economics.
+		</p>
+
+	</div>
+
+
+	<div class="info" id="research">
+		<p class="smallTitle">Publications</p>
+		
+		<p class="info_text" style="text-align: left;">
+			<a href="https://dl.acm.org/citation.cfm?id=3212701"><span class="pubTitle">Accessible Privacy-Preserving Web-Based Data Analysis for Assessing and Addressing Economic Inequalities.</span></a></br>
+			Andrei Lapets, Frederick Jansen, Kinan Dak Albab, Rawane Issa, <span class="lucy">Lucy Qin</span>, Mayank Varia, and Azer Bestavros. </br>
+			Proceedings of the 1st ACM SIGCAS Conference on Computing and Sustainable Societies. Menlo Park and San Jose, CA, USA. June 2018. </br>
+
+		</br></br>
+		<a href="https://dl.acm.org/citation.cfm?id=3212699"><span class="pubTitle">Callisto: A Cryptographic Approach to Detecting Serial Perpetrators of Sexual Misconduct.</span></a></br>
+		Anjana Rajan, <span class="lucy">Lucy Qin</span>, David W. Archer, Dan Boneh, Tancrède Lepoint, Mayank Varia.</br>
+		Proceedings of the 1st ACM SIGCAS Conference on Computing and Sustainable Societies. Menlo Park and San Jose, CA, USA. June 2018.</br>
+		</br></br>
+
+		
+
+		<a href="https://journals.sagepub.com/doi/full/10.1177/2472630318825335"><span class="pubTitle">Standardizing Automated DNA Assembly: Best Practices, Metrics, and Protocols Using Robots</span></a></br>
+		Douglas Densmore David I. Walsh, III, Marilene Pavan, Luis Ortiz, Scott Wick, Johanna Bobrow, Nicholas J. Guido, Sarah Leinicke, Dany Fu, Shreya Pandit, <span class="lucy">Lucy Qin</span>, Peter A. Carr.</br>
+		SLAS Technology: Translating Life Sciences Innovation. February 2019.</br>
+		</br></br>
+
+		<span class="pubTitle">From Usability to Secure Computing and Back Again.</span></br>
+		<span class="lucy">Lucy Qin</span>, Peter Flockhart, Andrei Lapets, Frederick Jansen, Kinan Bab, Mayank Varia, Shannon Roberts, Ira Globus-Harris.</br>
+		Submitted.
+		
+
+	</br></br>
+
+		<p class="smallTitle">Talks</p>
+		<!-- <span class="pubTitle"></span>
+
+	</br></br> -->
+	<p class="info_text" style="text-align: left;">
+
+		<span class="pubTitle">Deploying MPC for Social Good.</span></br>
+		Real World Crypto. San Jose, CA. January 2019.
+
+	</br></br>
+
+		<span class="pubTitle">Privacy-Preserving Data Analysis for Social Impact.</span></br>
+		Grace Hopper Celebration. Houston, TX. September 2018.
+
+	</br></br>
+
+		<span class="pubTitle">Software Tools for Next-Gen Genetic Design.</span></br>
+		MIT-Broad Foundry. Cambridge, MA. August 2018.
+
+
+	
+	</p>
+	<!-- <p class='smallTitle'>Content has been removed! Check back later!</p> -->
+
+
+	</div>
+
+	<!-- <div class="info" id="contact"> -->
+		<!-- <p class="smallTitle">Contact</p> -->
+		<!-- <h3>
+			<a href="mailto:lucyzqin@gmail.com?Subject=Hi!">Email</a> | 
+				<a href="http://www.github.com/lucyq">GitHub</a> | <a href="https://www.linkedin.com/profile/view?id=159294495&trk=nav_responsive_tab_profile_pic">LinkedIn</a>
+		</h3> -->
+		<!-- </p> -->
+		<!-- <br><br><br> -->
+	<!-- </div> -->
+
+
+
+
+	<script>
+
+	// 	/* TOGGLING DIFF SECTIONS */
+	// 	$(".nav_link").bind("click", function() {
+  //     $(".info").hide();
+  //     var divId = $(this).attr("divId");
+  //  //	$("#" + divId).slideToggle('slow', function() {});
+  //     $("#" + divId).show();
+  //  });
+  //  /* STICKY NAV */
+  //  $(document).ready(function() {  
+  //    var stickyNavTop = $('.nav').offset().top;  
+       
+  //    var stickyNav = function(){  
+  //      var scrollTop = $(window).scrollTop();  
+              
+  //      if (scrollTop > stickyNavTop) {   
+  //          $('.nav').addClass('sticky');  
+  //      } else {  
+  //          $('.nav').removeClass('sticky');   
+  //      }  
+  //    };  
+       
+  //    stickyNav();  
+       
+  //    $(window).scroll(function() {  
+  //        stickyNav();  
+  //    });  
+  //  });  
+  //  /* SLIDER */
+  //  $('.variable-width').slick({
+  //    dots: true,
+  //    infinite: true,
+  //    speed: 300,
+  //    slidesToShow: 3,
+  //    centerMode: true,
+  //    variableWidth: true
+  //  });
+           
+	// 	</script>
 
 </html>
-
-
-

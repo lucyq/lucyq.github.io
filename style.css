@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
-
-
 @font-face {
 	font-family: titleFont;
 	src: url(fonts/Ventilla.ttf); 
@@ -13,7 +10,17 @@
 
 @font-face {
 	font-family: textFont;
-	src: url(fonts/Roboto-Thin.ttf);
+	src: url(fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+	font-family: robotoReg;
+	src: url(fonts/Roboto/Roboto-Regular.ttf)
+}
+
+@font-face {
+	font-family: robotoLight;
+	src: url(fonts/Roboto/Roboto-Light.ttf)
 }
 
 body {
@@ -32,20 +39,24 @@ body {
 
 .info {
 	background-color: rgba(202, 207, 225, 0.65);
-	display: none;
-	margin-left: 20%;
-	margin-right: 20%;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 10px;
-	padding-right: 10px;
+
+	/* background-color: rgba(202, 207, 225, 0.65); */
+	/* display: none; */
+	/* margin-left: 20%; */
+	/* margin-right: 20%; */
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .nav {
-	font-family: subtitleFont;
-	font-size: 52px;
-	color: #FFFFFF;
+	font-family: textFont;
+	font-size: 40px;
+	color: rgb(50,50,50);
 	text-align: center;
+	letter-spacing: 2px
+	
 }
 
 .title {
@@ -84,3 +95,40 @@ nav {
 	display: inline-block;
 	padding: 5px;
 }
+
+.nav_link:hover {
+		text-transform: uppercase;
+}
+
+.info_text {
+	font-family: robotoLight;
+	font-size: 18px;
+	color: rgb(50,50,50);
+	text-align: center;
+}
+
+.smallTitle {
+	font-family: robotoReg;
+	font-size: 30px;
+	letter-spacing: 3px
+}
+
+
+.lucy {
+	font-family: robotoReg;
+}
+
+.pubTitle {
+	font-family: robotoReg;
+}
+
+a {
+	color: black;
+}
+/* 
+#about {
+} */
+
+/* #research {
+	background-color: rgba(240, 240, 240, 0.65);
+} */
