@@ -70,6 +70,12 @@ body {
 
 a {
 	text-decoration: none;	
+	color: black;
+	font-family: robotoReg;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 .text_link {
@@ -94,6 +100,7 @@ nav {
 
 .nav_link:hover {
 		text-transform: uppercase;
+		
 }
 
 .info_text {
@@ -116,10 +123,6 @@ nav {
 
 .pubTitle {
 	font-family: robotoReg;
-}
-
-a {
-	color: black;
 }
 
 .icon {
