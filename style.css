@@ -97,12 +97,12 @@ body {
 
 .title {
 	font-family: playfairIt;
-	font-size: 90px;
+	font-size: 70px;
 	color: #FFFFFF;
 	color: rgb(50,50,50);
 	text-align: center;
-	margin-top: 200px;
-	margin-bottom: 10px;
+	/* margin-top: 200px; */
+	margin-bottom: 5px;
 	letter-spacing: 7px
 }
 
@@ -169,9 +169,14 @@ nav {
 	height: auto;
 }
 
-#contact {
+#contact{
+	font-family: playfair;
+	font-size: 14px;
+}
+
+/* #contact {
 	margin-left: 5%;
 	margin-right: 5%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-}
+} */
