@@ -86,15 +86,6 @@ body {
 	padding-bottom: 10px;
 }
 
-.nav {
-	font-family: textFont;
-	font-size: 40px;
-	color: rgb(50,50,50);
-	text-align: center;
-	letter-spacing: 2px
-	
-}
-
 .title {
 	font-family: playfairIt;
 	font-size: 70px;
