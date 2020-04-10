@@ -76,7 +76,7 @@ body {
 	margin-left: 20%;
 	margin-right: 20%;
 	padding-top: 5%;
-	padding-bottom: 5%;
+	padding-bottom: 2%;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -93,6 +93,7 @@ body {
 	color: rgb(50,50,50);
 	text-align: center;
 	/* margin-top: 200px; */
+	margin-top: 10px;
 	margin-bottom: 5px;
 	letter-spacing: 7px
 }
@@ -107,7 +108,7 @@ a {
 a:hover {
 	/* text-decoration: underline; */
 	/* font-weight: bold; */
-	color: rgba(188, 143, 143, 1);
+	color: rgba(188, 143, 143, 1) !important;
 }
 
 .text_link {
@@ -148,10 +149,10 @@ nav {
 	letter-spacing: 2px;
 }
 
-
+/* 
 .lucy {
 	font-family: robotoReg;
-}
+} */
 
 .pubTitle {
 	font-family: robotoReg;
@@ -162,14 +163,25 @@ nav {
 	height: auto;
 }
 
-#contact{
-	font-family: playfair;
-	font-size: 14px;
+#photo {
+	width: 150px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-/* #contact {
-	margin-left: 5%;
-	margin-right: 5%;
-	padding-top: 1%;
-	padding-bottom: 1%;
-} */
+#reachme {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 0px;
+	color: rgb(90,90,90);
+}
+
+#contact {
+	font-family: playfairSemiBold !important;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: rgb(90,90,90);
+}
