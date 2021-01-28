@@ -52,6 +52,11 @@
 	src: url(fonts/Roboto/Roboto-MediumItalic.ttf)
 }
 
+@font-face {
+	font-family: robotoMed;
+	src: url(fonts/Roboto/Roboto-Medium.ttf)
+}
+
 @font-face{
 	font-family: 'Playfair';
 	src: url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
@@ -149,10 +154,10 @@ nav {
 	letter-spacing: 2px;
 }
 
-/* 
+
 .lucy {
-	font-family: robotoReg;
-} */
+	font-family: robotoMed;
+}
 
 .pubTitle {
 	font-family: robotoReg;
