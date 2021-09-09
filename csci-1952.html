@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title> CSCI 1952V: Algos for the People </title>
+  <meta property="og:title" content=" - " />
+  <meta name="twitter:title" content=" - " />
+  <meta name="description" content="Algorithms for the People (CS 1952V) Lecture: 10:30-11:50am, Tu/Th
+Instructors: Kweku Kwegyir-Aggrey, Julia Netter, Lucy Qin
+Office hours: by appointment
+Course Description: In this course we will examine how technology affects marginalized communities. In our analysis, we hope to better understand how power and identity affect the creation of technology, and how these dynamics exclude marginalized groups, and the harmful consequences of this exclusion. This is a discussion-based seminar which will focus on the following themes: surveillance, protest movements, the technical needs of specific user groups, content moderation, and machine learning. 
+
+Students will be expected to read and synthesize a variety of news articles, reports, and research papers.">
+  <meta name="author" content=""/>
+  <meta property="og:site_name" content="" />
+  <meta property="og:url" content="https://cs.brown.edu/2952v/" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.72.0" />
+  <link rel="stylesheet" href="https://cs.brown.edu/people/seny/css/style.css" media="all" />
+  <link rel="stylesheet" href="https://cs.brown.edu/people/seny/css/syntax.css" media="all" />
+  <link rel="stylesheet" href="https://cs.brown.edu/people/seny/css/custom.css" media="all" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- <header class="site-header">
+  <nav class="site-navi">
+    <h1 class="site-title"><a href="https://cs.brown.edu/people/seny/"></a></h1>
+    <ul class="site-navi-items">
+      <li class="site-navi-item-home"><a href="https://cs.brown.edu/people/seny/index.html" title="Home">Home</a></li>
+      <li class="site-navi-item-papers"><a href="https://cs.brown.edu/people/seny/papers/" title="Papers">Papers</a></li>
+      <li class="site-navi-item-talks"><a href="https://cs.brown.edu/people/seny/talks/" title="Talks">Talks</a></li>
+      <li class="site-navi-item-lab"><a href="http://esl.cs.brown.edu" title="Lab">Lab</a></li>
+      <li class="site-navi-item-blog"><a href="http://esl.cs.brown.edu/blog" title="Blog">Blog</a></li>
+    </ul>
+  </nav>
+</header> -->
+<!-- <hr class="site-header-bottom"> -->
+
+    
+    <div class="main" role="main">
+
+	<article class="article">
+	    <h1 id="algorithms-for-the-people-cs-2952v">Algorithms for the People (CS 1952V)</h1>
+<!-- <p><strong>Lecture:</strong> 10:30-11:50am, Tu/Th</p> -->
+<p><strong>Instructors:</strong> Kweku Kwegyir-Aggrey, Julia Netter, Lucy Qin</p>
+
+<!-- Instructors: 
+Office hours: by appointment
+Course Description: Computer science has transformed every aspect of society, including communication, transportation, commerce, finance, and health. The revolution enabled by computing has been extraordinarily valuable. The largest tech companies generate almost a trillion dollars a year and employ millions of people. But technology does not affect everyone in the same way."> -->
+
+<p><strong>Office hours:</strong> by appointment</p>
+<h1 id="course-description">Course Description</h1>
+<p>In this course we will examine how technology affects marginalized communities. In our analysis, we hope to better understand how power and identity affect the creation of technology, and how these dynamics exclude marginalized groups, and the harmful consequences of this exclusion. This is a discussion-based seminar which will focus on the following themes: surveillance, protest movements, the technical needs of specific user groups, content moderation, and machine learning. 
+</p>
+<!-- <p>Syllabus: <a href="https://cs.brown.edu/people/seny/syllabus/missive-aftp-20.pdf">pdf</a></p> -->
+<h1 id="pre-requisites">Pre-Requisites</h1>
+<p>Graduate students: none</p>
+<p>Undergrad CS concentrators: either 300, 320 or 330</p>
+<p>Undergrad non-CS concentrators: email professor</p>
+<h1 id="course-schedule-preliminary">Course Schedule (preliminary)</h1>
+Readings subject to change </br></br>
+<table>
+<thead>
+<tr>
+<th>Dates</th>
+<th>Topic</th>
+<th>Readings</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sep 14</td>
+<td>Overview</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 16</td>
+<td>Responsibility</td>
+<td>P. Rogaway. (pages 1-10) <a href="https://web.cs.ucdavis.edu/~rogaway/papers/moral-fn.pdf">The Moral Character of Cryptographic Work</a>
+</br></br>R. Abebe, S. Barocas, J. Kleinberg, K. Levy, M. Raghavan, D. Robinson. <a href="https://arxiv.org/abs/1912.04883">Roles for Computing in Social Change</a>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 21</td>
+<td>Surveillance</td>
+<td>The US Senate Church Committee. (pages 1-20) <a href="https://www.intelligence.senate.gov/sites/default/files/94755_II.pdf">The Church Report</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 23</td>
+<td>Surveillance</td>
+<td>The Policing in Chicago Research Group. <a href="http://ipce.uic.edu/wp-content/uploads/sites/41/2019/11/PCRG-Accountability-After-Abolition-Final-Draft.pdf">Accountability After Abolition</a>
+</br></br>
+M. Stern. <a href="https://slate.com/news-and-politics/2018/05/federal-judge-accused-ice-of-making-up-evidence-to-prove-that-dreamer-was-gang-affiliated.html">Federal judge accused ICE of making up evidence to prove that Dreamer was "gang-affiliated".</a>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 28</td>
+<td>Surveillance</td>
+<td>
+M. Funk. <a href="https://www.nytimes.com/2019/10/02/magazine/ice-surveillance-deportation.html">How ICE Picks Its Targets in the Surveillance Age</a>
+</br>
+</br>
+J. Ulloa. <a href="https://www.latimes.com/politics/la-pol-ca-ice-license-plate-immigrants-20190313-story.html">ICE is tracking immigrants with the help of California sanctuary cities, court records show</a>
+</br>
+</br>
+C. Edmondson. <a href="https://www.nytimes.com/2019/07/07/us/politics/ice-drivers-licenses-facial-recognition.html">ICE Used Facial Recognition to Mine State Driver’s License Databases</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 30</td>
+<td>Surveillance</td>
+<td>
+
+</br>
+</td>
+<td>Project list out</td>
+</tr>
+<tr>
+<td>Oct 5</td>
+<td>Protest Movements</td>
+<td>
+A. Brown, W. Parrish, A. Speri. <a href="https://theintercept.com/2017/05/27/leaked-documents-reveal-security-firms-counterterrorism-tactics-at-standing-rock-to-defeat-pipeline-insurgencies/">Leaked Documents Reveal Counterterrorism Tactics Used at Standing Rock to “Defeat Pipeline Insurgencies”</a>
+</br>
+</br>
+A. Brown, W. Parrish, A. Speri. <a href="https://theintercept.com/2017/06/03/standing-rock-documents-expose-inner-workings-of-surveillance-industrial-complex/">Standing Rock Documents Expose Inner Workings of “Surveillance-Industrial Complex”</a>
+</br>
+</br>
+A. Brown, W. Parrish, A. Speri. <a href="https://theintercept.com/2017/09/29/standing-rock-dakota-access-pipeline-dapl-no-fly-zone-drones-tigerswan/">Police Used Private Security Aircraft for Surveillance in Standing Rock No-Fly Zone</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 7</td>
+<td>Protest Movements</td>
+<td>
+</br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 12</td>
+<td>Protest Movements</td>
+<td>
+</br>
+
+</td>
+
+<td>Projects chosen</td>
+</tr>
+<tr>
+<td>Oct 14</td>
+<td>Technical needs of user groups</td>
+<td>T. Jenkins. <a href="https://omalley.nelsonmandela.org/omalley/index.php/site/q/03lv03445/04lv03996/05lv04001.htm">Talking with Vula</a>
+</br>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 19</td>
+<td>Technical needs of user groups</td>
+<td>
+L. Simko, A. Lerner, S. Ibtasam, F. Roesner, T. Kohno. <a href="https://adalerner.com/simko-refugees-sp18.pdf">Computer Security and Privacy for Refugees in the United States</a>
+</br></br>
+A. McDonald, C. Barwulor, M. Mazurek, F. Scahub, E. Redmiles. <a href="https://www.usenix.org/system/files/sec21fall-mcdonald.pdf">“It’s stressful having all these phones”:
+  Investigating Sex Workers’ Safety Goals, Risks, and Practices Online</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 21</td>
+<td>Technical needs of user groups</td>
+<td>
+M. Whittaker, M. Alper, C. Bennett, S. Hendren, L. Kaziunas, M. Mills, M. Ringel Morris, J. Rankin, E. Rogers, M. Salas, S. Myers West. <a href="https://ainowinstitute.org/disabilitybiasai-2019.pdf">Disability, Bias, and AI</a>
+</br></br>
+S. Kane, A. Guo, M. Ringel Morris. <a href="http://aka.ms/sensea11y">Sense and Accessibility: Understanding People with Physical Disabilities’ Experiences with Sensing Systems</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 26</td>
+<td>Technical needs of user groups</td>
+<td>
+M. Corcoran. <a href="https://slate.com/technology/2018/10/voice-assistants-alexa-siri-speech-disabilities-recognition.html">When Alexa Can’t Understand You</a>
+</br></br>
+D. Amodei, et. al.
+<a href="http://proceedings.mlr.press/v48/amodei16.pdf">Deep Speech 2 : End-to-End Speech Recognition in English and Mandarin</a>
+</br></br>
+A. Koenecke, et. al. <a href="Racial disparities in automated speech recognition">Racial disparities in automated speech recognition</a>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 28</td>
+<td>Content Moderation</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 2</td>
+<td>US Election</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 4</td>
+<td>
+Content Moderation
+</td>
+<td>
+
+</br></br>
+
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 9</td>
+<td>Content Moderation</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 11</td>
+<td>Machine Learning</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 16</td>
+<td>Machine Learning</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 18</td>
+<td>Machine Learning</td>
+<td>
+
+</br></br>
+
+</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 23</td>
+<td>Project presentations</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 25</td>
+<td>Thanksgiving</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 30</td>
+<td>Project Presentations</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dec 2</td>
+<td>Project Presentations</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dec 7</td>
+<td>Reading period</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+	</article>
+
+    </div>
+
+
+
+<div class="site-footer">
+
+<script src="https://cs.brown.edu/people/seny/js/script.js"></script>
+<script src="https://cs.brown.edu/people/seny/js/custom.js"></script>
+
+
+</body>
+</html>
