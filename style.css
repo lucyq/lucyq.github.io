@@ -63,6 +63,7 @@
 } 
 
 body {
+
 	background-image: url(images/white-waves.png);
 }
 
@@ -104,7 +105,8 @@ body {
 }
 
 a {
-	color: black;
+	/* color: black; */
+	color: rgb(77, 166, 212);
 	font-family: robotoReg;
 	text-decoration: none;
 
