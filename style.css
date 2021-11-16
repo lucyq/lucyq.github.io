@@ -105,10 +105,10 @@ body {
 }
 
 a {
-	/* color: black; */
-	color: rgb(44, 97, 143);
+	color: black;
+	/* color: rgb(44, 97, 143); */
 	font-family: robotoReg;
-	text-decoration: none;
+	text-decoration: underline;
 
 }
 
