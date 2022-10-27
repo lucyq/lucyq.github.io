@@ -105,15 +105,17 @@ body {
 }
 
 a {
-	color: black;
+	/* color: black; */
+	color: rgba(114,144,99,0.8);
+	/* color: rgba(188, 143, 143, 1) !important; */
 	/* color: rgb(44, 97, 143); */
 	font-family: robotoReg;
-	text-decoration: underline;
+	/* text-decoration: none; */
 
 }
 
 a:hover {
-	/* text-decoration: underline; */
+	text-decoration: underline;
 	/* font-weight: bold; */
 	color: rgba(188, 143, 143, 1) !important;
 }
