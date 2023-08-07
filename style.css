@@ -1,6 +1,11 @@
-@font-face {
+/* @font-face {
 	font-family: titleFont;
 	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+} */
+
+@font-face{
+	font-family: titleFont;
+	src: url(fonts/CLMGregam-Regular.otf)
 }
 
 
@@ -19,6 +24,10 @@
 	src: url(fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf.ttf);
 }
 
+@font-face {
+	font-family: playFairBold;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
 
 
 @font-face {
@@ -79,22 +88,22 @@ body {
 .content {
 	/* background-color: rgba(239, 190, 171, 0.3); */
 	background-color: rgba(255,255,255,0.6);
-	margin-left: 20%;
-	margin-right: 20%;
-	padding-top: 5%;
-	padding-bottom: 2%;
-	padding-left: 10%;
-	padding-right: 10%;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 75px;
+	padding-right: 75px;
 }
 
 .info {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .title {
-	font-family: playfairIt;
-	font-size: 70px;
+	font-family: titleFont;
+	font-size: 90px;
 	color: #FFFFFF;
 	color: rgb(50,50,50);
 	text-align: center;
@@ -109,7 +118,7 @@ a {
 	color: rgba(114,144,99,0.8) !important;
 	/* color: rgba(188, 143, 143, 1) !important; */
 	/* color: rgb(44, 97, 143); */
-	font-family: robotoReg;
+	font-family: playFair;
 	/* text-decoration: none; */
 
 }
@@ -133,8 +142,8 @@ nav {
 }
 
 .icon {
-	width: 45px;
-	height: 45px;
+	width: 60px;
+	height: 60px;
 	display: inline-block;
 	padding: 5px;
 }
@@ -144,27 +153,33 @@ nav {
 		
 }
 
+.collab{
+    font-family: playfairIt;
+}
+
 .info_text {
-	font-family: robotoLight;
+	font-family: playfair;
 	font-size: 14px;
 	color: rgb(90,90,90);
 	text-align: left;
 }
 
 .smallTitle {
-	font-family:playfairSemiBold;
-	font-size: 24px;
+	font-family:titleFont;
+	font-size: 40px;
 	font-weight: 100;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 }
 
 
 .lucy {
-	font-family: robotoMed;
+	font-family: playFairBold;
+    /* font-size: 20px; */
+    /* letter-spacing: 2px; */
 }
 
 .pubTitle {
-	font-family: robotoReg;
+	font-family: playFair;
 }
 
 .icon {
@@ -189,8 +204,8 @@ nav {
 }
 
 #contact {
-	font-family: playfairSemiBold !important;
-	font-size: 14px;
+	font-family: playfair !important;
+	/* font-size: 14px; */
 	letter-spacing: 1px;
-	color: rgb(90,90,90);
+	/* color: rgb(90,90,90); */
 }
