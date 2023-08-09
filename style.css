@@ -66,6 +66,13 @@
 	src: url(fonts/Roboto/Roboto-Medium.ttf)
 }
 
+@font-face {
+	font-family: robotoIt;
+	src: url(fonts/Roboto/Roboto-LightItalic.ttf)
+}
+
+
+
 @font-face{
 	font-family: 'Playfair';
 	src: url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
@@ -78,7 +85,7 @@ body {
 
 .info_text {
 	font-family: textFont;
-	font-size: 20px;
+	/* font-size: 28px; */
 	color: rgb(40,40,40);
 	text-align: center;
 	letter-spacing: 0.5px
@@ -118,7 +125,7 @@ a {
 	color: rgba(114,144,99,0.8) !important;
 	/* color: rgba(188, 143, 143, 1) !important; */
 	/* color: rgb(44, 97, 143); */
-	font-family: playFair;
+	font-family: robotoMed;
 	/* text-decoration: none; */
 
 }
@@ -154,12 +161,14 @@ nav {
 }
 
 .collab{
-    font-family: playfairIt;
+	font-family: robotoIt;
+    /* font-family: playfairIt; */
 }
 
 .info_text {
-	font-family: playfair;
-	font-size: 14px;
+	font-family: robotoLight;
+	/* font-family: playfair; */
+	font-size: 16px;
 	color: rgb(90,90,90);
 	text-align: left;
 }
@@ -173,13 +182,14 @@ nav {
 
 
 .lucy {
-	font-family: playFairBold;
+	font-family: robotoMed;
     /* font-size: 20px; */
     /* letter-spacing: 2px; */
 }
 
 .pubTitle {
-	font-family: playFair;
+	font-family: robotoMed;
+	/* font-family: playFair; */
 }
 
 .icon {
@@ -188,8 +198,8 @@ nav {
 }
 
 #photo {
-	width: 150px;
-	border-radius: 50%;
+	width: 175px;
+	border-radius: 100%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -204,7 +214,7 @@ nav {
 }
 
 #contact {
-	font-family: playfair !important;
+	font-family: robotoMedIt !important;
 	/* font-size: 14px; */
 	letter-spacing: 1px;
 	/* color: rgb(90,90,90); */
