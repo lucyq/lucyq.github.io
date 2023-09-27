@@ -9,6 +9,35 @@
 }
 
 
+@font-face{
+	font-family: kanada;
+	src: url(fonts/Kanada/Kanada.otf)
+}
+
+
+@font-face{
+	font-family: kanadaItalic;
+	src: url(fonts/Kanada/Kanada-Italic.otf)
+}
+
+
+@font-face{
+	font-family: kanadaWide;
+	src: url(fonts/Kanada/Kanada-Wide.otf)
+}
+
+
+@font-face{
+	font-family: kanadaItalic;
+	src: url(fonts/Kanada/Kanada-Italic.otf)
+}
+
+@font-face{
+	font-family: fillerExpanded;
+	src: url(fonts/Filler-Expanded.otf)
+}
+
+
 @font-face {
 	font-family: playfair;
 	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
@@ -95,12 +124,19 @@ body {
 .content {
 	/* background-color: rgba(239, 190, 171, 0.3); */
 	background-color: rgba(255,255,255,0.6);
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-top: 5%;
+	padding-bottom: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
+/* 
+	margin-left: 75px;
+	margin-right: 75px;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	padding-left: 75px;
-	padding-right: 75px;
+	padding-right: 75px; */
 }
 
 .info {
@@ -160,6 +196,11 @@ nav {
 		
 }
 
+#about {
+	padding-left: 12%;
+	padding-right: 12%;
+}
+
 .collab{
 	font-family: robotoIt;
     /* font-family: playfairIt; */
@@ -174,7 +215,7 @@ nav {
 }
 
 .smallTitle {
-	font-family:titleFont;
+	font-family: titleFont;
 	font-size: 40px;
 	font-weight: 100;
 	letter-spacing: 3px;
