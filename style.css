@@ -145,7 +145,8 @@ body {
 }
 
 .title {
-	font-family: titleFont;
+	font-family: playfairIt;
+	/* font-family: titleFont; */
 	font-size: 90px;
 	color: #FFFFFF;
 	color: rgb(50,50,50);
@@ -215,10 +216,14 @@ nav {
 }
 
 .smallTitle {
-	font-family: titleFont;
+	font-family:playfairSemiBold;
+	font-size: 24px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	/* font-family: titleFont;
 	font-size: 40px;
 	font-weight: 100;
-	letter-spacing: 3px;
+	letter-spacing: 3px; */
 }
 
 
