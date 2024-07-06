@@ -1,0 +1,306 @@
+/* @font-face {
+	font-family: titleFont;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+} */
+
+
+
+
+
+@font-face{
+	font-family: titleFont;
+	src: url(fonts/Kanada/Kanada-WideItalic.otf)
+}
+
+
+@font-face{
+	font-family: kanada;
+	src: url(fonts/Kanada/Kanada.otf)
+}
+
+
+@font-face{
+	font-family: kanadaItalic;
+	src: url(fonts/Kanada/Kanada-Italic.otf)
+}
+
+
+@font-face{
+	font-family: kanadaWide;
+	src: url(fonts/Kanada/Kanada-Wide.otf)
+}
+
+
+@font-face{
+	font-family: kanadaItalic;
+	src: url(fonts/Kanada/Kanada-Italic.otf)
+}
+
+@font-face{
+	font-family: fillerExpanded;
+	src: url(fonts/Filler-Expanded.otf)
+}
+
+
+@font-face {
+	font-family: playfair;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+	font-family: playfairIt;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+	font-family: playfairSemiBold;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf.ttf);
+}
+
+@font-face {
+	font-family: playFairBold;
+	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
+}
+
+
+@font-face {
+	font-family: crimsonIt;
+	src: url(fonts/Crimson_Text/CrimsonText-Italic.ttf);
+}
+
+@font-face {
+	font-family: crimsonText;
+	src: url(fonts/Crimson_Text/CrimsonText-Regular.ttf);
+}
+
+
+@font-face {
+	font-family: textFont;
+	src: url(fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+	font-family: robotoReg;
+	src: url(fonts/Roboto/Roboto-Regular.ttf)
+}
+
+@font-face {
+	font-family: robotoLight;
+	src: url(fonts/Roboto/Roboto-Light.ttf)
+}
+
+@font-face {
+	font-family: robotoMedIt;
+	src: url(fonts/Roboto/Roboto-MediumItalic.ttf)
+}
+
+@font-face {
+	font-family: robotoMed;
+	src: url(fonts/Roboto/Roboto-Medium.ttf)
+}
+
+@font-face {
+	font-family: robotoIt;
+	src: url(fonts/Roboto/Roboto-LightItalic.ttf)
+}
+
+
+
+@font-face{
+	font-family: 'Playfair';
+	src: url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+} 
+
+
+.inconsolata {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 105;
+  }
+/* 
+.inconsolata-bold {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+} */
+  
+
+/* body {
+
+	background-image: url(images/white-waves.png);
+} */
+
+
+.content {
+	/* background-color: rgba(239, 190, 171, 0.3); */
+	background-color: rgba(255,255,255,0.6);
+	margin-left: 20%;
+	margin-right: 20%;
+	padding-top: 5%;
+	padding-bottom: 2%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.info {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.title {
+
+    /* max-height: 80px; */
+    /* width: auto; */
+    /* font-family: titleFont;
+	font-size: 60px;
+	color: #FFFFFF;
+	color: rgb(50,50,50);
+	text-align: center;
+
+	margin-top: 10px;
+	margin-bottom: 5px;
+	letter-spacing: 7px  */
+}
+
+a {
+    color: rgb(37, 81, 226);
+    /* color: rgba(114,144,99,0.8) !important; */
+	/* color: rgba(188, 143, 143, 1) !important; */
+	/* color: rgb(44, 97, 143); */
+	/* font-family: robotoMed; */
+	/* text-decoration: none; */
+
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 125; /* this width increases the kerning */
+
+}
+
+a:hover {
+	text-decoration: underline;
+	/* font-weight: bold; */
+    color: gray !important;
+	/* color: rgba(188, 143, 143, 1) !important; */
+}
+
+.text_link {
+	color: rgb(40,40,40);
+	/* background-color: #ffffcc; */
+	text-decoration-color: black;
+}
+
+nav {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.icon {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	padding: 5px;
+}
+
+.nav_link:hover {
+		text-transform: uppercase;
+		
+}
+
+#about {
+	padding-left: 12%;
+	padding-right: 12%;
+}
+
+.collab{
+	font-family: robotoIt;
+    /* font-family: playfairIt; */
+}
+
+.info_text {
+	/* font-family: robotoLight; */
+	/* font-family: playfair; */
+	font-size: 16px;
+	color: rgb(90,90,90);
+	text-align: left;
+}
+
+.smallTitle {
+	font-family:playfairSemiBold;
+	font-size: 24px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	/* font-family: titleFont;
+	font-size: 40px;
+	font-weight: 100;
+	letter-spacing: 3px; */
+}
+
+
+.lucy {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 125; /* this width increases the kerning */    
+}
+
+/* .pubTitle {
+	font-family: robotoMed;
+ */
+
+.icon {
+	width: 25px;
+	height: auto;
+}
+
+#photo {
+	width: 175px;
+	border-radius: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#reachme {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+#contact {
+	
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 125; /* this width increases the kerning */ 
+    /* font-family: robotoMedIt !important; */
+	/* font-size: 14px; */
+	letter-spacing: 1px;
+	/* color: rgb(90,90,90); */
+}
+
+
+img {
+
+    max-height: 65px;
+    width: auto;
+    /* transform: scale(0.1);
+     */
+    /* max-width: 200px;
+     */
+    /* width:100px */
+}
