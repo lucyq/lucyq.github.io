@@ -13,7 +13,33 @@
 		<link href="style-new.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<!-- <script src="slick.min.js"></script> -->
-	</head>
+	
+        <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    
+
+
+        <script type="module">
+            import { fairyDustCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+          
+            // new fairyDustCursor();
+
+
+            new cursoreffects.fairyDustCursor({
+                colors: ["#2551e2", "#2551e2", "#2551e2"],
+            });
+
+            // window.addEventListener("load", (event) => {
+                // new cursoreffects.ghostCursor();
+            // });
+
+
+
+          </script>
+
+    </head>
+
+    <!-- cool cursor effects for future use: -->
+    <!-- https://tholman.com/cursor-effects/ -->
 
 <body>
 <div class="container">
