@@ -137,6 +137,8 @@
 }  */
 
 
+
+
 .content {
 	/* background-color: rgba(239, 190, 171, 0.3); */
 	background-color: rgba(255,255,255,0.6);
@@ -188,7 +190,9 @@ a {
 a:hover {
 	text-decoration: underline;
 	/* font-weight: bold; */
-    color: gray !important;
+    /* color: gray !important; */
+	background-color: yellow;
+	/* background-color: #e9edfc; */
 	/* color: rgba(188, 143, 143, 1) !important; */
 }
 
