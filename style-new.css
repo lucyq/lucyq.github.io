@@ -131,6 +131,11 @@
 } */
   
 
+/* @media only screen and (min-width: 768px) {
+	[class*="col-"] {
+	  width: 100%;
+	}
+} */
 /* body {
 
 	cursor: url(images/icons8-cursor-24.png), auto;
@@ -190,8 +195,8 @@ a {
 a:hover {
 	text-decoration: underline;
 	/* font-weight: bold; */
-    /* color: gray !important; */
-	background-color: yellow;
+    color: white !important;
+	background-color: rgb(37, 81, 226);
 	/* background-color: #e9edfc; */
 	/* color: rgba(188, 143, 143, 1) !important; */
 }
