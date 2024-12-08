@@ -4,7 +4,10 @@
 } */
 
 
-
+@font-face{
+	font-family: fillerExpanded;
+	src: url(fonts/FillerExpanded.otf)
+}
 
 
 @font-face{
@@ -286,6 +289,11 @@ nav {
 	margin: 0 auto;
 	margin-top: 60px;
 	margin-bottom: 0px;
+}
+
+
+#lucyTitle {
+	font-family: fillerExpanded;
 }
 
 #contact {
