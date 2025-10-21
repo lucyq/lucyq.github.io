@@ -123,27 +123,6 @@
     font-variation-settings:
       "wdth" 105;
   }
-/* 
-.inconsolata-bold {
-    font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-} */
-  
-
-/* @media only screen and (min-width: 768px) {
-	[class*="col-"] {
-	  width: 100%;
-	}
-} */
-/* body {
-
-	cursor: url(images/icons8-cursor-24.png), auto;
-}  */
-
 
 
 
@@ -161,21 +140,6 @@
 .info {
 	padding-top: 5px;
 	padding-bottom: 5px;
-}
-
-.title {
-
-    /* max-height: 80px; */
-    /* width: auto; */
-    /* font-family: titleFont;
-	font-size: 60px;
-	color: #FFFFFF;
-	color: rgb(50,50,50);
-	text-align: center;
-
-	margin-top: 10px;
-	margin-bottom: 5px;
-	letter-spacing: 7px  */
 }
 
 a {
@@ -325,4 +289,10 @@ img {
     /* max-width: 200px;
      */
     /* width:100px */
+}
+
+
+.smalltext {
+	font-size: 12px;
+
 }
