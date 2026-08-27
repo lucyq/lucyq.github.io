@@ -296,3 +296,20 @@ img {
 	font-size: 12px;
 
 }
+
+.sidebar-col {
+	position: sticky;
+	top: 30px;
+	align-self: flex-start;
+}
+
+@media (max-width: 767.98px) {
+	.sidebar-col {
+		position: static;
+		top: auto;
+	}
+}
+
+.and-more-heading {
+	max-height: 55px;
+}
