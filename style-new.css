@@ -1,120 +1,3 @@
-/* @font-face {
-	font-family: titleFont;
-	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
-} */
-
-
-@font-face{
-	font-family: fillerExpanded;
-	src: url(fonts/FillerExpanded.otf)
-}
-
-
-@font-face{
-	font-family: titleFont;
-	src: url(fonts/Kanada/Kanada-WideItalic.otf)
-}
-
-
-@font-face{
-	font-family: kanada;
-	src: url(fonts/Kanada/Kanada.otf)
-}
-
-
-@font-face{
-	font-family: kanadaItalic;
-	src: url(fonts/Kanada/Kanada-Italic.otf)
-}
-
-
-@font-face{
-	font-family: kanadaWide;
-	src: url(fonts/Kanada/Kanada-Wide.otf)
-}
-
-
-@font-face{
-	font-family: kanadaItalic;
-	src: url(fonts/Kanada/Kanada-Italic.otf)
-}
-
-@font-face{
-	font-family: fillerExpanded;
-	src: url(fonts/Filler-Expanded.otf)
-}
-
-
-@font-face {
-	font-family: playfair;
-	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
-}
-
-@font-face {
-	font-family: playfairIt;
-	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
-}
-
-@font-face {
-	font-family: playfairSemiBold;
-	src: url(fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf.ttf);
-}
-
-@font-face {
-	font-family: playFairBold;
-	src: url(fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
-}
-
-
-@font-face {
-	font-family: crimsonIt;
-	src: url(fonts/Crimson_Text/CrimsonText-Italic.ttf);
-}
-
-@font-face {
-	font-family: crimsonText;
-	src: url(fonts/Crimson_Text/CrimsonText-Regular.ttf);
-}
-
-
-@font-face {
-	font-family: textFont;
-	src: url(fonts/Roboto/Roboto-Thin.ttf);
-}
-
-@font-face {
-	font-family: robotoReg;
-	src: url(fonts/Roboto/Roboto-Regular.ttf)
-}
-
-@font-face {
-	font-family: robotoLight;
-	src: url(fonts/Roboto/Roboto-Light.ttf)
-}
-
-@font-face {
-	font-family: robotoMedIt;
-	src: url(fonts/Roboto/Roboto-MediumItalic.ttf)
-}
-
-@font-face {
-	font-family: robotoMed;
-	src: url(fonts/Roboto/Roboto-Medium.ttf)
-}
-
-@font-face {
-	font-family: robotoIt;
-	src: url(fonts/Roboto/Roboto-LightItalic.ttf)
-}
-
-
-
-@font-face{
-	font-family: 'Playfair';
-	src: url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-} 
-
-
 .inconsolata {
     font-family: "Inconsolata", monospace;
     font-optical-sizing: auto;
@@ -122,105 +5,29 @@
     font-style: normal;
     font-variation-settings:
       "wdth" 105;
-  }
-
-
-
-.content {
-	/* background-color: rgba(239, 190, 171, 0.3); */
-	background-color: rgba(255,255,255,0.6);
-	margin-left: 20%;
-	margin-right: 20%;
-	padding-top: 5%;
-	padding-bottom: 2%;
-	padding-left: 10%;
-	padding-right: 10%;
-}
-
-.info {
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 a {
     color: rgb(37, 81, 226);
-    /* color: rgba(114,144,99,0.8) !important; */
-	/* color: rgba(188, 143, 143, 1) !important; */
-	/* color: rgb(44, 97, 143); */
-	/* font-family: robotoMed; */
-	/* text-decoration: none; */
-
     font-family: "Inconsolata", monospace;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     font-variation-settings:
       "wdth" 125; /* this width increases the kerning */
-
 }
 
 a:hover {
-	text-decoration: underline;
-	/* font-weight: bold; */
+    text-decoration: underline;
     color: white !important;
-	background-color: rgb(37, 81, 226);
-	/* background-color: #e9edfc; */
-	/* color: rgba(188, 143, 143, 1) !important; */
-}
-
-.text_link {
-	color: rgb(40,40,40);
-	/* background-color: #ffffcc; */
-	text-decoration-color: black;
-}
-
-nav {
-  text-align: center;
-  margin: 20px 0;
-  padding: 10px;
-}
-
-.icon {
-	width: 60px;
-	height: 60px;
-	display: inline-block;
-	padding: 5px;
-}
-
-.nav_link:hover {
-		text-transform: uppercase;
-		
-}
-
-#about {
-	padding-left: 12%;
-	padding-right: 12%;
-}
-
-.collab{
-	font-family: robotoIt;
-    /* font-family: playfairIt; */
+    background-color: rgb(37, 81, 226);
 }
 
 .info_text {
-	/* font-family: robotoLight; */
-	/* font-family: playfair; */
-	font-size: 16px;
-	color: rgb(90,90,90);
-	text-align: left;
+    font-size: 16px;
+    color: rgb(90,90,90);
+    text-align: left;
 }
-
-.smallTitle {
-	font-family:playfairSemiBold;
-	font-size: 24px;
-	font-weight: 100;
-	letter-spacing: 2px;
-	/* font-family: titleFont;
-	font-size: 40px;
-	font-weight: 100;
-	letter-spacing: 3px; */
-}
-
 
 .lucy {
     font-family: "Inconsolata", monospace;
@@ -228,88 +35,73 @@ nav {
     font-weight: 700;
     font-style: normal;
     font-variation-settings:
-      "wdth" 125; /* this width increases the kerning */    
+      "wdth" 125; /* this width increases the kerning */
 }
 
-/* .pubTitle {
-	font-family: robotoMed;
- */
-
-.icon {
-	width: 25px;
-	height: auto;
-}
-
-#photo {
-	width: 175px;
-	border-radius: 100%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#reachme {
-	width: 50%;
-	margin: 0 auto;
-	margin-top: 60px;
-	margin-bottom: 0px;
-}
-
-
-#lucyTitle {
-	font-family: fillerExpanded;
-}
-
-#contact {
-	
-    font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 125; /* this width increases the kerning */ 
-    /* font-family: robotoMedIt !important; */
-	/* font-size: 14px; */
-	letter-spacing: 1px;
-	/* color: rgb(90,90,90); */
-}
-
-
-/* .no-gutter > [class*='col-'] {
-	padding-right:10px;
-	padding-left:10px;
-} */
-
-img {
-
+/* Header-text images only, so future photos aren't shrunk to 65px */
+.title,
+.heading {
     max-height: 65px;
     width: auto;
-    /* transform: scale(0.1);
-     */
-    /* max-width: 200px;
-     */
-    /* width:100px */
-}
-
-
-.smalltext {
-	font-size: 12px;
-
-}
-
-.sidebar-col {
-	position: sticky;
-	top: 30px;
-	align-self: flex-start;
-}
-
-@media (max-width: 767.98px) {
-	.sidebar-col {
-		position: static;
-		top: auto;
-	}
 }
 
 .and-more-heading {
-	max-height: 55px;
+    max-height: 55px;
+}
+
+.smalltext {
+    font-size: 12px;
+}
+
+.sidebar-col {
+    position: sticky;
+    top: 72px; /* same as .page-top-space, so the column never moves */
+    align-self: flex-start;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar-col {
+        position: static;
+        top: auto;
+    }
+}
+
+/* Headshot at the top of the sidebar, above the name */
+.headshot {
+    display: block;
+    width: 180px;
+    height: auto;               /* always the whole photo, never cropped */
+    max-width: 100%;
+    border-radius: 0;           /* square corners; use 8px for rounded or 50% for a circle */
+    margin: 0 auto 20px;        /* centred in the sidebar; use "0 0 20px 0" to left-align */
+    background-color: #e9edfc;  /* pale blue shown until the photo file exists */
+}
+
+/* Blank space at the top of the page (replaces the old three line breaks) */
+.page-top-space {
+    height: 72px;
+}
+
+/* Column split on wide windows: 29% / 71% (between a quarter and a third) */
+@media (min-width: 992px) {
+    .sidebar-col {
+        flex: 0 0 29%;
+        max-width: 29%;
+    }
+
+    .main-content-col {
+        flex: 0 0 71%;
+        max-width: 71%;
+    }
+}
+
+/* Short blue bar in front of each collaboration / award note */
+.collab::before {
+    content: "";
+    display: inline-block;
+    width: 12px;                /* length of the bar */
+    height: 2px;                /* thickness of the bar */
+    background-color: rgb(37, 81, 226);
+    vertical-align: middle;
+    margin: 0 8px 2px 4px;      /* right value = gap between bar and text */
 }
