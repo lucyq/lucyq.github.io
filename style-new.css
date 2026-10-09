@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "compressed";
+    src: url("fonts/compressed.otf") format("opentype");
+    font-display: swap;
+}
+
 .inconsolata {
     font-family: "Inconsolata", monospace;
     font-optical-sizing: auto;
@@ -15,10 +21,11 @@ a {
     font-style: normal;
     font-variation-settings:
       "wdth" 125; /* this width increases the kerning */
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: white !important;
     background-color: rgb(37, 81, 226);
 }
@@ -95,6 +102,12 @@ a:hover {
     }
 }
 
+/* Collaboration / award notes, same size as the publication buttons */
+.collab,
+.collab a {
+    font-size: 14px;
+}
+
 /* Short blue bar in front of each collaboration / award note */
 .collab::before {
     content: "";
@@ -104,4 +117,155 @@ a:hover {
     background-color: rgb(37, 81, 226);
     vertical-align: middle;
     margin: 0 8px 2px 4px;      /* right value = gap between bar and text */
+}
+
+
+
+.text-heading {
+    color: rgb(37, 81, 226);
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-variation-settings: "wdth" 125;
+    font-size: 40px;
+    line-height: 1.1;
+    margin: 0 0 16px 0;
+}
+
+/* Topic groups under "selected publications" */
+.text-subheading {
+    color: rgb(37, 81, 226);
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
+    font-variation-settings: "wdth" 110;
+    font-size: 19px;
+    margin: 24px 0 10px 0;
+}
+
+/* Keep the name image from getting the blue hover box when it is a link */
+.title-link:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 767.98px) {
+    .text-heading {
+        font-size: 32px;
+    }
+}
+
+/* ===== Job application page: single column ===== */
+.job-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 16px 64px;
+}
+
+/* Name at the top of the page */
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 36px;
+}
+
+.job-section {
+    border-top: 1px solid rgb(210, 214, 228);
+    padding-top: 28px;
+    margin-top: 28px;
+}
+
+.job-header + .job-section {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+
+.job-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.job-section-heading .text-heading {
+    font-size: 30px;
+    margin: 0;
+}
+
+.job-material-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.job-material-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 6px 0;
+}
+
+.job-material-list li span {
+    min-width: 260px;
+}
+
+/* Small boxed "PDF" tag next to each document */
+.job-pdf-link {
+    font-size: 13px;
+    padding: 1px 8px;
+    border: 1px solid rgb(37, 81, 226);
+    border-radius: 3px;
+}
+
+/* Boxed project / video buttons after a publication title, same look as the PDF tags */
+.pub-button {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 2px 10px;
+    margin-left: 6px;
+    border: 1px solid rgb(37, 81, 226);
+    border-radius: 3px;
+}
+
+/* Row of buttons on its own line under a publication's details */
+.pub-buttons {
+    display: block;             /* a span, so it can sit inside the publications paragraph */
+    margin-top: 6px;
+}
+
+.pub-buttons .pub-button:first-child {
+    margin-left: 0;
+}
+
+@media (max-width: 767.98px) {
+    .job-section-heading .text-heading {
+        font-size: 26px;
+    }
+
+    .job-material-list li span {
+        min-width: 0;
+        flex: 1;
+    }
+}
+
+
+/* .subhead {
+    font-family: "compressed";
+    color: rgb(37, 81, 226);
+    font-weight: normal;  
+    font-synthesis: none;
+    font-size: 60px;
+} */
+/* Custom arrow cursor everywhere, including over links.
+   "1 1" is the arrow's tip within the 15x24px image; "auto" is the fallback. */
+html,
+a {
+    cursor: url("images/simple-cursor-blue.png") 1 1, auto;
 }
