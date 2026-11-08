@@ -261,10 +261,9 @@ a.pub-button:not([href]) {
     background-color: rgb(37, 81, 226);  /* site blue behind the cut-out photo */
     opacity: 0;
     visibility: hidden;
-    /* starts a little lower and blurry, then floats up and comes into focus */
-    transform: translateY(12px);
+    /* starts blurry, then comes into focus */
     filter: blur(6px);
-    transition: opacity 0.4s ease, transform 0.8s ease-out, filter 0.4s ease, visibility 0.4s;   /* timing when it disappears */
+    transition: opacity 0.4s ease, filter 0.4s ease, visibility 0.4s;   /* timing when it disappears */
     pointer-events: none;
     z-index: 10;
 }
@@ -273,10 +272,9 @@ a.pub-button:not([href]) {
 .headshot-hover:focus-within .headshot-preview {
     opacity: 0.75;              /* 75% opaque; use 1 for fully solid */
     visibility: visible;
-    transform: translateY(0);
     filter: blur(0);
     /* timing when it appears: fades in blurry first, then sharpens a beat later */
-    transition: opacity 0.25s ease, transform 0.6s ease-out, filter 0.35s ease 0.15s, visibility 0.25s;
+    transition: opacity 0.25s ease, filter 0.35s ease 0.15s, visibility 0.25s;
 }
 
 @media (max-width: 767.98px) {
@@ -305,10 +303,9 @@ a {
     cursor: url("images/simple-cursor-blue.png") 1 1, auto;
 }
 
-/* No floating or blur for people who have reduced motion turned on; they get the plain fade */
+/* No blur for people who have reduced motion turned on; they get the plain fade */
 @media (prefers-reduced-motion: reduce) {
     .headshot-preview {
-        transform: none;
         filter: none;
         transition: opacity 0.15s ease;
     }
