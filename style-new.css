@@ -303,6 +303,19 @@ a {
     cursor: url("images/simple-cursor-blue.png") 1 1, auto;
 }
 
+/* No focus outline when the Headshot button is tapped or clicked; keyboard users still get one */
+.headshot-hover .pub-button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* On phones, show the headshot to the right of the Headshot button instead of below it */
+@media (max-width: 767.98px) {
+    .headshot-preview {
+        top: calc(50% - 50px);      /* vertically centred on the button (preview is 100px tall) */
+        left: calc(100% + 8px);     /* just to the right of the button */
+    }
+}
+
 /* No blur for people who have reduced motion turned on; they get the plain fade */
 @media (prefers-reduced-motion: reduce) {
     .headshot-preview {
