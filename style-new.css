@@ -73,17 +73,6 @@ a:hover {
     }
 }
 
-/* Headshot at the top of the sidebar, above the name */
-.headshot {
-    display: block;
-    width: 180px;
-    height: auto;               /* always the whole photo, never cropped */
-    max-width: 100%;
-    border-radius: 0;           /* square corners; use 8px for rounded or 50% for a circle */
-    margin: 0 auto 20px;        /* centred in the sidebar; use "0 0 20px 0" to left-align */
-    background-color: #e9edfc;  /* pale blue shown until the photo file exists */
-}
-
 /* Blank space at the top of the page (replaces the old three line breaks) */
 .page-top-space {
     height: 72px;
@@ -240,8 +229,47 @@ a:hover {
     margin-top: 6px;
 }
 
+/* Keep a button blue even before it has a link (Bootstrap greys out links with no href) */
+a.pub-button:not([href]) {
+    color: rgb(37, 81, 226);
+}
+
 .pub-buttons .pub-button:first-child {
     margin-left: 0;
+}
+
+/* Headshot that pops up when hovering over (or tapping) the Headshot button */
+.headshot-hover {
+    position: relative;
+    display: inline-block;
+    margin-left: 6px;           /* same gap as between other buttons */
+}
+
+.headshot-hover .pub-button {
+    margin-left: 0;
+}
+
+.headshot-preview {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 8px);      /* just below the button */
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid rgb(37, 81, 226);
+    border-radius: 3px;         /* square like the buttons; use 50% for a circle */
+    background-color: rgb(37, 81, 226);  /* site blue behind the cut-out photo */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.headshot-hover:hover .headshot-preview,
+.headshot-hover:focus-within .headshot-preview {
+    opacity: 0.85;              /* 85% opaque; use 1 for fully solid */
+    visibility: visible;
 }
 
 @media (max-width: 767.98px) {
