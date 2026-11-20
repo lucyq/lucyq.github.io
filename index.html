@@ -345,6 +345,40 @@ While I was a PhD student, I was awarded the <a href="https://cs.brown.edu/news/
 
 
 
+
+<!-- Umami event tracking: counts clicks on the email link, on papers and other links, and
+     views of the headshot preview. Shows up under Events in the Umami dashboard. -->
+<script>
+(function () {
+  function track(name, data) {
+    if (window.umami && typeof window.umami.track === 'function') window.umami.track(name, data);
+  }
+
+  // Clicks on links
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    var text = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100);
+
+    if (href.indexOf('mailto:') === 0) { track('email-click'); return; }
+    if (a.hostname && a.hostname !== location.hostname) {
+      // Links in the publications column count as paper links; everything else as other links
+      var name = a.closest('.main-content-col') ? 'paper-link' : 'other-link';
+      track(name, { text: text, url: a.href });
+    }
+  });
+
+  // Headshot preview, counted once per visit
+  var hover = document.querySelector('.headshot-hover');
+  var counted = false;
+  function countHeadshot() { if (!counted) { counted = true; track('headshot-preview'); } }
+  if (hover) {
+    hover.addEventListener('mouseenter', countHeadshot);
+    hover.addEventListener('focusin', countHeadshot);
+  }
+})();
+</script>
 </body>
 
 </html>
